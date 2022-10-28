@@ -1,9 +1,9 @@
 <?php
-
+require_once("database.php");
 class Admin extends Database {
     private $email;
     private $nombre;
-    private $password;
+    private $clave;
 
     public function getEmail()
     {
@@ -29,15 +29,23 @@ class Admin extends Database {
         return $this;
     }
 
-    public function getPassword()
+    public function getClave()
     {
-        return $this->password;
+        return $this->clave;
     }
 
-    public function setPassword($password)
+    public function setClave($clave)
     {
-        $this->password = $password;
+        $this->clave = $clave;
 
         return $this;
     }
+
+    public function validar(){
+        $_POST['email']);
+        setClave($_POST['password']);
+    }
+
+
+
 }
