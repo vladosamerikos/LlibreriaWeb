@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-<!--Controlador frontal: fichero que se encarga de cargarlo absolutamente todo -->
+<!--Controlador frontal: fichero que se encarga de cargarlo absolutamente todo  hola gerard-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
