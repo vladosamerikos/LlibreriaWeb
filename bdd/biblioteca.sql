@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-10-2022 a las 10:29:43
+-- Tiempo de generación: 28-10-2022 a las 08:30:22
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -26,6 +26,25 @@ USE `biblioteca`;
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `admin`
+--
+
+CREATE TABLE `admin` (
+  `correo` varchar(100) NOT NULL,
+  `nombre` varchar(25) NOT NULL,
+  `clave` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `admin`
+--
+
+INSERT INTO `admin` (`correo`, `nombre`, `clave`) VALUES
+('administrador@gmail.com', 'Administrador', '827ccb0eea8a706c4c34a16891f84e7b');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `articulo`
 --
 
@@ -34,25 +53,20 @@ CREATE TABLE `articulo` (
   `fk_id_genero` int(11) NOT NULL,
   `isbn` int(13) NOT NULL,
   `nombre` varchar(100) NOT NULL,
-  `precio_venta` float NOT NULL,
-  `stock` int(11) NOT NULL,
+  `descripcion_short` varchar(50) NOT NULL,
   `descripcion` varchar(255) NOT NULL,
+  `stock` int(11) NOT NULL,
+  `precio_venta` float NOT NULL,
   `imagen` varchar(50) NOT NULL,
-  `estado` tinyint(1) NOT NULL,
-  `fk_id_autor` int(11) NOT NULL
+  `estado` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `autor`
+-- Volcado de datos para la tabla `articulo`
 --
 
-CREATE TABLE `autor` (
-  `id_autor` int(11) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `apellido` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `articulo` (`id_articulo`, `fk_id_genero`, `isbn`, `nombre`, `descripcion_short`, `descripcion`, `stock`, `precio_venta`, `imagen`, `estado`) VALUES
+(1, 1, 541545454, 'torrente', 'fdfdf', 'bla', 50, 85, 'ashndsbn/img.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -61,13 +75,19 @@ CREATE TABLE `autor` (
 --
 
 CREATE TABLE `detalle_factura` (
-  `id_detallefactura` int(11) NOT NULL,
-  `fk_id_venta` int(11) NOT NULL,
+  `fk_id_factura` int(11) NOT NULL,
   `fk_id_articulo` int(11) NOT NULL,
+  `fk_id_usuario` int(11) NOT NULL,
   `cantidad` int(11) NOT NULL,
-  `precio` float NOT NULL,
-  `descuento` float NOT NULL
+  `precio` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `detalle_factura`
+--
+
+INSERT INTO `detalle_factura` (`fk_id_factura`, `fk_id_articulo`, `fk_id_usuario`, `cantidad`, `precio`) VALUES
+(1, 1, 1, 2, 170);
 
 -- --------------------------------------------------------
 
@@ -76,16 +96,18 @@ CREATE TABLE `detalle_factura` (
 --
 
 CREATE TABLE `factura` (
-  `id_venta` int(11) NOT NULL,
-  `fk_id_usuario` int(11) NOT NULL,
-  `tipo_comprobante` varchar(20) NOT NULL,
-  `serie_comprobante` varchar(7) NOT NULL,
-  `num_comprobante` varchar(10) NOT NULL,
+  `id_factura` int(11) NOT NULL,
   `fecha` date NOT NULL,
-  `impuesto` float NOT NULL,
   `total` float NOT NULL,
   `estado` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `factura`
+--
+
+INSERT INTO `factura` (`id_factura`, `fecha`, `total`, `estado`) VALUES
+(1, '2022-10-29', 170, 'pendiente');
 
 -- --------------------------------------------------------
 
@@ -96,22 +118,15 @@ CREATE TABLE `factura` (
 CREATE TABLE `generos` (
   `id_genero` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
-  `descripcion` varchar(255) NOT NULL,
   `estado` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `rol`
+-- Volcado de datos para la tabla `generos`
 --
 
-CREATE TABLE `rol` (
-  `id_rol` int(20) NOT NULL,
-  `nombre` varchar(30) NOT NULL,
-  `descripcion` varchar(255) NOT NULL,
-  `estado` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `generos` (`id_genero`, `nombre`, `estado`) VALUES
+(1, 'comedia', 1);
 
 -- --------------------------------------------------------
 
@@ -121,16 +136,19 @@ CREATE TABLE `rol` (
 
 CREATE TABLE `usuario` (
   `id_usuario` int(20) NOT NULL,
-  `fk_id_rol` int(20) NOT NULL,
   `nombre` varchar(100) NOT NULL,
-  `tipo_documento` varchar(20) NOT NULL,
-  `num_documento` varchar(20) NOT NULL,
   `direccion` varchar(70) NOT NULL,
-  `telefono` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
   `clave` varchar(200) NOT NULL,
   `estado` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id_usuario`, `nombre`, `direccion`, `email`, `clave`, `estado`) VALUES
+(1, 'Vlad', 'C/VisualStudio', 'vlad@gmail.com', '202cb962ac59075b964b07152d234b70', 1);
 
 --
 -- Índices para tablas volcadas
@@ -141,29 +159,22 @@ CREATE TABLE `usuario` (
 --
 ALTER TABLE `articulo`
   ADD PRIMARY KEY (`id_articulo`),
-  ADD KEY `FK_articulo_generos` (`fk_id_genero`),
-  ADD KEY `FK_articulo_autor` (`fk_id_autor`);
-
---
--- Indices de la tabla `autor`
---
-ALTER TABLE `autor`
-  ADD PRIMARY KEY (`id_autor`);
+  ADD KEY `FK_articulo_generos` (`fk_id_genero`);
 
 --
 -- Indices de la tabla `detalle_factura`
 --
 ALTER TABLE `detalle_factura`
-  ADD PRIMARY KEY (`id_detallefactura`),
-  ADD KEY `FK_detalle_factura_factura` (`fk_id_venta`),
-  ADD KEY `FK_detalle_factura_articulo` (`fk_id_articulo`);
+  ADD PRIMARY KEY (`fk_id_factura`,`fk_id_articulo`,`fk_id_usuario`) USING BTREE,
+  ADD KEY `FK_detalle_factura_articulo` (`fk_id_articulo`),
+  ADD KEY `FK_detalle_factura_factura` (`fk_id_factura`) USING BTREE,
+  ADD KEY `FK_detalle_factura_usuario` (`fk_id_usuario`);
 
 --
 -- Indices de la tabla `factura`
 --
 ALTER TABLE `factura`
-  ADD PRIMARY KEY (`id_venta`),
-  ADD KEY `FK_factura_usuario` (`fk_id_usuario`);
+  ADD PRIMARY KEY (`id_factura`) USING BTREE;
 
 --
 -- Indices de la tabla `generos`
@@ -172,17 +183,10 @@ ALTER TABLE `generos`
   ADD PRIMARY KEY (`id_genero`) USING BTREE;
 
 --
--- Indices de la tabla `rol`
---
-ALTER TABLE `rol`
-  ADD PRIMARY KEY (`id_rol`);
-
---
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id_usuario`),
-  ADD KEY `FK_usuario_rol` (`fk_id_rol`);
+  ADD PRIMARY KEY (`id_usuario`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -192,43 +196,25 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `articulo`
 --
 ALTER TABLE `articulo`
-  MODIFY `id_articulo` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `autor`
---
-ALTER TABLE `autor`
-  MODIFY `id_autor` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `detalle_factura`
---
-ALTER TABLE `detalle_factura`
-  MODIFY `id_detallefactura` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_articulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `factura`
 --
 ALTER TABLE `factura`
-  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_factura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `generos`
 --
 ALTER TABLE `generos`
-  MODIFY `id_genero` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `rol`
---
-ALTER TABLE `rol`
-  MODIFY `id_rol` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_genero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
@@ -238,7 +224,6 @@ ALTER TABLE `usuario`
 -- Filtros para la tabla `articulo`
 --
 ALTER TABLE `articulo`
-  ADD CONSTRAINT `FK_articulo_autor` FOREIGN KEY (`fk_id_autor`) REFERENCES `autor` (`id_autor`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `FK_articulo_generos` FOREIGN KEY (`fk_id_genero`) REFERENCES `generos` (`id_genero`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
@@ -246,19 +231,8 @@ ALTER TABLE `articulo`
 --
 ALTER TABLE `detalle_factura`
   ADD CONSTRAINT `FK_detalle_factura_articulo` FOREIGN KEY (`fk_id_articulo`) REFERENCES `articulo` (`id_articulo`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `FK_detalle_factura_factura` FOREIGN KEY (`fk_id_venta`) REFERENCES `factura` (`id_venta`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Filtros para la tabla `factura`
---
-ALTER TABLE `factura`
-  ADD CONSTRAINT `FK_factura_usuario` FOREIGN KEY (`fk_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Filtros para la tabla `usuario`
---
-ALTER TABLE `usuario`
-  ADD CONSTRAINT `FK_usuario_rol` FOREIGN KEY (`fk_id_rol`) REFERENCES `rol` (`id_rol`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `FK_detalle_factura_factura` FOREIGN KEY (`fk_id_factura`) REFERENCES `factura` (`id_factura`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `FK_detalle_factura_usuario` FOREIGN KEY (`fk_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
