@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-10-2022 a las 08:30:22
+-- Tiempo de generación: 28-10-2022 a las 10:56:52
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -75,19 +75,12 @@ INSERT INTO `articulo` (`id_articulo`, `fk_id_genero`, `isbn`, `nombre`, `descri
 --
 
 CREATE TABLE `detalle_factura` (
+  `id_detallepedido` int(11) NOT NULL,
   `fk_id_factura` int(11) NOT NULL,
   `fk_id_articulo` int(11) NOT NULL,
-  `fk_id_usuario` int(11) NOT NULL,
   `cantidad` int(11) NOT NULL,
   `precio` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `detalle_factura`
---
-
-INSERT INTO `detalle_factura` (`fk_id_factura`, `fk_id_articulo`, `fk_id_usuario`, `cantidad`, `precio`) VALUES
-(1, 1, 1, 2, 170);
 
 -- --------------------------------------------------------
 
@@ -97,6 +90,7 @@ INSERT INTO `detalle_factura` (`fk_id_factura`, `fk_id_articulo`, `fk_id_usuario
 
 CREATE TABLE `factura` (
   `id_factura` int(11) NOT NULL,
+  `fk_id_usuario` int(11) DEFAULT NULL,
   `fecha` date NOT NULL,
   `total` float NOT NULL,
   `estado` varchar(20) NOT NULL
@@ -106,8 +100,8 @@ CREATE TABLE `factura` (
 -- Volcado de datos para la tabla `factura`
 --
 
-INSERT INTO `factura` (`id_factura`, `fecha`, `total`, `estado`) VALUES
-(1, '2022-10-29', 170, 'pendiente');
+INSERT INTO `factura` (`id_factura`, `fk_id_usuario`, `fecha`, `total`, `estado`) VALUES
+(1, NULL, '2022-10-29', 170, 'pendiente');
 
 -- --------------------------------------------------------
 
@@ -165,16 +159,16 @@ ALTER TABLE `articulo`
 -- Indices de la tabla `detalle_factura`
 --
 ALTER TABLE `detalle_factura`
-  ADD PRIMARY KEY (`fk_id_factura`,`fk_id_articulo`,`fk_id_usuario`) USING BTREE,
+  ADD PRIMARY KEY (`id_detallepedido`) USING BTREE,
   ADD KEY `FK_detalle_factura_articulo` (`fk_id_articulo`),
-  ADD KEY `FK_detalle_factura_factura` (`fk_id_factura`) USING BTREE,
-  ADD KEY `FK_detalle_factura_usuario` (`fk_id_usuario`);
+  ADD KEY `FK_detalle_factura_factura` (`fk_id_factura`) USING BTREE;
 
 --
 -- Indices de la tabla `factura`
 --
 ALTER TABLE `factura`
-  ADD PRIMARY KEY (`id_factura`) USING BTREE;
+  ADD PRIMARY KEY (`id_factura`) USING BTREE,
+  ADD KEY `FK_factura_usuario` (`fk_id_usuario`);
 
 --
 -- Indices de la tabla `generos`
@@ -231,8 +225,13 @@ ALTER TABLE `articulo`
 --
 ALTER TABLE `detalle_factura`
   ADD CONSTRAINT `FK_detalle_factura_articulo` FOREIGN KEY (`fk_id_articulo`) REFERENCES `articulo` (`id_articulo`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `FK_detalle_factura_factura` FOREIGN KEY (`fk_id_factura`) REFERENCES `factura` (`id_factura`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `FK_detalle_factura_usuario` FOREIGN KEY (`fk_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `FK_detalle_factura_factura` FOREIGN KEY (`fk_id_factura`) REFERENCES `factura` (`id_factura`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `factura`
+--
+ALTER TABLE `factura`
+  ADD CONSTRAINT `FK_factura_usuario` FOREIGN KEY (`fk_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
