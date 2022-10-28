@@ -1,5 +1,5 @@
 <?php
-echo "<form class='formLoginAdmin' method='post' action='index.php?controller=Admin&action=login'>
+echo "<form class='formLoginAdmin' method='post' action='index.php?controller=Admin&action=validar'>
 <label for=''>User Name</label>
 <input type='email' id='email' name='email'><br><br>
 <label for='password'>Password</label>
