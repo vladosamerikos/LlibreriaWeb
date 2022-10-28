@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!--Controlador frontal: fichero que se encarga de cargarlo absolutamente todo -->
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +11,7 @@
     <title>Document</title>
 </head>
 <body>
-<?php 
+<?php
 require_once "autoload.php";
 require_once "views/general/cabecera.html";
 require_once "views/general/menu.php";
