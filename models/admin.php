@@ -42,8 +42,11 @@ class Admin extends Database {
     }
 
     public function validar(){
-        $_POST['email']);
-        setClave($_POST['password']);
+        $email = $_POST['email'];
+        $clave = $_POST['password'];
+        $sql = "SELECT * FROM admin WHERE correo LIKE $email and clave LIKE $clave";
+        $rows = $this->db->query($sql);
+        
     }
 
 

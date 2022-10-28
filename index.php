@@ -14,7 +14,7 @@ session_start();
 <?php
 require_once "views/general/cabecera.html";
 require_once "views/general/menu.php";
-
+require_once "controllers/AdminController.php";
 if (isset($_GET['controller'])){
     $nombreController = $_GET['controller']."Controller";
 }
