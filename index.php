@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!--Controlador frontal: fichero que se encarga de cargarlo absolutamente todo  hola gerard-->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +12,9 @@ session_start();
 <?php
 require_once "views/general/cabecera.html";
 require_once "views/general/menu.php";
-require_once "controllers/AdminController.php";
+require_once "controllers/LoginController.php";
+require_once "controllers/PanelController.php";
+
 if (isset($_GET['controller'])){
     $nombreController = $_GET['controller']."Controller";
 }

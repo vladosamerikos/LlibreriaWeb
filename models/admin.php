@@ -41,18 +41,13 @@ class Admin extends Database {
         return $this;
     }
 
-    public function validaruser(){
-        $email = $_POST['email'];
-        $clave = $_POST['password'];
-        $sql = "SELECT * FROM admin WHERE correo LIKE $email and clave LIKE $clave";
-        $rows = $this->db->query($sql);
-        if($rows == 1){
-            $_SESSION['email'] = $email;
-            $_SESSION['nombre'] = $rows['nombre'];
-            $_SESSION['clave'] = $clave;
-        }
-        else{
-            echo "<h1>Datos incorrectos</h1>";
+    public function login($email, $password){
+        $consulta = $this->db->prepare("SELECT * FROM admin WHERE correo LIKE '$email' and clave LIKE '$password'");
+        $consulta->execute();
+        if ($consulta->fetch(PDO::FETCH_OBJ)){
+            return true;
+        }else{
+            return false;
         }
     }
 
