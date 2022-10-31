@@ -1,17 +1,10 @@
 <?php
 require_once("database.php");
-<<<<<<< HEAD
 class Admin extends Database
 {
-=======
-class Admin extends Database {
-    
->>>>>>> 2221470e997ceca896e11da24bd07ef42fcce7ef
     private $email;
     private $nombre;
-    private $clave; 
-
-    // prubas github
+    private $clave;
 
     public function login($email, $password)
     {
