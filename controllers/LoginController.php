@@ -6,9 +6,11 @@ class LoginController {
 
     public function index() {
         if(isset($_SESSION['email'])){
-            header('location:');
+            require "views/loginAdmin/formulario.php";
+        }else{
+            echo "hay session";
         }
-        require "views/loginAdmin/formulario.php";
+        
     }
     
     public function login(){

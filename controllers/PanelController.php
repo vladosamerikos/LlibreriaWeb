@@ -1,14 +1,14 @@
 <?php
-
 require "models/libro.php";
-require "views/adminPanel/menu.php";
-class PanelController {
 
-    
+class PanelController
+{
 
-    public function mostrarLibros(){
+    public function mostrarLibros()
+    {
+        require_once "views/adminPanel/menu.php";
         $libro = new Libro();
-        $catalogo=$libro->obtenerCatalogo();
+        $catalogo = $libro->obtenerCatalogo();
         require_once "views/adminPanel/tablaLibros.php";
     }
 }
