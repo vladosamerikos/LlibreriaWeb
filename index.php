@@ -1,4 +1,4 @@
-<!--Controlador frontal: fichero que se encarga de cargarlo absolutamente todo  hola gerard-->
+<!--Controlador frontal: fichero que se encarga de cargarlo absolutamente-->
 <!DOCTYPE html>
 <html lang="en">
 

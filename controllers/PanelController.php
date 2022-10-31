@@ -1,9 +1,9 @@
 <?php
 require "models/libro.php";
+require "models/categoria.php";
 
-class PanelController
-{
-
+class PanelController {
+    
     public function mostrarLibros()
     {
         require_once "views/adminPanel/menu.php";
@@ -17,7 +17,6 @@ class PanelController
         require_once "views/adminPanel/menu.php";
         require_once "views/adminPanel/anadirLibro.php";
     }
-
 
     public function anadirLibro(){
         require_once "views/adminPanel/menu.php";
@@ -33,4 +32,27 @@ class PanelController
         $libro->anadir($_idgenero, $_isbn, $_nombre, $_descripcion_short, $_descripcion, $_stock, $_precio_venta, $_imagen);
 
     }
+
+    public function mostrarCategorias()
+    {
+        require_once "views/adminPanel/menu.php";
+        $categoria = new Categoria();
+        $catalogo = $categoria->obtenerCatalogo();
+        require_once "views/adminPanel/tablaCategorias.php";
+    }
+
+    public function mostrarAnadirCategoria()
+    {
+        require_once "views/adminPanel/menu.php";
+        require_once "views/adminPanel/anadirCategoria.php";
+    }
+
+    public function anadirCategoria(){
+        require_once "views/adminPanel/menu.php";
+        $categoria = new Categoria();
+        $nombre = $_POST['nombre'];
+        $categoria->anadir($nombre);
+
+    }
+
 }
