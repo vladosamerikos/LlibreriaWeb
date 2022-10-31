@@ -1,5 +1,6 @@
 <?php
-echo "<table class='admin-panel-libros-table'>
+echo "<a href='index.php?controller=Panel&action=mostrarAnadirLibro'>Añadir libro</a>
+<table class='admin-panel-libros-table'>
     <tr>
         <th>Id</th>
         <th>Genero</th>

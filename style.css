@@ -70,3 +70,11 @@ a {
     border: 1px solid black;
 }
 
+/* Formulario añadir libro */
+
+.anadir-libro-form{
+    display: block;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
