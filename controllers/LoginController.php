@@ -1,5 +1,4 @@
 <?php
-session_start();
 require "models/admin.php";
 
 class LoginController
@@ -7,11 +6,11 @@ class LoginController
 
     public function index()
     {
-        // if(isset($_SESSION['email'])){
-        require "views/loginAdmin/formulario.php";
-        // }else{
-        //     echo "hay session";
-        // }
+        if(isset($_SESSION['email'])){
+            header('Location: index.php?controller=Panel&action=mostrarLibros');
+        }else{
+            require "views/loginAdmin/formulario.php";
+        }
 
     }
 

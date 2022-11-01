@@ -21,8 +21,13 @@ foreach ($catalogo as $libro) {
         <td>" . $libro['descripcion_short'] . "</td>
         <td>" . $libro['stock'] . "</td>
         <td>" . $libro['precio_venta'] . "</td>
-        <td>" . $libro['imagen'] . "</td>
-        <td>" . $libro['estado'] . "</td>
+        <td>" . $libro['imagen'] . "</td>";
+        if($libro['estado']){
+            echo"<td><a href='index.php?controller=Panel&action=desactivarLibro&id=". $libro['id_articulo'] ."''><img src='img/on.svg'></a></td>";
+        }else{
+            echo"<td><a href='index.php?controller=Panel&action=activarLibro&id=". $libro['id_articulo'] ."'><img src='img/off.svg'></a></td>";
+        }
+        echo"
         </tr>";
 }
 echo "</table>";

@@ -13,9 +13,16 @@ class Categoria extends Database
     // private $imagen;
     // private $estado;
 
-    public function obtenerCatalogo()
+    public function obtenerListado()
     {
         $consulta = $this->db->prepare("SELECT * FROM generos");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
+    public function obtenerListadoActivos()
+    {
+        $consulta = $this->db->prepare("SELECT * FROM generos WHERE estado = 1");
         $consulta->execute();
         $resultado = $consulta->fetchAll();
         return $resultado;

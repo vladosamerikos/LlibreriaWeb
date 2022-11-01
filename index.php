@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!--Controlador frontal: fichero que se encarga de cargarlo absolutamente-->
 <!DOCTYPE html>
 <html lang="en">

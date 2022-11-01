@@ -38,4 +38,16 @@ class Libro extends Database
         echo "Nuevo libro agregado correctamente";
         echo "ID del ultimo libro: " . $last_id;
     }
+
+    public function activar($id){
+        $consulta = $this->db->prepare("UPDATE articulo SET estado = 1 WHERE id_articulo LIKE '$id'");
+        $count =$consulta->execute();
+        echo $count." registros actualizados correctamente";
+    } 
+
+    public function desactivar($id){
+        $consulta = $this->db->prepare("UPDATE articulo SET estado = 0 WHERE id_articulo LIKE '$id'");
+        $count =$consulta->execute();
+        echo $count." registros actualizados correctamente";
+    } 
 }
