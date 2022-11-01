@@ -1,6 +1,7 @@
 <?php
 require "models/libro.php";
 require "models/categoria.php";
+require "models/pedidos.php";
 
 class PanelController {
     
@@ -109,6 +110,14 @@ class PanelController {
         $categoria = new Categoria();
         $catalogo = $categoria->obtenerListado();
         require_once "views/adminPanel/tablaCategorias.php";
+    }
+
+    public function mostrarPedidos()
+    {
+        require_once "views/adminPanel/menu.php";
+        $pedido = new Pedido();
+        $catalogo = $pedido->obtenerPedido();
+        require_once "views/adminPanel/tablaPedidos.php";
     }
 
     public function mostrarAnadirCategoria()
