@@ -39,6 +39,24 @@ class Libro extends Database
         echo "ID del ultimo libro: " . $last_id;
     }
 
+    public function editar(
+        $id_articlo,
+        $idgenero,
+        $isbn,
+        $nombre,
+        $descripcion_short,
+        $descripcion,
+        $stock,
+        $precio_venta,
+        $imagen
+    ) 
+    {
+        $consulta = $this->db->prepare("UPDATE articulo SET fk_id_genero= $idgenero, isbn = $isbn, nombre = '$nombre', descripcion_short= '$descripcion_short', descripcion = '$descripcion', stock = $stock, precio_venta = $precio_venta, imagen = '$imagen', estado=1 WHERE id_articulo = $id_articlo") ;
+        $consulta->execute();
+        $count =$consulta->execute();
+        echo $count." registros actualizados correctamente";
+    }
+
     public function activar($id){
         $consulta = $this->db->prepare("UPDATE articulo SET estado = 1 WHERE id_articulo LIKE '$id'");
         $count =$consulta->execute();
@@ -50,4 +68,11 @@ class Libro extends Database
         $count =$consulta->execute();
         echo $count." registros actualizados correctamente";
     } 
+
+    public function obtenerInfo($id){
+        $consulta = $this->db->prepare("SELECT * FROM articulo WHERE id_articulo = $id");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
 }

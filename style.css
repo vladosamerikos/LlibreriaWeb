@@ -11,6 +11,10 @@ a {
     text-decoration: none;
 }
 
+.ocult{
+    display: none;
+}
+
 /* Menu horizontal admin */
 .main-menu-bar {
     height: 100px;
@@ -68,6 +72,11 @@ a {
 
 .admin-panel-libros-table td, th, tr{
     border: 1px solid black;
+}
+
+.libroicon{
+    width: 80px;
+    height: 80px;
 }
 
 /* Formulario añadir libro */

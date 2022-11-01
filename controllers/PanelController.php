@@ -60,7 +60,45 @@ class PanelController {
         $libro = new Libro();
         $libro->desactivar($_idlibro);
         header("Location: index.php?controller=Panel&action=mostrarLibros");
+    }
 
+    public function mostrarEditarLibro(){
+        $categoria = new Categoria();
+        $listadoCategorias = $categoria->obtenerListadoActivos();
+        $_idlibro =$_GET['id'];
+        $libro = new Libro();
+        $datosLibro=$libro->obtenerInfo($_idlibro);
+        require_once "views/adminPanel/menu.php";
+        require_once "views/adminPanel/editarLibro.php";
+    }
+
+    public function editarLibro(){
+        require_once "views/adminPanel/menu.php";
+        $libro = new Libro();
+        $_id_articulo = $_POST['id_articulo'];
+        $_idgenero = trim($_POST['idgenero']);
+        $_isbn = trim($_POST['isbn']);
+        $_nombre = $_POST['nombre'];
+        $_descripcion_short = $_POST['descripcion_short'];
+        $_descripcion = $_POST['descripcion'];
+        $_stock = $_POST['stock'];
+        $_precio_venta = $_POST['precio_venta'];
+
+        if (is_uploaded_file($_FILES['imagen']['tmp_name'])) {
+            $nombreDirectorio = "img/";
+            $idUnico = $_isbn;
+            $nomorig = $_FILES['imagen']['name'];
+            $cont = explode(".", $nomorig);
+            $ext = $cont[1];
+            $nombreFichero = $idUnico . "." . $ext;
+            move_uploaded_file(
+                $_FILES['imagen']['tmp_name'],
+                $nombreDirectorio . $nombreFichero
+            );
+        }
+        $_imagen = $nombreDirectorio . $nombreFichero;
+        $libro->editar($_id_articulo, $_idgenero, $_isbn, $_nombre, $_descripcion_short, $_descripcion, $_stock, $_precio_venta, $_imagen);
+        header("Location: index.php?controller=Panel&action=mostrarLibros");
     }
 
 
