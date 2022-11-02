@@ -134,3 +134,21 @@ tr {
     padding: 8px;
     margin-right: 5%;
 }
+
+/* ESTILOS MÓVIL*/
+
+/* Menú panel administrador fijo*/
+
+@media screen and (max-width: 1080px) {
+    div.admin-menu-bar{
+        width: 200px;
+        height: 50%;
+        background-color: #333;
+        margin-top: 15%;
+
+        /* Esto lo mantendra en su sitio */
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+}
