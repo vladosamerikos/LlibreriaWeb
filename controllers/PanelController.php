@@ -5,6 +5,8 @@ require "models/pedidos.php";
 
 class PanelController {
     
+    /* CONTROLADORES DE LIBROS */
+
     public function mostrarLibros()
     {
         require_once "views/adminPanel/menu.php";
@@ -102,7 +104,7 @@ class PanelController {
         header("Location: index.php?controller=Panel&action=mostrarLibros");
     }
 
-
+    /* CONTROLADORES DE CATEGORIAS */
 
     public function mostrarCategorias()
     {
@@ -110,14 +112,6 @@ class PanelController {
         $categoria = new Categoria();
         $catalogo = $categoria->obtenerListado();
         require_once "views/adminPanel/tablaCategorias.php";
-    }
-
-    public function mostrarPedidos()
-    {
-        require_once "views/adminPanel/menu.php";
-        $pedido = new Pedido();
-        $catalogo = $pedido->obtenerPedido();
-        require_once "views/adminPanel/tablaPedidos.php";
     }
 
     public function mostrarAnadirCategoria()
@@ -132,6 +126,49 @@ class PanelController {
         $nombre = $_POST['nombre'];
         $categoria->anadir($nombre);
 
+    }
+
+    public function activarCategoria(){
+        $_idcategoria =$_GET['id'];
+        $categoria = new Categoria();
+        $categoria->activar($_idcategoria);
+        header("Location: index.php?controller=Panel&action=mostrarCategorias");
+    }
+
+    public function desactivarCategoria(){
+        $_idcategoria =$_GET['id'];
+        $categoria = new Categoria();
+        $categoria->desactivar($_idcategoria);
+        header("Location: index.php?controller=Panel&action=mostrarCategorias");
+    }
+
+    public function mostrarEditarCategoria(){
+        $_idcategoria =$_GET['id'];
+        $categoria = new Categoria();
+        $datosCategoria=$categoria->obtenerInfo($_idcategoria);
+        require_once "views/adminPanel/menu.php";
+        require_once "views/adminPanel/editarCategoria.php";
+    }
+
+    public function editarCategoria(){
+        require_once "views/adminPanel/menu.php";
+        $categoria = new Categoria();
+        $_id_genero = $_POST['id_genero'];
+        $_nombre = $_POST['nombre'];
+        $_estado = $_POST['estado'];
+
+        $categoria->editar($_id_genero, $_nombre);
+        header("Location: index.php?controller=Panel&action=mostrarCategorias");
+    }
+
+    /* CONTROLADORES DE PEDIDOS */
+
+    public function mostrarPedidos()
+    {
+        require_once "views/adminPanel/menu.php";
+        $pedido = new Pedido();
+        $catalogo = $pedido->obtenerPedido();
+        require_once "views/adminPanel/tablaPedidos.php";
     }
 
 }
