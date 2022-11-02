@@ -135,6 +135,16 @@ tr {
     margin-right: 5%;
 }
 
+footer{
+    height: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
 /* ESTILOS MÓVIL*/
 
 /* Menú panel administrador fijo*/
