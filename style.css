@@ -5,13 +5,14 @@
 
 body {
     height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 a {
     text-decoration: none;
 }
 
-.ocult{
+.ocult {
     display: none;
 }
 
@@ -39,7 +40,7 @@ a {
 
 /* Formulario login admin */
 
-.formLoginAdmin{
+.formLoginAdmin {
     margin-top: 100px;
     width: 300px;
     margin-left: auto;
@@ -70,18 +71,20 @@ a {
     border-collapse: collapse;
 }
 
-.admin-panel-libros-table td, th, tr{
+.admin-panel-libros-table td,
+th,
+tr {
     border: 1px solid black;
 }
 
-.libroicon{
+.libroicon {
     width: 80px;
     height: 80px;
 }
 
 /* Formulario añadir libro */
 
-.anadir-libro-form{
+.anadir-libro-form {
     display: block;
     width: 300px;
     margin-left: auto;
@@ -90,7 +93,44 @@ a {
 
 /* Tabla pedidos */
 
-.admin-panel-pedidos-table td, th, tr{
-    border: 1px solid black;
+.admin-panel-pedidos-table {
+    display: inline-block;
     border-collapse: collapse;
+}
+
+.admin-panel-pedidos-table td,
+th,
+tr {
+    border: 1px solid black;
+}
+
+/* Titulos de paginas del panel de Administrador */
+
+.admin-panel-title-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 85%;
+    height: 50px;
+    float: right;
+}
+
+.admin-panel-title {
+    display: inline-block;
+    font-size: 30px;
+}
+
+.orange-line {
+    width: 100%;
+    height: 3px;
+    background-color: #FBA00E;
+    margin-top: 10px;
+}
+
+.admin-panel-add-link {
+    display: block;
+    float: right;
+    background-color: #FBA00E;
+    color: black;
+    padding: 8px;
+    margin-right: 5%;
 }
