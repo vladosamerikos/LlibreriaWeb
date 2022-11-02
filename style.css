@@ -138,7 +138,7 @@ tr {
 /* ESTILOS MÓVIL*/
 
 /* Menú panel administrador fijo*/
-
+/* 
 @media screen and (max-width: 1080px) {
     div.admin-menu-bar{
         width: 200px;
@@ -146,9 +146,8 @@ tr {
         background-color: #333;
         margin-top: 15%;
 
-        /* Esto lo mantendra en su sitio */
         position: fixed;
         top: 0;
         left: 0;
     }
-}
+} */
