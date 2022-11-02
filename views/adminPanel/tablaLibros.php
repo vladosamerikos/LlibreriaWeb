@@ -1,5 +1,10 @@
 <?php
-echo "<a href='index.php?controller=Panel&action=mostrarAnadirLibro'>Añadir libro</a>
+echo "
+<div class='admin-panel-title-container'>
+    <h1 class='admin-panel-title'>Productes</h1>
+    <a class='admin-panel-add-link' href='index.php?controller=Panel&action=mostrarAnadirLibro'>Añadir libro</a><br>
+    <div class='orange-line'></div>
+</div>
 <table class='admin-panel-libros-table'>
     <tr>
         <th>Id</th>
