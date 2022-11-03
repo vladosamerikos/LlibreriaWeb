@@ -14,6 +14,7 @@ session_start();
 </head>
 
 <body>
+    <script src="script.js"></script>
     <?php
     require_once "autoload.php";
     require_once "views/general/cabecera.html";
@@ -34,7 +35,6 @@ session_start();
         }
         $controlador->$action();
     } else {
-
         echo "No existe el controlador";
     }
     require_once "views/general/pie.html";

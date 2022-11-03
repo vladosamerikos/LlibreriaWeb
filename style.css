@@ -102,7 +102,7 @@ a {
     height: 60px;
 }
 
-/* Formulario añadir libro */
+/* Formulario añadir/editar libro */
 
 .anadir-libro-form {
     display: block;
@@ -111,6 +111,19 @@ a {
     margin-right: auto;
 }
 
+#edit-container {
+    display: none;
+}
+
+#edit-foto-btn {
+    color: orange;
+}
+
+#edit-foto-btn:hover {
+    color: orange;
+    opacity: 0.8;
+    cursor: pointer;
+}
 
 /* Titulos de paginas del panel de Administrador */
 

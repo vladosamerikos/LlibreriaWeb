@@ -35,7 +35,7 @@ class LibroController
         $_precio_venta = $_POST['precio_venta'];
 
         if (is_uploaded_file($_FILES['imagen']['tmp_name'])) {
-            $nombreDirectorio = "img/";
+            $nombreDirectorio = "img/libros";
             $idUnico = $_isbn;
             $nomorig = $_FILES['imagen']['name'];
             $cont = explode(".", $nomorig);
@@ -81,6 +81,17 @@ class LibroController
     {
         require_once "views/adminPanel/menu.php";
         $libro = new Libro();
+        $_oldimagen = $_POST['oldimagen'];
+        if ($_oldimagen != '') {
+            if (unlink($_oldimagen)) {
+                // mensaje que confirma la eliminacion
+            } else {
+                // mensaje que muestra error
+            }
+        } else {
+            // mensaje que muestra error
+        }
+
         $_id_articulo = $_POST['id_articulo'];
         $_idgenero = trim($_POST['idgenero']);
         $_isbn = trim($_POST['isbn']);
@@ -91,7 +102,7 @@ class LibroController
         $_precio_venta = $_POST['precio_venta'];
 
         if (is_uploaded_file($_FILES['imagen']['tmp_name'])) {
-            $nombreDirectorio = "img/";
+            $nombreDirectorio = "img/libros/";
             $idUnico = $_isbn;
             $nomorig = $_FILES['imagen']['name'];
             $cont = explode(".", $nomorig);
@@ -101,9 +112,13 @@ class LibroController
                 $_FILES['imagen']['tmp_name'],
                 $nombreDirectorio . $nombreFichero
             );
+            $_imagen = $nombreDirectorio . $nombreFichero;
+        } else {
+            $_imagen = $_oldimagen;
         }
-        $_imagen = $nombreDirectorio . $nombreFichero;
         $libro->editar($_id_articulo, $_idgenero, $_isbn, $_nombre, $_descripcion_short, $_descripcion, $_stock, $_precio_venta, $_imagen);
+
+
         header("Location: index.php?controller=Libro&action=mostrarLibros");
     }
 }

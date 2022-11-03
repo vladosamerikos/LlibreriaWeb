@@ -19,6 +19,15 @@ echo "</select><br><br>
     <input type='text' id='stock' name='stock' value='" . $datosLibro[0]['stock'] . "'><br><br>
     <label for='precio_venta'>Precio</label>
     <input type='number' id='precio_venta' name='precio_venta' value='" . $datosLibro[0]['precio_venta'] . "'><br><br>
+    <span id='edit-foto-btn' onclick='mostrarEditFoto()'>Editar foto</span><br><br>
+    <div id='edit-container'>";
+if ($datosLibro[0]['imagen'] != null) {
+    echo "<img class='libroicon' src='" . $datosLibro[0]['imagen'] . "'>";
+} else {
+    echo "No tenia foto";
+}
+echo "<input readonly class='ocult' type='text' id='oldimagen' name='oldimagen' value='" . $datosLibro[0]['imagen'] . "'>
     <input type='file' id='imagen' name='imagen'><br><br>
+    </div>
     <input name='submit' type='submit' id='submit' value='Editar libro'><br>
 </form>";
