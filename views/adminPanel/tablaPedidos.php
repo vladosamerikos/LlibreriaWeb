@@ -4,7 +4,7 @@ echo "
     <h1 class='admin-panel-title'>Pedidos</h1>
     <div class='orange-line'></div>
 </div>
-<table class='admin-panel-pedidos-table'>
+<table class='admin-panel-page-table'>
     <tr>
         <th>Id Factura</th>
         <th>Id USuario</th>
@@ -14,11 +14,11 @@ echo "
     </tr>";
 foreach ($catalogo as $pedido) {
     echo " <tr>
-        <td>" . $pedido['id_factura'] . "</td>
-        <td>" . $pedido['fk_id_usuario'] . "</td>
-        <td>" . $pedido['fecha'] . "</td>
-        <td>" . $pedido['total'] . "</td>
-        <td>" . $pedido['estado'] . "</td>
+        <td class='text'>" . $pedido['id_factura'] . "</td>
+        <td class='text'>" . $pedido['fk_id_usuario'] . "</td>
+        <td class='text'>" . $pedido['fecha'] . "</td>
+        <td class='text'>" . $pedido['total'] . "</td>
+        <td class='text'>" . $pedido['estado'] . "</td>
         </tr>";
 }
 echo "</table>";

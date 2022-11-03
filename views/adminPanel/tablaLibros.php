@@ -5,7 +5,7 @@ echo "
     <a class='admin-panel-add-link' href='index.php?controller=Libro&action=mostrarAnadirLibro'>Añadir libro</a><br>
     <div class='orange-line'></div>
 </div>
-<table class='admin-panel-libros-table'>
+<table class='admin-panel-page-table'>
     <tr>
         <th>Id</th>
         <th>Genero</th>
@@ -29,12 +29,12 @@ foreach ($catalogo as $libro) {
         <td class='text'>" . $libro['precio_venta'] . "</td>
         <td><img class='libroicon' src='" . $libro['imagen'] . "'></td>";
     if ($libro['estado']) {
-        echo "<td><a href='index.php?controller=Libro&action=desactivarLibro&id=" . $libro['id_articulo'] . "''><img src='img/on.svg'></a></td>";
+        echo "<td><a href='index.php?controller=Libro&action=desactivarLibro&id=" . $libro['id_articulo'] . "''><img class='control-icons' src='img/on.svg'></a></td>";
     } else {
-        echo "<td><a href='index.php?controller=Libro&action=activarLibro&id=" . $libro['id_articulo'] . "'><img src='img/off.svg'></a></td>";
+        echo "<td><a href='index.php?controller=Libro&action=activarLibro&id=" . $libro['id_articulo'] . "'><img class='control-icons' src='img/off.svg'></a></td>";
     }
     echo "
-        <td><a href='index.php?controller=Libro&action=mostrarEditarLibro&id=" . $libro['id_articulo'] . "''><img src='img/edit.svg'></a></td>
+        <td><a href='index.php?controller=Libro&action=mostrarEditarLibro&id=" . $libro['id_articulo'] . "''><img class='control-icons' src='img/edit.svg'></a></td>
         </tr>";
 }
 echo "</table>";

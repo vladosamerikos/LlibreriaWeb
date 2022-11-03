@@ -67,30 +67,26 @@ a {
 
 /* Tabla catalogo de libros */
 
-.admin-panel-libros-table {
+.admin-panel-page-table {
+    margin-left: 5%;
     display: inline-block;
 }
 
-.admin-panel-libros-table th {
+.admin-panel-page-table th {
     color: black;
     border-bottom: 1px solid #FBA00E;
     padding: 2rem 2rem 0.75rem 2rem;
 }
 
-.admin-panel-libros-table tr:nth-child(odd) {
+.admin-panel-page-table tr:nth-child(odd) {
     color: #1F1F1F;
 }
 
-.admin-panel-libros-table tr:nth-child(even) {
+.admin-panel-page-table tr:nth-child(even) {
     color: gray;
 }
 
-.admin-panel-libros-table td.text {
-    padding: 0rem 1rem 0rem 1rem;
-    text-align: center;
-}
-
-.admin-panel-libros-table td img.libroicon {
+.text {
     padding: 0rem 1rem 0rem 1rem;
     text-align: center;
 }
@@ -98,6 +94,12 @@ a {
 .libroicon {
     width: 80px;
     height: 80px;
+}
+
+.control-icons {
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
 }
 
 /* Formulario añadir libro */
@@ -109,18 +111,6 @@ a {
     margin-right: auto;
 }
 
-/* Tabla pedidos */
-
-.admin-panel-pedidos-table {
-    display: inline-block;
-    border-collapse: collapse;
-}
-
-.admin-panel-pedidos-table td,
-th,
-tr {
-
-}
 
 /* Titulos de paginas del panel de Administrador */
 
@@ -153,7 +143,7 @@ tr {
     margin-right: 5%;
 }
 
-footer{
+footer {
     height: 100px;
     background-color: black;
     color: white;
