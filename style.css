@@ -68,13 +68,16 @@ a {
 
 .admin-panel-libros-table {
     display: inline-block;
-    border-collapse: collapse;
+    
 }
 
-.admin-panel-libros-table td,
-th,
-tr {
-    border: 1px solid black;
+.admin-panel-libros-table td {
+    color: gray;
+}
+
+.admin-panel-libros-table th {
+    color: black;
+    border-bottom: 1px solid orange;
 }
 
 .libroicon {
@@ -101,7 +104,7 @@ tr {
 .admin-panel-pedidos-table td,
 th,
 tr {
-    border: 1px solid black;
+
 }
 
 /* Titulos de paginas del panel de Administrador */
