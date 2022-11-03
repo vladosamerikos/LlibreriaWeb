@@ -6,12 +6,11 @@ class LoginController
 
     public function index()
     {
-        if(isset($_SESSION['email'])){
-            header('Location: index.php?controller=Panel&action=mostrarLibros');
-        }else{
+        if (isset($_SESSION['email'])) {
+            header('Location: index.php?controller=Libro&action=mostrarLibros');
+        } else {
             require "views/loginAdmin/formulario.php";
         }
-
     }
 
     public function login()
@@ -24,7 +23,7 @@ class LoginController
         if ($_result) {
             $_SESSION['email'] = $_email;
             echo "login correcto";
-            header('Location: index.php?controller=Panel&action=mostrarLibros');
+            header('Location: index.php?controller=Libro&action=mostrarLibros');
             die();
         } else {
             echo "login incorrecto";

@@ -1,11 +1,10 @@
 <?php
 require "models/libro.php";
 require "models/categoria.php";
-require "models/pedidos.php";
 
-class PanelController {
-    
-    /* CONTROLADORES DE LIBROS */
+class LibroController
+{
+
 
     public function mostrarLibros()
     {
@@ -23,7 +22,8 @@ class PanelController {
         require_once "views/adminPanel/anadirLibro.php";
     }
 
-    public function anadirLibro(){
+    public function anadirLibro()
+    {
         require_once "views/adminPanel/menu.php";
         $libro = new Libro();
         $_idgenero = trim($_POST['idgenero']);
@@ -48,34 +48,37 @@ class PanelController {
         }
         $_imagen = $nombreDirectorio . $nombreFichero;
         $libro->anadir($_idgenero, $_isbn, $_nombre, $_descripcion_short, $_descripcion, $_stock, $_precio_venta, $_imagen);
-
     }
 
-    public function activarLibro(){
-        $_idlibro =$_GET['id'];
+    public function activarLibro()
+    {
+        $_idlibro = $_GET['id'];
         $libro = new Libro();
         $libro->activar($_idlibro);
-        header("Location: index.php?controller=Panel&action=mostrarLibros");
+        header("Location: index.php?controller=Libro&action=mostrarLibros");
     }
 
-    public function desactivarLibro(){
-        $_idlibro =$_GET['id'];
+    public function desactivarLibro()
+    {
+        $_idlibro = $_GET['id'];
         $libro = new Libro();
         $libro->desactivar($_idlibro);
-        header("Location: index.php?controller=Panel&action=mostrarLibros");
+        header("Location: index.php?controller=Libro&action=mostrarLibros");
     }
 
-    public function mostrarEditarLibro(){
+    public function mostrarEditarLibro()
+    {
         $categoria = new Categoria();
         $listadoCategorias = $categoria->obtenerListadoActivos();
-        $_idlibro =$_GET['id'];
+        $_idlibro = $_GET['id'];
         $libro = new Libro();
-        $datosLibro=$libro->obtenerInfo($_idlibro);
+        $datosLibro = $libro->obtenerInfo($_idlibro);
         require_once "views/adminPanel/menu.php";
         require_once "views/adminPanel/editarLibro.php";
     }
 
-    public function editarLibro(){
+    public function editarLibro()
+    {
         require_once "views/adminPanel/menu.php";
         $libro = new Libro();
         $_id_articulo = $_POST['id_articulo'];
@@ -101,74 +104,6 @@ class PanelController {
         }
         $_imagen = $nombreDirectorio . $nombreFichero;
         $libro->editar($_id_articulo, $_idgenero, $_isbn, $_nombre, $_descripcion_short, $_descripcion, $_stock, $_precio_venta, $_imagen);
-        header("Location: index.php?controller=Panel&action=mostrarLibros");
+        header("Location: index.php?controller=Libro&action=mostrarLibros");
     }
-
-    /* CONTROLADORES DE CATEGORIAS */
-
-    public function mostrarCategorias()
-    {
-        require_once "views/adminPanel/menu.php";
-        $categoria = new Categoria();
-        $catalogo = $categoria->obtenerListado();
-        require_once "views/adminPanel/tablaCategorias.php";
-    }
-
-    public function mostrarAnadirCategoria()
-    {
-        require_once "views/adminPanel/menu.php";
-        require_once "views/adminPanel/anadirCategoria.php";
-    }
-
-    public function anadirCategoria(){
-        require_once "views/adminPanel/menu.php";
-        $categoria = new Categoria();
-        $nombre = $_POST['nombre'];
-        $categoria->anadir($nombre);
-
-    }
-
-    public function activarCategoria(){
-        $_idcategoria =$_GET['id'];
-        $categoria = new Categoria();
-        $categoria->activar($_idcategoria);
-        header("Location: index.php?controller=Panel&action=mostrarCategorias");
-    }
-
-    public function desactivarCategoria(){
-        $_idcategoria =$_GET['id'];
-        $categoria = new Categoria();
-        $categoria->desactivar($_idcategoria);
-        header("Location: index.php?controller=Panel&action=mostrarCategorias");
-    }
-
-    public function mostrarEditarCategoria(){
-        $_idcategoria =$_GET['id'];
-        $categoria = new Categoria();
-        $datosCategoria=$categoria->obtenerInfo($_idcategoria);
-        require_once "views/adminPanel/menu.php";
-        require_once "views/adminPanel/editarCategoria.php";
-    }
-
-    public function editarCategoria(){
-        require_once "views/adminPanel/menu.php";
-        $categoria = new Categoria();
-        $_id_genero = $_POST['id_genero'];
-        $_nombre = $_POST['nombre'];
-        $_estado = $_POST['estado'];
-
-        $categoria->editar($_id_genero, $_nombre);
-        header("Location: index.php?controller=Panel&action=mostrarCategorias");
-    }
-
-    /* CONTROLADORES DE PEDIDOS */
-
-    public function mostrarPedidos()
-    {
-        require_once "views/adminPanel/menu.php";
-        $pedido = new Pedido();
-        $catalogo = $pedido->obtenerPedido();
-        require_once "views/adminPanel/tablaPedidos.php";
-    }
-
 }

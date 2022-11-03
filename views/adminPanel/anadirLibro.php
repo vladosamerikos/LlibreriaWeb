@@ -1,10 +1,10 @@
 <?php
-echo "<form class='anadir-libro-form' method='post' ENCTYPE='multipart/form-data' action='index.php?controller=Panel&action=anadirLibro'>
+echo "<form class='anadir-libro-form' method='post' ENCTYPE='multipart/form-data' action='index.php?controller=Libro&action=anadirLibro'>
     <label for='idgenero'>Genero</label>
     <select required name='idgenero' id='idgenero'>";
-    foreach ($listadoCategorias as $categorias){
-        echo "<option value=" . $categorias['id_genero'] . ">" . $categorias['nombre'] . "</option>";
-    }
+foreach ($listadoCategorias as $categorias) {
+    echo "<option value=" . $categorias['id_genero'] . ">" . $categorias['nombre'] . "</option>";
+}
 echo "</select><br><br>
     <label for='isbn'>ISBN</label>
     <input type='text' id='isbn' name='isbn'><br><br>
