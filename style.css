@@ -53,8 +53,9 @@ a {
     float: left;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
     width: 15%;
+    margin-top: 70px;
 }
 
 .admin-menu-bar-item {
@@ -68,16 +69,30 @@ a {
 
 .admin-panel-libros-table {
     display: inline-block;
-    
-}
-
-.admin-panel-libros-table td {
-    color: gray;
 }
 
 .admin-panel-libros-table th {
     color: black;
-    border-bottom: 1px solid orange;
+    border-bottom: 1px solid #FBA00E;
+    padding: 2rem 2rem 0.75rem 2rem;
+}
+
+.admin-panel-libros-table tr:nth-child(odd) {
+    color: #1F1F1F;
+}
+
+.admin-panel-libros-table tr:nth-child(even) {
+    color: gray;
+}
+
+.admin-panel-libros-table td.text {
+    padding: 0rem 1rem 0rem 1rem;
+    text-align: center;
+}
+
+.admin-panel-libros-table td img.libroicon {
+    padding: 0rem 1rem 0rem 1rem;
+    text-align: center;
 }
 
 .libroicon {

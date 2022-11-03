@@ -20,13 +20,13 @@ echo "
     </tr>";
 foreach ($catalogo as $libro) {
     echo " <tr>
-        <td>" . $libro['id_articulo'] . "</td>
-        <td>" . $libro['genero'] . "</td>
-        <td>" . $libro['isbn'] . "</td>
-        <td>" . $libro['nombre'] . "</td>
-        <td>" . $libro['descripcion_short'] . "</td>
-        <td>" . $libro['stock'] . "</td>
-        <td>" . $libro['precio_venta'] . "</td>
+        <td class='text'>" . $libro['id_articulo'] . "</td>
+        <td class='text'>" . $libro['genero'] . "</td>
+        <td class='text'>" . $libro['isbn'] . "</td>
+        <td class='text'>" . $libro['nombre'] . "</td>
+        <td class='text'>" . $libro['descripcion_short'] . "</td>
+        <td class='text'>" . $libro['stock'] . "</td>
+        <td class='text'>" . $libro['precio_venta'] . "</td>
         <td><img class='libroicon' src='" . $libro['imagen'] . "'></td>";
         if($libro['estado']){
             echo"<td><a href='index.php?controller=Panel&action=desactivarLibro&id=". $libro['id_articulo'] ."''><img src='img/on.svg'></a></td>";
