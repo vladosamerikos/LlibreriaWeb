@@ -30,7 +30,6 @@ class Categoria extends Database
     public function editar($id_genero, $nombre)
     {
         $consulta = $this->db->prepare("UPDATE generos SET nombre = '$nombre' WHERE id_genero = $id_genero") ;
-        $consulta->execute();
         $count =$consulta->execute();
         echo $count." registros actualizados correctamente";
     }
@@ -43,8 +42,10 @@ class Categoria extends Database
 
     public function desactivar($id){
         $consulta = $this->db->prepare("UPDATE generos SET estado = 0 WHERE id_genero LIKE '$id'");
+        $consulta2 = $this->db->prepare("UPDATE articulo SET fk_id_genero = 0 WHERE fk_id_genero = $id") ;
         $count =$consulta->execute();
-        echo $count." registros actualizados correctamente";
+        $count2 =$consulta2->execute();
+        echo $count+$count2." registros actualizados correctamente";
     }
 
     public function obtenerInfo($id){
