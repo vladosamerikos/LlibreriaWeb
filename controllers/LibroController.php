@@ -82,16 +82,6 @@ class LibroController
         require_once "views/adminPanel/menu.php";
         $libro = new Libro();
         $_oldimagen = $_POST['oldimagen'];
-        if ($_oldimagen != '') {
-            if (unlink($_oldimagen)) {
-                // mensaje que confirma la eliminacion
-            } else {
-                // mensaje que muestra error
-            }
-        } else {
-            // mensaje que muestra error
-        }
-
         $_id_articulo = $_POST['id_articulo'];
         $_idgenero = trim($_POST['idgenero']);
         $_isbn = trim($_POST['isbn']);
@@ -102,6 +92,13 @@ class LibroController
         $_precio_venta = $_POST['precio_venta'];
 
         if (is_uploaded_file($_FILES['imagen']['tmp_name'])) {
+            // Eliminamos la imagen anterior
+            if (unlink($_oldimagen)) {
+                // mensaje que confirma la eliminacion
+            } else {
+                // mensaje que muestra error
+            }
+
             $nombreDirectorio = "img/libros/";
             $idUnico = $_isbn;
             $nomorig = $_FILES['imagen']['name'];

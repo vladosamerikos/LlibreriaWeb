@@ -2,16 +2,6 @@
 require_once("database.php");
 class Categoria extends Database
 {
-    // private $id_articlo;
-    // private $id_genero;
-    // private $isbn;
-    // private $nombre;
-    // private $descripcion_short;
-    // private $descripcion;
-    // private $stock;
-    // private $precio_venta;
-    // private $imagen;
-    // private $estado;
 
     public function obtenerListado()
     {
@@ -37,9 +27,9 @@ class Categoria extends Database
         echo "ID de la ultima categoria: " . $last_id;
     }
 
-    public function editar($_id_genero, $_nombre)
+    public function editar($id_genero, $nombre)
     {
-        $consulta = $this->db->prepare("UPDATE generos SET nombre = '$_nombre' WHERE id_genero = $_id_genero") ;
+        $consulta = $this->db->prepare("UPDATE generos SET nombre = '$nombre' WHERE id_genero = $id_genero") ;
         $consulta->execute();
         $count =$consulta->execute();
         echo $count." registros actualizados correctamente";
