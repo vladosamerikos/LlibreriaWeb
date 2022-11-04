@@ -23,20 +23,33 @@ a {
 
 }
 
-/* .main-menu-bar-logo {} */
+.main-menu-bar-logo {
+    margin-left: 10px;
+}
 
 .main-menu-list {
     float: right;
     display: flex;
     flex-direction: row;
     list-style: none;
+    margin-top: 40px;
 }
 
 .main-menu-list-item>a {
     color: white;
-    width: 200px;
-    margin-right: 20px;
+    margin-right: 100px;
+    margin-top: 50px;
+    border-bottom: 2px solid #FBA00E;
+    align-items: center;
+    padding: 8px;
 }
+
+.main-menu-list-item>a:hover {
+    color: #FBA00E;
+    background-color: white;
+    padding: 8px;
+}
+
 
 /* Formulario login admin */
 
@@ -53,7 +66,7 @@ a {
     float: left;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 70vh;
     width: 15%;
     margin-top: 70px;
 }
@@ -63,6 +76,10 @@ a {
     height: 70px;
     text-align: center;
     line-height: 70px;
+}
+.admin-menu-bar-item:hover {
+    color: #FBA00E;
+    background-color: #1F1F1F;
 }
 
 /* Tabla catalogo de libros */
@@ -156,6 +173,11 @@ a {
     margin-right: 5%;
 }
 
+.admin-panel-add-link:hover{
+    color: #FBA00E;
+    background-color: #1F1F1F;
+}
+
 footer {
     height: 100px;
     background-color: black;
@@ -163,8 +185,14 @@ footer {
     text-align: center;
     width: 100%;
     bottom: 0;
-    position: absolute;
+    position: fixed;
 }
+
+#div1 {
+    padding-top: 80px;
+}
+
+
 
 /* ESTILOS MÓVIL */
 
