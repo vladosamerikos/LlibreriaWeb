@@ -52,7 +52,6 @@ class Libro extends Database
     ) 
     {
         $consulta = $this->db->prepare("UPDATE articulo SET fk_id_genero= $idgenero, isbn = $isbn, nombre = '$nombre', descripcion_short= '$descripcion_short', descripcion = '$descripcion', stock = $stock, precio_venta = $precio_venta, imagen = '$imagen', estado=1 WHERE id_articulo = $id_articlo") ;
-        $consulta->execute();
         $count =$consulta->execute();
         echo $count." registros actualizados correctamente";
     }
