@@ -1,7 +1,7 @@
 <?php
 echo "
 <div class='admin-panel-title-container'>
-    <h1 class='admin-panel-title'>Productes</h1>
+    <h1 class='admin-panel-title'>Libros</h1>
     <a class='admin-panel-add-link' href='index.php?controller=Libro&action=mostrarAnadirLibro'>Añadir libro</a><br>
     <div class='orange-line'></div>
 </div>

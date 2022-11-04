@@ -48,6 +48,7 @@ a {
     color: #FBA00E;
     background-color: white;
     padding: 8px;
+    border-radius: 5px;
 }
 
 
@@ -189,11 +190,13 @@ a {
     color: black;
     padding: 8px;
     margin-right: 5%;
+    border-radius: 5px;
 }
 
 .admin-panel-add-link:hover{
     color: #FBA00E;
     background-color: #1F1F1F;
+    border-radius: 5px;
 }
 
 footer {
@@ -209,8 +212,6 @@ footer {
 #div1 {
     padding-top: 80px;
 }
-
-
 
 /* ESTILOS MÓVIL */
 
