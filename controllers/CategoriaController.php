@@ -8,6 +8,7 @@ class CategoriaController
     public function mostrarCategorias()
     {
         require_once "views/adminPanel/menu.php";
+        require_once "views/adminPanel/buscador.php";
         $categoria = new Categoria();
         $catalogo = $categoria->obtenerListado();
         require_once "views/adminPanel/tablaCategorias.php";
