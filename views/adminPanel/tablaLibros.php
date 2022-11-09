@@ -4,8 +4,11 @@ echo "
     <h1 class='admin-panel-title'>Libros</h1>
     <a class='admin-panel-add-link' href='index.php?controller=Libro&action=mostrarAnadirLibro'>Añadir libro</a><br>
     <div class='orange-line'></div>
-</div>
-<table class='admin-panel-page-table'>
+</div>";
+
+require_once "views/adminPanel/buscadorLibros.php";
+
+echo    "<table class='admin-panel-page-table'>
     <tr>
         <th>Id</th>
         <th>Genero</th>

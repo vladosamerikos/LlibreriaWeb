@@ -2,6 +2,15 @@
 require_once("database.php");
 class Pedido extends Database
 {
+
+    public function buscarPedidos($filtro)
+    {
+        $consulta = $this->db->prepare("SELECT id_factura, fk_id_usuario, fecha, total, factura.estado AS id_estado FROM factura INNER JOIN estado_factura ON factura.estado = estado_factura.id_estado WHERE fk_id_usuario LIKE '%$filtro%'");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
+
     public function obtenerPedido()
     {
         $consulta = $this->db->prepare("SELECT id_factura, fk_id_usuario, fecha, total, factura.estado AS id_estado FROM factura INNER JOIN estado_factura ON factura.estado = estado_factura.id_estado");

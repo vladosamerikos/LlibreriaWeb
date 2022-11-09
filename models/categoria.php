@@ -3,6 +3,14 @@ require_once("database.php");
 class Categoria extends Database
 {
 
+    public function buscarCategorias($filtro)
+    {
+        $consulta = $this->db->prepare("SELECT * FROM generos WHERE nombre LIKE '%$filtro%'");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
+
     public function obtenerListado()
     {
         $consulta = $this->db->prepare("SELECT * FROM generos");

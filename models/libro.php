@@ -13,6 +13,14 @@ class Libro extends Database
     // private $imagen;
     // private $estado;
 
+    public function buscarLibros($filtro)
+    {
+        $consulta = $this->db->prepare("SELECT id_articulo, generos.nombre AS genero, isbn, articulo.nombre, descripcion_short, descripcion, stock, precio_venta, imagen, articulo.estado  FROM articulo INNER JOIN generos ON articulo.fk_id_genero = generos.id_genero WHERE articulo.nombre LIKE '%$filtro%' OR isbn LIKE '%$filtro%'");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
+
     public function obtenerCatalogo()
     {
         $consulta = $this->db->prepare("SELECT id_articulo, generos.nombre AS genero, isbn, articulo.nombre, descripcion_short, descripcion, stock, precio_venta, imagen, articulo.estado  FROM articulo INNER JOIN generos ON articulo.fk_id_genero = generos.id_genero");

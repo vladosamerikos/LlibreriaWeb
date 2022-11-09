@@ -4,9 +4,11 @@ echo "
     <h1 class='admin-panel-title'>Géneros</h1>
     <a class='admin-panel-add-link' href='index.php?controller=Categoria&action=mostrarAnadirCategoria'>Añadir género</a><br>
     <div class='orange-line'></div>
-</div>
+</div>";
 
-<table class='admin-panel-page-table'>
+require_once "views/adminPanel/buscadorCategorias.php";
+
+echo "<table class='admin-panel-page-table'>
     <tr>
         <th>Id</th>
         <th>Nombre</th>

@@ -3,8 +3,11 @@ echo "
 <div class='admin-panel-title-container'>
     <h1 class='admin-panel-title'>Pedidos</h1>
     <div class='orange-line'></div>
-</div>
-<table class='admin-panel-page-table'>
+</div>";
+
+require_once "views/adminPanel/buscadorPedidos.php";
+
+echo "<table class='admin-panel-page-table'>
     <tr>
         <th>Id Factura</th>
         <th>Id USuario</th>
