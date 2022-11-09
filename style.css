@@ -146,6 +146,23 @@ a {
     cursor: pointer;
 }
 
+/* tabla pedidos */
+
+
+.admin-panel-pedido-editar-estado-form{
+    display: flex;
+    align-items: center;
+}
+
+.admin-panel-pedido-submit-button{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+
+
+
 /* Titulos de paginas del panel de Administrador */
 
 .admin-panel-title-container {
