@@ -221,22 +221,22 @@ footer {
 
 /* Estilos buscador */
 .search_bar {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 70px;
-
+    width: 85%;
+    height: 50px;
+    float: right;
+    background-color: #FBA00E;
 }
 
 .search_img {
+    display: inline-block;
     width: 40px;
     height: 40px;
 }
 
 .search_form {
+    display: inline-block;
     background-color: #90e0ef;
     border: none;
-    display: flex;
-    flex-direction: row;
     width: 700px;
     margin-top: 0px;
 }
