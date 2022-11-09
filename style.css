@@ -205,14 +205,17 @@ footer {
     height: 100px;
     background-color: black;
     color: white;
-    text-align: center;
     width: 100%;
     bottom: 0;
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#div1 {
-    padding-top: 80px;
+.footer-link{
+    color: white;
+    margin-left: 20px;
 }
 
 
