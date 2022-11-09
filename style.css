@@ -113,12 +113,14 @@ a {
 .libroicon {
     width: 80px;
     height: 80px;
+    padding-left: 10%;
+
 }
 
 .control-icons {
-    margin-left: 20px;
     width: 60px;
     height: 60px;
+    padding-left: 25%;
 }
 
 /* Formulario añadir/editar libro */
@@ -212,6 +214,49 @@ footer {
 #div1 {
     padding-top: 80px;
 }
+
+
+/* Estilos buscador */
+.search_bar {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 70px;
+
+}
+
+.search_img {
+    width: 40px;
+    height: 40px;
+}
+
+.search_form {
+    background-color: #90e0ef;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    margin-top: 0px;
+}
+
+.search_form input {
+    border: none;
+    padding-left: 10px;
+    width: 88%;
+}
+
+.search_form button {
+    border: none;
+    background-color: #90e0ef;
+    color: #0077b6;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.search_form button:hover {
+    opacity: 50%;
+}
+
+
 
 /* ESTILOS MÓVIL */
 

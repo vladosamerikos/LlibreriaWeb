@@ -4,7 +4,6 @@ require "models/categoria.php";
 class CategoriaController
 {
 
-
     public function mostrarCategorias()
     {
         require_once "views/adminPanel/menu.php";

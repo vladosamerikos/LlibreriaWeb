@@ -2,7 +2,7 @@
 echo "
 <div class='admin-panel-title-container'>
     <h1 class='admin-panel-title'>Géneros</h1>
-    <a class='admin-panel-add-link' href='index.php?controller=Categoria&action=mostrarAnadirCategoria'>Añadir categoria</a><br>
+    <a class='admin-panel-add-link' href='index.php?controller=Categoria&action=mostrarAnadirCategoria'>Añadir género</a><br>
     <div class='orange-line'></div>
 </div>
 
