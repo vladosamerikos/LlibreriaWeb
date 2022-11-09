@@ -18,6 +18,8 @@ class PedidoController
         $_id_factura = $_POST['id_factura'];
         $pedido = new Pedido();
         $pedido->modificarEstado($_id_factura, $_id_estado);
+        $catalogo = $pedido->obtenerPedido();
+        $estados = $pedido->obtenerEstados();
         require_once "views/adminPanel/menu.php";
         require_once "views/adminPanel/tablaPedidos.php";
     }

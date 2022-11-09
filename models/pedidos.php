@@ -25,9 +25,8 @@ class Pedido extends Database
     }
     
     public function modificarEstado($id_pedido, $id_estado){
-        $consulta = $this->db->prepare("UPDATE factura SET estado = $id_estado WHERE id_articulo = $id_pedido");
+        $consulta = $this->db->prepare("UPDATE factura SET estado = '$id_estado' WHERE id_factura = $id_pedido") ;
         $count =$consulta->execute();
-        echo $count." Registro actualizado correctamente";
     }
 
 }
