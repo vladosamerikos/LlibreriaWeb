@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-11-2022 a las 08:25:49
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 7.4.29
+-- Tiempo de generación: 09-11-2022 a las 09:38:52
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -58,6 +58,7 @@ CREATE TABLE `articulo` (
   `stock` int(11) NOT NULL,
   `precio_venta` float NOT NULL,
   `imagen` varchar(50) NOT NULL,
+  `destacado` tinyint(1) NOT NULL DEFAULT 0,
   `estado` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -65,8 +66,8 @@ CREATE TABLE `articulo` (
 -- Volcado de datos para la tabla `articulo`
 --
 
-INSERT INTO `articulo` (`id_articulo`, `fk_id_genero`, `isbn`, `nombre`, `descripcion_short`, `descripcion`, `stock`, `precio_venta`, `imagen`, `estado`) VALUES
-(1, 0, 541545454, 'torrente', 'fdfdf', 'bla', 50, 85, 'img/libros/541545454.jpg', 1);
+INSERT INTO `articulo` (`id_articulo`, `fk_id_genero`, `isbn`, `nombre`, `descripcion_short`, `descripcion`, `stock`, `precio_venta`, `imagen`, `destacado`, `estado`) VALUES
+(1, 0, 541545454, 'torrente', 'fdfdf', 'bla', 50, 85, 'img/libros/541545454.jpg', 0, 1);
 
 -- --------------------------------------------------------
 
