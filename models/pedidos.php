@@ -5,7 +5,7 @@ class Pedido extends Database
 
     public function buscarPedidos($filtro)
     {
-        $consulta = $this->db->prepare("SELECT id_factura, fk_id_usuario, fecha, total, factura.estado AS id_estado FROM factura INNER JOIN estado_factura ON factura.estado = estado_factura.id_estado WHERE fk_id_usuario LIKE '%$filtro%'");
+        $consulta = $this->db->prepare("SELECT id_factura, U.nombre AS nombreusu, fecha, total, F.estado AS id_estado FROM factura F INNER JOIN usuario U ON U.id_usuario = F.fk_id_usuario INNER JOIN estado_factura  E ON F.estado = E.id_estado WHERE U.nombre LIKE '%$filtro%'");
         $consulta->execute();
         $resultado = $consulta->fetchAll();
         return $resultado;
@@ -13,18 +13,11 @@ class Pedido extends Database
 
     public function obtenerPedido()
     {
-        $consulta = $this->db->prepare("SELECT id_factura, fk_id_usuario, fecha, total, factura.estado AS id_estado FROM factura INNER JOIN estado_factura ON factura.estado = estado_factura.id_estado");
+        $consulta = $this->db->prepare("SELECT id_factura, U.nombre AS nombreusu, fecha, total, F.estado AS id_estado FROM factura F INNER JOIN usuario U ON U.id_usuario = F.fk_id_usuario INNER JOIN estado_factura  E ON F.estado = E.id_estado");
         $consulta->execute();
         $resultado = $consulta->fetchAll();
         return $resultado;
     }
-
-    public function envio($id)
-    {
-        $consulta = $this->db->prepare("UPDATE factura SET estado = enviado WHERE id_articulo LIKE '$id'");
-        $count =$consulta->execute();
-        echo $count." Registro actualizado correctamente";
-    } 
     
     public function obtenerEstados(){
         $consulta = $this->db->prepare("SELECT * FROM estado_factura");
@@ -37,5 +30,9 @@ class Pedido extends Database
         $consulta = $this->db->prepare("UPDATE factura SET estado = '$id_estado' WHERE id_factura = $id_pedido") ;
         $count =$consulta->execute();
     }
+
+    
+
+
 
 }

@@ -1,5 +1,6 @@
 <?php
 echo "
+<div class='admin-panel-content-container'>
 <div class='admin-panel-title-container'>
     <h1 class='admin-panel-title'>Pedidos</h1>
     <div class='orange-line'></div>
@@ -10,7 +11,7 @@ require_once "views/adminPanel/buscadorPedidos.php";
 echo "<table class='admin-panel-page-table'>
     <tr>
         <th>Id Factura</th>
-        <th>Id USuario</th>
+        <th>Usuario</th>
         <th>Fecha</th>
         <th>Total (€)</th>
         <th>Estado</th>
@@ -18,7 +19,7 @@ echo "<table class='admin-panel-page-table'>
 foreach ($catalogo as $pedido) {
     echo " <tr>
         <td class='text'>" . $pedido['id_factura'] . "</td>
-        <td class='text'>" . $pedido['fk_id_usuario'] . "</td>
+        <td class='text'>" . $pedido['nombreusu'] . "</td>
         <td class='text'>" . $pedido['fecha'] . "</td>
         <td class='text'>" . $pedido['total'] . "</td>
         <td class='text'><form class='admin-panel-pedido-editar-estado-form' method='post' action='index.php?controller=Pedido&action=editarEstado'>
@@ -36,4 +37,5 @@ foreach ($catalogo as $pedido) {
         </form></td>
         </tr>";
 }
-echo "</table>";
+echo "</table>
+</div>";

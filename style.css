@@ -83,6 +83,90 @@ a {
     background-color: #1F1F1F;
 }
 
+/* Estilos comunes de las tablas  */
+
+.admin-panel-content-container{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    float: right;
+}
+
+.admin-panel-title-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 50px;
+    float: right;
+}
+
+.admin-panel-title {
+    display: inline-block;
+    font-size: 30px;
+}
+
+.orange-line {
+    width: 100%;
+    height: 3px;
+    background-color: #FBA00E;
+    margin-top: 10px;
+}
+
+.admin-panel-add-link {
+    display: block;
+    float: right;
+    background-color: #FBA00E;
+    color: black;
+    padding: 8px;
+    margin-right: 5%;
+    border-radius: 5px;
+}
+
+.admin-panel-add-link:hover{
+    color: #FBA00E;
+    background-color: #1F1F1F;
+    border-radius: 5px;
+}
+
+/* Estilos buscador */
+.search_bar {
+    display: flex;
+    width: 50%;
+    height: 50px;
+    background-color: #FBA00E;
+    align-items: center;
+}
+
+.search_img {
+    width: 40px;
+    height: 40px;
+}
+
+.search_form {
+    background-color: #FBA00E;
+    border: none;
+    width: 95%;
+    margin-top: 0px;
+}
+
+.search_form input {
+    border: none;
+    padding-left: 10px;
+    width: 88%;
+}
+
+.search_form button {
+    border: none;
+    background-color: #FBA00E;
+    color: #f3f3f3;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.search_form button:hover {
+    opacity: 50%;
+}
+
 /* Tabla catalogo de libros */
 
 .admin-panel-page-table {
@@ -160,47 +244,6 @@ a {
     margin-left: 10px;
 }
 
-
-
-
-/* Titulos de paginas del panel de Administrador */
-
-.admin-panel-title-container {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 85%;
-    height: 50px;
-    float: right;
-}
-
-.admin-panel-title {
-    display: inline-block;
-    font-size: 30px;
-}
-
-.orange-line {
-    width: 100%;
-    height: 3px;
-    background-color: #FBA00E;
-    margin-top: 10px;
-}
-
-.admin-panel-add-link {
-    display: block;
-    float: right;
-    background-color: #FBA00E;
-    color: black;
-    padding: 8px;
-    margin-right: 5%;
-    border-radius: 5px;
-}
-
-.admin-panel-add-link:hover{
-    color: #FBA00E;
-    background-color: #1F1F1F;
-    border-radius: 5px;
-}
-
 footer {
     height: 100px;
     background-color: black;
@@ -217,49 +260,6 @@ footer {
     color: white;
     margin-left: 20px;
 }
-
-
-/* Estilos buscador */
-.search_bar {
-    width: 85%;
-    height: 50px;
-    float: right;
-    background-color: #FBA00E;
-}
-
-.search_img {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-}
-
-.search_form {
-    display: inline-block;
-    background-color: #90e0ef;
-    border: none;
-    width: 700px;
-    margin-top: 0px;
-}
-
-.search_form input {
-    border: none;
-    padding-left: 10px;
-    width: 88%;
-}
-
-.search_form button {
-    border: none;
-    background-color: #90e0ef;
-    color: #0077b6;
-    font-weight: bold;
-    margin-left: 5px;
-}
-
-.search_form button:hover {
-    opacity: 50%;
-}
-
-
 
 /* ESTILOS MÓVIL */
 
