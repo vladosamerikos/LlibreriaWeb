@@ -61,6 +61,51 @@ a {
     margin-right: auto;
 }
 
+/* Formulario login usuario */
+.form-title{
+    margin-bottom: 33px;
+}
+
+.form-row{
+    position: relative;
+    margin-bottom: 25px;
+}
+.form-icon{
+    width: 15px;
+    height: 15px;
+}
+
+.form-container{
+    max-width: 1200px;
+}
+
+.login-user-content{
+    padding-top: 67px;
+    padding-bottom: 87px;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    color: #222;
+}
+
+.login-form-input{
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 6px 30px;
+    font-family: Poppins;
+    box-sizing: border-box;
+}
+
+/* Formulario crear cuenta usuario */
+
+
+
+
 /* Menu vertical admin */
 
 .admin-menu-bar {
