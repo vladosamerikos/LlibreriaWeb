@@ -11,6 +11,7 @@ class Libro extends Database
     // private $stock;
     // private $precio_venta;
     // private $imagen;
+    // private $destacado;
     // private $estado;
 
     public function buscarLibros($filtro)
@@ -78,6 +79,14 @@ class Libro extends Database
 
     public function obtenerInfo($id){
         $consulta = $this->db->prepare("SELECT * FROM articulo WHERE id_articulo = $id");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
+    
+    public function libroDestacado()
+    {
+        $consulta = $this->db->prepare("SELECT * FROM articulo WHERE destacado = 1");
         $consulta->execute();
         $resultado = $consulta->fetchAll();
         return $resultado;

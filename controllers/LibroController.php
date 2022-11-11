@@ -118,4 +118,11 @@ class LibroController
 
         header("Location: index.php?controller=Libro&action=mostrarLibros");
     }
+    public function mostrarLibroDestacado()
+    {
+        require_once "views/general/menu.php";
+        $libro = new Libro();
+        $resultado= $libro->libroDestacado();
+        require_once "views/principal/librosImportantes.php";
+    }
 }
