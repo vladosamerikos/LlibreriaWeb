@@ -266,16 +266,20 @@ footer {
 /* LIBROS IMPORTANTES MAIN PAGE */
 
 .main-page-important-books{
-    display: flex;
-    flex-wrap: wrap;
-    height: 320px;
-    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 700px;
     align-items: center;
     text-align: center;
     margin: auto;
     justify-content: space-between;
 }
 
+.important-book{
+    height: 10%;
+    padding-bottom: 20%;
+    margin: auto;
+}
 .important-book-image{
     display: flex;
     width: 150px;
@@ -291,7 +295,7 @@ footer {
 
 .important-book-short-description{
     color: grey;
-    margin-bottom: 2rem;
+    height: 8rem;
 }
 
 .important-reservation-book-button{
