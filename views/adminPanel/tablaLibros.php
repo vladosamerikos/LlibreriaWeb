@@ -1,5 +1,6 @@
 <?php
 echo "
+<div class='admin-panel-content-container'>
 <div class='admin-panel-title-container'>
     <h1 class='admin-panel-title'>Libros</h1>
     <a class='admin-panel-add-link' href='index.php?controller=Libro&action=mostrarAnadirLibro'>Añadir libro</a><br>
@@ -40,4 +41,5 @@ foreach ($catalogo as $libro) {
         <td><a href='index.php?controller=Libro&action=mostrarEditarLibro&id=" . $libro['id_articulo'] . "''><img class='control-icons' src='img/edit.svg'></a></td>
         </tr>";
 }
-echo "</table>";
+echo "</table>
+</div>";
