@@ -15,6 +15,7 @@ echo "<table class='admin-panel-page-table'>
         <th>Fecha</th>
         <th>Total (€)</th>
         <th>Estado</th>
+        <th>Detalles del pedido</th>
     </tr>";
 foreach ($catalogo as $pedido) {
     echo " <tr>
@@ -36,6 +37,28 @@ foreach ($catalogo as $pedido) {
             <input class='admin-panel-pedido-submit-button' type='image' name='submit' src='./img/upload2.svg' alt='Confirmar'>
         </form></td>
         </tr>";
+        echo "<tr>
+                <td colspan='6'>
+                    <div>
+                        <p>El identificador de la factura es: ".$detalle['fk_id_factura']."</p>
+                        <table>
+                            <tr>
+                                <th>Id articulo</th>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                            </tr>";
+                            foreach ($detalles as $detalle) {
+                                echo "<tr></tr>";
+                            }
+                            echo "<tr>
+                                <td colspan='5'>Precio total: " . $pedido['total'] . "</td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>";
 }
 echo "</table>
 </div>";
