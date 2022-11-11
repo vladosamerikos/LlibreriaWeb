@@ -291,13 +291,14 @@ footer {
 
 .important-book-short-description{
     color: grey;
+    margin-bottom: 2rem;
 }
 
 .important-reservation-book-button{
     text-decoration: none;
     background-color: #FBA00E;
     border-radius: 25px;
-    padding: 15px;
+    padding: 5px 15px 5px 15px;
     color: white;
     border: none;
 }
