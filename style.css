@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +8,7 @@
 body {
     height: 100%;
     font-family: 'Source Sans Pro', sans-serif;
+    
 }
 
 a {
@@ -20,7 +23,6 @@ a {
 .main-menu-bar {
     height: 100px;
     background-color: black;
-
 }
 
 .main-menu-bar-logo {
@@ -60,6 +62,51 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Formulario login usuario */
+.form-title{
+    margin-bottom: 33px;
+}
+
+.form-row{
+    position: relative;
+    margin-bottom: 25px;
+}
+.form-icon{
+    width: 15px;
+    height: 15px;
+}
+
+.form-container{
+    max-width: 1200px;
+}
+
+.login-user-content{
+    padding-top: 67px;
+    padding-bottom: 87px;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    color: #222;
+}
+
+.login-form-input{
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 6px 30px;
+    font-family: Poppins;
+    box-sizing: border-box;
+}
+
+/* Formulario crear cuenta usuario */
+
+
+
 
 /* Menu vertical admin */
 
@@ -261,6 +308,54 @@ footer {
     margin-left: 20px;
 }
 
+/* LIBROS IMPORTANTES MAIN PAGE */
+
+.main-page-important-books{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 700px;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.important-book{
+    height: 10%;
+    padding-bottom: 20%;
+    margin: auto;
+}
+.important-book-image{
+    display: flex;
+    width: 150px;
+    height: 150px;
+}
+
+.important-book-price{
+    text-align: left;
+    font-size: 31px;
+    padding-left: 20%;
+    padding-bottom: 20px;
+}
+
+.important-book-short-description{
+    color: grey;
+    height: 8rem;
+}
+
+.important-reservation-book-button{
+    text-decoration: none;
+    background-color: #FBA00E;
+    border-radius: 25px;
+    padding: 5px 15px 5px 15px;
+    color: white;
+    border: none;
+}
+
+.important-reservation-book-button:hover{
+    opacity: 0.7;
+    border-radius: 25px;
+}
 /* ESTILOS MÓVIL */
 
 /* Menú panel administrador fijo */
