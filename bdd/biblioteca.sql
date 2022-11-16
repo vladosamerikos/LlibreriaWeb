@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-11-2022 a las 09:38:52
+-- Tiempo de generación: 16-11-2022 a las 09:40:31
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 7.4.30
 
@@ -67,7 +67,12 @@ CREATE TABLE `articulo` (
 --
 
 INSERT INTO `articulo` (`id_articulo`, `fk_id_genero`, `isbn`, `nombre`, `descripcion_short`, `descripcion`, `stock`, `precio_venta`, `imagen`, `destacado`, `estado`) VALUES
-(1, 0, 541545454, 'torrente', 'fdfdf', 'bla', 50, 85, 'img/libros/541545454.jpg', 0, 1);
+(1, 0, 541545454, 'torrente', 'LIBRO EN PREVENTA. Envíos a partir del 21 de novie', 'bla', 50, 85, 'img/libros/541545454.jpg', 1, 1),
+(2, 1, 8888, 'lalaland', 'fdfdf', 'bla bla bla', 50, 85, 'img/libros/541545454.jpg', 1, 1),
+(3, 2, 888875, 'lalalandghgh', 'fdfdf', 'bla bla bla bla', 500, 105, 'img/libros/541545454.jpg', 1, 1),
+(4, 2, 4432, 'hOLA', 'JKº', 'JKLXCV', 50, 501, '', 1, 1),
+(5, 2, 4432, 'hOLA', 'JKº', 'JKLXCV', 50, 501, 'img/libros4432.jpg', 1, 1),
+(6, 1, 875454, 'BJMJH', 'RFGRFGGH', 'gegegeg', 30, 20, 'img/libros875454.jpg', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -222,7 +227,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `articulo`
 --
 ALTER TABLE `articulo`
-  MODIFY `id_articulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_articulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `factura`

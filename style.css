@@ -330,7 +330,7 @@ label {
     cursor: pointer;
 }
 
-/* tabla pedidos */
+/* TABLA PEDIDOS */
 
 
 .admin-panel-pedido-editar-estado-form{
@@ -366,7 +366,7 @@ footer {
 .main-page-important-books{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 700px;
+    width: 1200px;
     align-items: center;
     text-align: center;
     margin: auto;
@@ -374,14 +374,15 @@ footer {
 }
 
 .important-book{
-    height: 10%;
-    padding-bottom: 20%;
+    height: 500px;
+    width: 300px;
     margin: auto;
 }
 .important-book-image{
     display: flex;
     width: 150px;
     height: 150px;
+    margin: auto;
 }
 
 .important-book-price{
@@ -394,13 +395,15 @@ footer {
 .important-book-short-description{
     color: grey;
     height: 8rem;
+    width: 300px;
+
 }
 
 .important-reservation-book-button{
     text-decoration: none;
     background-color: #FBA00E;
     border-radius: 25px;
-    padding: 5px 15px 5px 15px;
+    padding: 15px 50px 15px 50px;
     color: white;
     border: none;
 }
