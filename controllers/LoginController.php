@@ -10,17 +10,15 @@ class LoginController
         if (isset($_SESSION['email']) && $_SESSION['role']=='admin') {
             header('Location: index.php?controller=Libro&action=mostrarLibros');
         }else if (isset($_SESSION['email']) && $_SESSION['role']=='user') {
-            header('Location: index.php?controller=Principal&action=mostrarPrincipal');
+            header('Location: index.php?controller=Principal&action=mostrarPaginaPrincipal');
         } else {
-            require "views/loginSignupUser/formulario.php";
+            header('Location: index.php?controller=Principal&action=mostrarPaginaPrincipal');
         }
     }
 
     public function mostrarLoginAdmin(){
         require "views/loginAdmin/formulario.php";
     }
-
-
 
     public function loginAdmin()
     {
