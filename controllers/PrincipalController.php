@@ -10,6 +10,7 @@ class PrincipalController
         $libro = new Libro();
         $resultado= $libro->libroDestacado();
         require_once "views/principal/librosImportantes.php";
+        require_once "views/principal/carrouselPublicidad.php";
     }
 
 
