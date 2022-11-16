@@ -12,7 +12,7 @@ class LoginController
         }else if (isset($_SESSION['email']) && $_SESSION['role']=='user') {
             header('Location: index.php?controller=Principal&action=mostrarPrincipal');
         } else {
-            require "views/loginSignupUser/formulario.php";
+            require "views/loginSignupUser/formularioLogin.php";
         }
     }
 
@@ -56,6 +56,16 @@ class LoginController
         } else {
             echo "login incorrecto";
         }
+    }
+
+    public function mostrarSignupUser()
+    {
+        require "views/loginSignupUser/formularioSignup.php";
+    }
+
+    public function mostrarLoginUser()
+    {
+        require "views/loginSignupUser/formularioLogin.php";
     }
 
 

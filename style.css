@@ -8,7 +8,7 @@
 body {
     height: 100%;
     font-family: 'Source Sans Pro', sans-serif;
-    
+    background-color: #f8f8f8;
 }
 
 a {
@@ -56,11 +56,11 @@ a {
 
 /* Formulario login admin */
 
-.formLoginAdmin {
-    margin-top: 100px;
-    width: 300px;
+.login-user-form{
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
+    display: inline-block;
 }
 
 /* Formulario login usuario */
@@ -78,30 +78,83 @@ a {
 }
 
 .form-container{
+    margin-top: 100px;
     max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    background: #fff;
+    box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
 }
 
 .login-user-content{
     padding-top: 67px;
     padding-bottom: 87px;
+    display: flex;
 }
 
 label {
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 20%;
     color: #222;
 }
-
+.form-label-checkbox{
+    margin-left: 25px;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    color: #222;
+}
 .login-form-input{
     width: 100%;
     display: block;
     border: none;
     border-bottom: 1px solid #999;
     padding: 6px 30px;
-    font-family: Poppins;
     box-sizing: border-box;
 }
+
+.login-user-form-submit-button{
+    background: #FBA00E;
+    color: #fff;
+    width: auto;
+    padding: 15px 39px;
+    border-radius: 5px;
+    border:none;
+}
+.login-user-form-submit-button:hover{
+    cursor: pointer;
+}
+
+.login-user-form-foto-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-user-form-foto{
+    width: 292px;
+    height: 350px;
+}
+
+.signin-user-link{
+    margin-top: 20px;
+    color: #222;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.signin-user-link:hover{
+   cursor: pointer;
+}
+
+
+
 
 /* Formulario crear cuenta usuario */
 
