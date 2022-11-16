@@ -56,6 +56,16 @@ class LoginController
         }
     }
 
+    public function mostrarSignupUser()
+    {
+        require "views/loginSignupUser/formularioSignup.php";
+    }
+
+    public function mostrarLoginUser()
+    {
+        require "views/loginSignupUser/formularioLogin.php";
+    }
+
 
 
 }

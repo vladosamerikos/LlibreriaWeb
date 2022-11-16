@@ -62,4 +62,5 @@ class CategoriaController
         $categoria->editar($_id_genero, $_nombre);
         header("Location: index.php?controller=Categoria&action=mostrarCategorias");
     }
+    
 }
