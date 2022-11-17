@@ -350,7 +350,7 @@ footer {
     color: white;
     width: 100%;
     bottom: 0;
-    position: fixed;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -412,6 +412,7 @@ footer {
     opacity: 0.7;
     border-radius: 25px;
 }
+
 /* ESTILOS MÓVIL */
 
 /* Menú panel administrador fijo */
