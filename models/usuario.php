@@ -21,4 +21,10 @@ class Usuario extends Database
         }
     }
  
+    public function signin()
+    {
+        $consulta = $this->db->prepare("INSERT INTO usuario () VALUES ()");
+
+    }
+
 }
