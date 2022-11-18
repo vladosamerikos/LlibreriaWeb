@@ -62,6 +62,9 @@ class LoginController
         $user = new Usuario();
         $_email = trim($_POST['email']);
         $_password = md5(trim($_POST['password']));
+        $_nombre = $_POST['nombre'];
+        $_apellidos = $_POST['apellidos'];
+        $_direccion = $_POST['direccion'];
 
         $_result = $user->login($_email, $_password);
         if ($_result) {

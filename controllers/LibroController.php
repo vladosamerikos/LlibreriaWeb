@@ -5,7 +5,6 @@ require "models/categoria.php";
 class LibroController
 {
 
-
     public function mostrarLibros()
     {
         require_once "views/adminPanel/menu.php";
