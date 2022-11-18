@@ -35,7 +35,7 @@ echo "
             <input class='login-user-form-submit-button' name='submit' type='submit' id='submit' value='Crear cuenta'>
         </form>
         <div class='login-user-form-foto-container'>
-            <img class='login-user-form-foto' src='img/signin-image.jpg' alt='login image'>
+            <img class='login-user-form-foto' src='img/signposter.png' alt='login image'>
             <a class='signin-user-link' href='index.php?controller=Login&action=mostrarLoginUser'>Tengo cuenta</a>
         </div>
     </div>

@@ -3,7 +3,7 @@ echo "
 <div class= 'form-container'>
     <div class = 'login-user-content'>
         <div class='login-user-form-foto-container'>
-            <img class='login-user-form-foto' src='img/signin-image.jpg' alt='login image'>
+            <img class='login-user-form-foto' src='img/loginposter.png' alt='login image'>
             <a class='signin-user-link' href='index.php?controller=Login&action=mostrarSignupUser'>Crear una cuenta</a>
         </div>
         <form class='login-user-form' method='post' action='index.php?controller=Login&action=loginUser'>
