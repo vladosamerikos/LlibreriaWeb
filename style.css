@@ -36,11 +36,16 @@ a {
     list-style: none;
     margin-top: 40px;
 }
-
+li.main-menu-list-item {
+    color: white;
+    margin-right: 100px;
+    margin-top: 5px;
+    align-items: center;
+}
 .main-menu-list-item>a {
     color: white;
     margin-right: 100px;
-    margin-top: 50px;
+    margin-top: 100px;
     border-bottom: 2px solid #FBA00E;
     align-items: center;
     padding: 8px;
@@ -53,6 +58,15 @@ a {
     border-radius: 5px;
 }
 
+/* MENÚ HORIZONTAL USER */
+
+img.menu-header-basket-photo{
+    padding-right: 20px;
+}
+
+img.menu-header-user-photo{
+    padding-right: 20px;
+}
 
 /* Formulario login admin */
 
