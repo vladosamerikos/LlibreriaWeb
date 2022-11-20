@@ -91,4 +91,5 @@ class Libro extends Database
         $resultado = $consulta->fetchAll();
         return $resultado;
     }
+
 }

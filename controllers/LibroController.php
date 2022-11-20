@@ -113,9 +113,15 @@ class LibroController
             $_imagen = $_oldimagen;
         }
         $libro->editar($_id_articulo, $_idgenero, $_isbn, $_nombre, $_descripcion_short, $_descripcion, $_stock, $_precio_venta, $_imagen);
-
-
         header("Location: index.php?controller=Libro&action=mostrarLibros");
+    }
+
+    public function mostrarLibro()
+    {
+        $_idlibro = $_GET['id'];
+        $libro = new Libro();
+        $datosLibro = $libro->obtenerInfo($_idlibro);
+        require_once "views/paginaLibro/libro.php";
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 echo "<div class='main-menu-bar'>
-<img class='main-menu-bar-logo' src='./img/logo-high.svg' alt='logo' height='100px' width='100px'>
+<a href='index.php?controller=Login&action=index'><img class='main-menu-bar-logo' src='./img/logo-high.svg' alt='logo' height='100px' width='100px'></a>
 <ul class='main-menu-list'>";
     if (isset($_SESSION['email'])) {
         if (isset($_SESSION['email']) && $_SESSION['role']=='admin')

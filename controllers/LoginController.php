@@ -50,8 +50,8 @@ class LoginController
             $_SESSION['email'] = $_email;
             $_SESSION['role'] = 'user';
             echo "login correcto";
-            // header('Location: index.php?controller=&action=');
-            // die();
+            header('Location: index.php?controller=Login&action=index');
+            die();
         } else {
             echo "login incorrecto";
         }
@@ -66,15 +66,19 @@ class LoginController
         $_apellidos = $_POST['apellidos'];
         $_direccion = $_POST['direccion'];
 
-        $_result = $user->login($_email, $_password);
-        if ($_result) {
-            $_SESSION['email'] = $_email;
-            $_SESSION['role'] = 'user';
-            echo "login correcto";
-            // header('Location: index.php?controller=&action=');
-            // die();
-        } else {
-            echo "login incorrecto";
+        $emailExist = $user->comprobarEmail($_email);
+
+        if ($emailExist){
+            echo "Este correo ya esta registrado";
+        }else{
+            $result = $user->signin($_email, $_password, $_nombre, $_apellidos, $_direccion);
+            if ($result) {
+                echo "Usuario creado correctamente";
+                header('Location: index.php?controller=Login&action=mostrarLoginUser');
+                die();
+            } else {
+                echo "Error al crear al usuario";
+            }
         }
     }
 

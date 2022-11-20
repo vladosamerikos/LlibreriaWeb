@@ -1,5 +1,5 @@
 <?php
-echo "<form class='anadir-libro-form' method='post' ENCTYPE='multipart/form-data' action='index.php?controller=Libro&action=anadirLibro'>
+echo "<form class='admin-panel-form' method='post' ENCTYPE='multipart/form-data' action='index.php?controller=Libro&action=anadirLibro'>
     <label for='idgenero'>Genero</label>
     <select required name='idgenero' id='idgenero'>";
 foreach ($listadoCategorias as $categorias) {

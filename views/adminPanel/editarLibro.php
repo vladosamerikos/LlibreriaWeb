@@ -1,5 +1,5 @@
 <?php
-echo "<form class='anadir-libro-form' method='post' ENCTYPE='multipart/form-data' action='index.php?controller=Libro&action=editarLibro'>
+echo "<form class='admin-panel-form' method='post' ENCTYPE='multipart/form-data' action='index.php?controller=Libro&action=editarLibro'>
 <input readonly class='ocult' type='number' id='id_articulo' name='id_articulo' value='" . $datosLibro[0]['id_articulo'] . "'>    
 <label for='idgenero'>Genero</label>
     <select required name='idgenero' id='idgenero' value='" . $datosLibro[0]['fk_id_genero'] . "'>";

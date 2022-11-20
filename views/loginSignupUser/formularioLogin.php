@@ -10,11 +10,11 @@ echo "
             <h2 class='form-title'>Iniciar session</h2>
             <div class='form-row'>
                 <label for='email'><img class='form-icon' src='img/email.svg'></label>
-                <input class='login-form-input' type='email' id='email' name='email' placeholder='Tu correo'>
+                <input required class='login-form-input' type='email' id='email' name='email' placeholder='Tu correo'>
             </div>
             <div class='form-row'>
                 <label for='password'><img class='form-icon' src='img/padlock.svg'> </label>
-                <input class='login-form-input' type='password' id='password' name='password' placeholder='Password'>
+                <input required class='login-form-input' type='password' id='password' name='password' placeholder='Password'>
             </div>
             <div class='form-row'>
                 <input type='checkbox' name='remember-me' id='remember-me' class='form-checkbox'>
