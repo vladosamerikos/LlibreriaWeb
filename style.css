@@ -432,6 +432,45 @@ footer {
     border-radius: 25px;
 }
 
+/* PREFOOTER MAIN PAGE */
+
+.pre-footer-title{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.pre-footer-images{
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    padding-bottom: 20px;
+    margin: auto;
+    width: 70%;
+
+}
+.pre-footer-image{
+    margin: auto;
+    width: 50px;
+    height: 50px;
+}
+
+.pre-footer-texts{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    margin: auto;
+    width: 70%;
+}
+
+.pre-footer-text{
+    margin: auto;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+}
+
 /* ESTILOS MÓVIL */
 
 /* Menú panel administrador fijo */
