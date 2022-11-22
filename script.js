@@ -37,9 +37,25 @@ const comprobarPassword = () => {
 		signUpPasswdFlag = false
 
 	}
-
-
 }
+
+// Pagina del libro
+var descripLargaFlag = false
+
+const mostrarOcultarDescrip= ()=>{
+	const describLarga= document.querySelector('.libro-text-descrip')
+	const mostrarMasButton = document.getElementById('mostrar-mas')
+	if (descripLargaFlag==true){
+		describLarga.setAttribute('style', 'max-height: 100px;')
+		mostrarMasButton.innerHTML = 'Mostrar mas'
+		descripLargaFlag= false
+	}else{
+		describLarga.setAttribute('style', 'max-height: none;')
+		mostrarMasButton.innerHTML = 'Mostrar menos'
+		descripLargaFlag= true
+	}
+}
+
 
 
 

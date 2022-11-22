@@ -427,7 +427,6 @@ img.menu-header-user-photo{
 /* Tabla catalogo de libros */
 
 .admin-panel-page-table {
-    margin-left: 5%;
     display: inline-block;
     background-color: white;
     border-radius: 10px;
@@ -614,13 +613,15 @@ footer {
 }
 
 .libro-image-container{
+    display: flex;
+    justify-content: end;
 width: 25%;
 margin: 1rem;
 }
 
 .libro-image{
-    height: 430px;
-    width: 290px;
+    height: 425px;
+    width: 280px;
 }
 
 .libro-text-container{
@@ -653,6 +654,8 @@ color: #999;
 .libro-text-descrip{
     margin-top: 1rem;
     margin-bottom: 1rem;
+    max-height: 100px;
+    overflow: hidden;
 }
 
 .libro-actions-container{
@@ -692,20 +695,37 @@ color: white;
     font-size: 31px;
 }
 
+#mostrar-mas{
+    margin-right: 20px;
+    text-align: end;
+    color: #1F1F1F;
+    cursor: pointer;
+}
+
+#mostrar-mas:hover{
+    color: #FBA00E;
+}
 /* ESTILOS MÓVIL */
 
 /* Menú panel administrador fijo */
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1200px) {
 
-    /* .admin-menu-bar{
-        display: none;
-        width: 200px;
-        height: 100%;
-        background-color: #333;
-        margin-top: 15%;
-        position: fixed;
-        top: 0;
-        left: 0;
-    } */
+
+    .libro-image{
+        height: 297px;
+        width: 196px;
+    }
+
+}
+
+
+@media screen and (max-width: 576px) {
+
+
+    .libro-image{
+        height: 207px;
+        width: 137px;
+    }
+
 }

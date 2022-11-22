@@ -98,7 +98,20 @@ class Libro extends Database
         $consulta->execute();
         $resultado = $consulta->fetchAll();
         return $resultado;
+    }
+
+    public function agregarCesta($id, $qant)
+    {   
+        if (isset($_SESSION['Cesta'])){
+            // unset($_SESSION['Cesta']);
+            $_SESSION['Cesta'][$id]['qant']=$qant;
+        }else{
+            $_SESSION['Cesta'][$id]['qant']=$qant;
+        }
+            
 
     }
+
+
 
 }
