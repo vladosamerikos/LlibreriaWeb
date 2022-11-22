@@ -393,6 +393,7 @@ img.menu-header-user-photo{
     padding: 0rem 1rem 0rem 1rem;
     text-align: center;
     height: 60px;
+    max-width: 100px;
 }
 
 .libroicon {
@@ -478,6 +479,7 @@ footer {
     font-size: 31px;
     padding-left: 20%;
     padding-bottom: 20px;
+    font-weight: 600;
 }
 
 .important-book-short-description{
