@@ -239,6 +239,7 @@ img.menu-header-user-photo{
 }
 
 /* Formulario crear cuenta usuario */
+
 #repite-password{
     margin-bottom: 20px;
 }
@@ -367,6 +368,11 @@ img.menu-header-user-photo{
 .admin-panel-page-table {
     margin-left: 5%;
     display: inline-block;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
 }
 
 .admin-panel-page-table th {
