@@ -8,7 +8,7 @@ echo "
             <h2 class='libro-text-title'>".$datosLibro[0]['nombre']."</h2>
             <p class='libro-text-categoria'>".$datosLibro[0]['isbn']."</p>
             <p class='libro-text-isbn'>ISBN ".$datosLibro[0]['isbn']."</p>
-            <p class='libro-text-stock'>Stock".$datosLibro[0]['stock']."</p>
+            <p class='libro-text-stock'>Stock: ".$datosLibro[0]['stock']."</p>
             <p class='libro-text-descrip-corta'>".$datosLibro[0]['descripcion']."</p>
             <p class='libro-text-descrip'>".$datosLibro[0]['descripcion']."</p>
             

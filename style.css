@@ -551,8 +551,8 @@ margin: 1rem;
 }
 
 .libro-image{
-    height: 250px;
-    width: 200px;
+    height: 430px;
+    width: 290px;
 }
 
 .libro-text-container{
@@ -583,7 +583,8 @@ color: #999;
 }
 
 .libro-text-descrip{
-
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .libro-actions-container{
@@ -618,6 +619,7 @@ color: white;
 }
 
 .libro-price {
+    margin-left: 15px;
     text-align: left;
     font-size: 31px;
 }
