@@ -12,7 +12,7 @@ echo "</select><br><br>
     <input type='text' id='descripcion_short' class='place-holder' name='descripcion_short' value='" . $datosLibro[0]['descripcion_short'] . "'><br><br>
     <input type='text' id='descripcion' class='place-holder' name='descripcion' value='" . $datosLibro[0]['descripcion'] . "'><br><br>
     <input type='text' id='stock' class='place-holder' name='stock' value='" . $datosLibro[0]['stock'] . "'><br><br>
-    <input type='number' id='precio_venta' class='place-holder' name='precio_venta' value='" . $datosLibro[0]['precio_venta'] . "'><br><br>
+    <input type='number' id='precio_venta' step='0.01' class='place-holder' name='precio_venta' value='" . $datosLibro[0]['precio_venta'] . "'><br><br>
     <span id='edit-foto-btn' onclick='mostrarEditFoto()'>Editar foto</span><br><br>
     <div id='edit-container'>";
 if ($datosLibro[0]['imagen'] != null) {

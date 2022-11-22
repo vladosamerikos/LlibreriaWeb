@@ -446,26 +446,31 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 1200px;
-    align-items: center;
     text-align: center;
     margin: auto;
     justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
 }
 
 .important-book{
     box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
     width: 300px;
     margin-bottom: 50px;
-    height: 430px;
+    height: 500px;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+    padding-top: 50px;
+    margin: auto;
 }
 
 .important-book-image{
     display: flex;
     width: 150px;
-    height: 150px;
+    height: 200px;
     margin: auto;
+    margin-bottom: 10px;
 }
 
 .important-book-price{
