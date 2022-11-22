@@ -18,8 +18,6 @@ session_start();
     <?php
     require_once "autoload.php";
     require_once "views/general/menu.php";
-    // $Principal = new PrincipalController();
-    // $Principal->listaCategoriasPrincipal();
 
     if (isset($_GET['controller'])) {
         $nombreController = $_GET['controller'] . "Controller";

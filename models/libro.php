@@ -92,4 +92,12 @@ class Libro extends Database
         return $resultado;
     }
 
+    public function librosCategoria($id)
+    {
+        $consulta = $this->db->prepare("SELECT * FROM articulo WHERE fk_id_genero = $id");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
+
 }

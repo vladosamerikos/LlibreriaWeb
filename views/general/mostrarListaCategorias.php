@@ -1,9 +1,15 @@
-<div class="main-page-list-category">
-    <?php
+<?php
+echo "<div class='main-page-list-category'>
+  <a href='#destacados'>Prodcutos destacados</a>
+  <div class='dropcategory'>
+    <button class='dropbtn'>Categorias 
+      <i class='fa-down'></i>
+    </button>
+    <div class='dropcategory-content'>";
         foreach ($resultado as $categoria) {
-            echo " <div class='list-category'>
-                <p>".$categoria['nombre']."</p>
-            </div>";
+            echo "<a href='index.php?controller=Principal&action=mostrarLibrosCategoria&id=" . $categoria['id_genero'] . "' class='list-category'>" . $categoria['nombre'] . "</a>";
         }
-    ?>
-</div>
+    echo "</div>
+  </div> 
+</div>";
+?>

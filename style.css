@@ -26,7 +26,7 @@ a {
 }
 
 .main-menu-bar-logo {
-    margin-left: 10px;
+    margin-left: 2vh;
 }
 
 .main-menu-bar-logo:hover{
@@ -41,14 +41,13 @@ a {
 }
 li.main-menu-list-item {
     color: white;
-    margin-right: 100px;
+    margin-right: 2vh;
     margin-top: 5px;
     align-items: center;
 }
 .main-menu-list-item>a {
     color: white;
-    margin-right: 100px;
-    margin-top: 100px;
+    margin-top: 10vh;
     border-bottom: 2px solid #FBA00E;
     align-items: center;
     padding: 8px;
@@ -361,6 +360,68 @@ img.menu-header-user-photo{
 .search_form button:hover {
     opacity: 50%;
 }
+
+/* Navegador categorias (main page) */
+
+.main-page-list-category {
+    overflow: hidden;
+    background-color: #1F1F1F;
+}
+
+.main-page-list-category a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropcategory {
+    float: left;
+    overflow: hidden;
+}
+
+.dropcategory .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.main-page-list-category a:hover, .dropcategory:hover .dropbtn {
+    background-color: #FBA00E;
+  }
+  
+  .dropcategory-content {
+    display: none;
+    position: absolute;
+    background-color: #1F1F1F;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropcategory-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropcategory-content a:hover {
+    background-color: #FBA00E;
+  }
+  
+  .dropcategory:hover .dropcategory-content {
+    display: block;
+  }
 
 /* Tabla catalogo de libros */
 
