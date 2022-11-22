@@ -26,6 +26,7 @@ class PrincipalController
         $_idcategoria = $_GET['id'];
         $librosCategoria = new Libro();
         $resultado = $librosCategoria->librosCategoria($_idcategoria);
+        require_once "views/principal/librosCategoria.php";
         require_once "views/principal/preFooter.html";
     }
 

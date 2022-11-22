@@ -98,6 +98,7 @@ class Libro extends Database
         $consulta->execute();
         $resultado = $consulta->fetchAll();
         return $resultado;
+
     }
 
 }

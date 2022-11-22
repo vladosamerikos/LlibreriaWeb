@@ -1,6 +1,5 @@
 <?php
 echo "<div class='main-page-list-category'>
-  <a href='#destacados'>Prodcutos destacados</a>
   <div class='dropcategory'>
     <button class='dropbtn'>Categorias 
       <i class='fa-down'></i>
