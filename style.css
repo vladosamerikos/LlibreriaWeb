@@ -541,6 +541,96 @@ footer {
     text-align: center;
 }
 
+/* Pagina del libro */
+
+.content-libro-container{
+    display: flex;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.libro-image-container{
+width: 25%;
+margin: 1rem;
+}
+
+.libro-image{
+    height: 430px;
+    width: 290px;
+}
+
+.libro-text-container{
+width: 50%;
+}
+
+.libro-text-title{
+font-size: 39px;
+}
+
+.libro-text-categoria{
+font-size: 16px;
+font-weight: bolder;
+}
+
+.libro-text-isbn{
+font-size: 14px;
+}
+
+.libro-text-stock{
+font-size: 14px;
+}
+
+.libro-text-descrip-corta{
+margin-top: 1rem;
+margin-bottom: 1rem;
+color: #999;
+}
+
+.libro-text-descrip{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.libro-actions-container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+width: 25%;
+}
+
+.num-libro-input{
+border-radius: 25px 0px 0px 25px;
+text-align: center;
+outline: none;
+border-right: none;
+width: 38%;
+border: 1px solid gray;
+}
+
+.add-to-carito-button{
+    height: 48px;
+border-radius: 0px 25px 25px 0px;
+border:none;
+background-color: #FBA00E;
+padding-left: 1rem;
+padding-right: 1rem;
+cursor: pointer;
+color: white;
+}
+
+.add-carito-form{
+    display: flex;
+}
+
+.libro-price {
+    margin-left: 15px;
+    text-align: left;
+    font-size: 31px;
+}
+
 /* ESTILOS MÓVIL */
 
 /* Menú panel administrador fijo */

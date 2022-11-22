@@ -121,6 +121,7 @@ class LibroController
         $_idlibro = $_GET['id'];
         $libro = new Libro();
         $datosLibro = $libro->obtenerInfo($_idlibro);
+        $precioFormat = str_replace('.',',',(string)$datosLibro[0]['precio_venta']);
         require_once "views/paginaLibro/libro.php";
     }
 

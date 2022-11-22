@@ -78,7 +78,7 @@ class Libro extends Database
     } 
 
     public function obtenerInfo($id){
-        $consulta = $this->db->prepare("SELECT * FROM articulo WHERE id_articulo = $id");
+        $consulta = $this->db->prepare("SELECT id_articulo, generos.nombre AS genero, isbn, articulo.nombre AS nombre, descripcion_short, descripcion, stock, precio_venta, imagen FROM articulo INNER JOIN generos ON articulo.fk_id_genero = generos.id_genero WHERE id_articulo = $id");
         $consulta->execute();
         $resultado = $consulta->fetchAll();
         return $resultado;
