@@ -38,7 +38,13 @@ class Pedido extends Database
         return $resultado;
     }
 
-    
+    public function obtenerFacturaPedido($id){
+        $consulta = $this->db->prepare("SELECT * FROM detalle_factura F INNER JOIN articulo A ON F.fk_id_articulo = A.id_articulo WHERE fk_id_factura = $id");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
+
 
 
 
