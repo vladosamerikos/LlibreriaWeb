@@ -13,6 +13,19 @@ class Libro extends Database
     // private $imagen;
     // private $destacado;
     // private $estado;
+    private $cantidad;
+
+    public function getCantidad()
+    {
+        return $this->cantidad;
+    }
+
+    public function setCantidad($cantidad)
+    {
+        $this->cantidad = $cantidad;
+
+        return $this;
+    }
 
     public function buscarLibros($filtro)
     {
@@ -100,13 +113,13 @@ class Libro extends Database
         return $resultado;
     }
 
-    public function agregarCesta($id, $qant)
+    public function agregarCesta($id, $cant)
     {   
         if (isset($_SESSION['Cesta'])){
             // unset($_SESSION['Cesta']);
-            $_SESSION['Cesta'][$id]['qant']=$qant;
+            $_SESSION['Cesta'][$id]['cant']=$cant;
         }else{
-            $_SESSION['Cesta'][$id]['qant']=$qant;
+            $_SESSION['Cesta'][$id]['cant']=$cant;
         }
             
 
@@ -114,4 +127,6 @@ class Libro extends Database
 
 
 
+
+    
 }

@@ -29,9 +29,10 @@ a {
     margin-left: 2vh;
 }
 
-.main-menu-bar-logo:hover{
+.main-menu-bar-logo:hover {
     opacity: 50%;
 }
+
 .main-menu-list {
     float: right;
     display: flex;
@@ -39,12 +40,14 @@ a {
     list-style: none;
     margin-top: 40px;
 }
+
 li.main-menu-list-item {
     color: white;
     margin-right: 2vh;
     margin-top: 5px;
     align-items: center;
 }
+
 .main-menu-list-item>a {
     color: white;
     margin-top: 10vh;
@@ -63,7 +66,7 @@ li.main-menu-list-item {
 
 /* formularios de edicion/agregamiento admin  */
 
-.admin-panel-form{
+.admin-panel-form {
     width: 300px;
     margin: auto;
     margin-top: 50px;
@@ -74,12 +77,12 @@ li.main-menu-list-item {
 
 }
 
-select#idgenero{
+select#idgenero {
     background-color: #f8f8f8;
     border: none;
 }
 
-input.place-holder{
+input.place-holder {
     text-align: center;
     text-decoration: none;
     border-bottom: 2px solid #FBA00E;
@@ -89,14 +92,14 @@ input.place-holder{
     background-color: #f8f8f8;
 }
 
-input.submit-button{
+input.submit-button {
     background-color: #f8f8f8;
     border: 2px solid #FBA00E;
     border-radius: 5px;
     padding: 1px 3px 1px 3px;
 }
 
-input.submit-button:hover{
+input.submit-button:hover {
     background-color: #1F1F1F;
     color: white;
     border: 2px solid #FBA00E;
@@ -122,17 +125,17 @@ input.submit-button:hover{
 
 /* MENÚ HORIZONTAL USER */
 
-img.menu-header-basket-photo{
+img.menu-header-basket-photo {
     padding-right: 20px;
 }
 
-img.menu-header-user-photo{
+img.menu-header-user-photo {
     padding-right: 20px;
 }
 
 /* Formulario login admin */
 
-.login-user-form{
+.login-user-form {
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -140,20 +143,21 @@ img.menu-header-user-photo{
 }
 
 /* Formulario login/signup usuario comun */
-.form-title{
+.form-title {
     margin-bottom: 33px;
 }
 
-.form-row{
+.form-row {
     position: relative;
     margin-bottom: 25px;
 }
-.form-icon{
+
+.form-icon {
     width: 15px;
     height: 15px;
 }
 
-.form-container{
+.form-container {
     margin-top: 100px;
     margin-bottom: 100px;
     max-width: 1200px;
@@ -165,7 +169,7 @@ img.menu-header-user-photo{
     border-radius: 20px;
 }
 
-.login-user-content{
+.login-user-content {
     padding-top: 67px;
     padding-bottom: 87px;
     display: flex;
@@ -177,14 +181,16 @@ img.menu-header-user-photo{
     top: 20%;
     color: #222;
 }
-.form-label-checkbox{
+
+.form-label-checkbox {
     margin-left: 25px;
     position: absolute;
     left: 0;
     top: -1px;
     color: #222;
 }
-.login-form-input{
+
+.login-form-input {
     width: 100%;
     display: block;
     border: none;
@@ -194,24 +200,25 @@ img.menu-header-user-photo{
     outline: none;
 }
 
-.login-form-input:focus{
+.login-form-input:focus {
     border: none;
     border-bottom: 1px solid #FBA00E;
 }
 
-.login-user-form-submit-button{
+.login-user-form-submit-button {
     background: #FBA00E;
     color: #fff;
     width: auto;
     padding: 15px 39px;
     border-radius: 5px;
-    border:none;
+    border: none;
 }
-.login-user-form-submit-button:hover{
+
+.login-user-form-submit-button:hover {
     cursor: pointer;
 }
 
-.login-user-form-foto-container{
+.login-user-form-foto-container {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -219,12 +226,12 @@ img.menu-header-user-photo{
     align-items: center;
 }
 
-.login-user-form-foto{
+.login-user-form-foto {
     width: 292px;
     height: 350px;
 }
 
-.signin-user-link{
+.signin-user-link {
     margin-top: 20px;
     color: #222;
     display: block;
@@ -232,14 +239,14 @@ img.menu-header-user-photo{
     border-bottom: 1px solid #222;
 }
 
-.signin-user-link:hover{
-   cursor: pointer;
-   border-bottom: 1px solid #FBA00E;
+.signin-user-link:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #FBA00E;
 }
 
 /* Formulario crear cuenta usuario */
 
-#repite-password{
+#repite-password {
     margin-bottom: 20px;
 }
 
@@ -269,6 +276,7 @@ img.menu-header-user-photo{
     text-align: center;
     line-height: 70px;
 }
+
 .admin-menu-bar-item:hover {
     color: #FBA00E;
     background-color: #1F1F1F;
@@ -276,7 +284,7 @@ img.menu-header-user-photo{
 
 /* Estilos comunes de las tablas admin panel */
 
-.admin-panel-content-container{
+.admin-panel-content-container {
     display: flex;
     flex-direction: column;
     width: 85%;
@@ -314,7 +322,7 @@ img.menu-header-user-photo{
     border-radius: 5px;
 }
 
-.admin-panel-add-link:hover{
+.admin-panel-add-link:hover {
     color: #FBA00E;
     background-color: #1F1F1F;
     border-radius: 5px;
@@ -384,7 +392,7 @@ img.menu-header-user-photo{
 }
 
 .dropcategory .dropbtn {
-    font-size: 16px;  
+    font-size: 16px;
     border: none;
     outline: none;
     color: white;
@@ -394,35 +402,36 @@ img.menu-header-user-photo{
     margin: 0;
 }
 
-.main-page-list-category a:hover, .dropcategory:hover .dropbtn {
+.main-page-list-category a:hover,
+.dropcategory:hover .dropbtn {
     background-color: #FBA00E;
-  }
-  
-  .dropcategory-content {
+}
+
+.dropcategory-content {
     display: none;
     position: absolute;
     background-color: #1F1F1F;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
-  
-  .dropcategory-content a {
+}
+
+.dropcategory-content a {
     float: none;
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
-  }
-  
-  .dropcategory-content a:hover {
+}
+
+.dropcategory-content a:hover {
     background-color: #FBA00E;
-  }
-  
-  .dropcategory:hover .dropcategory-content {
+}
+
+.dropcategory:hover .dropcategory-content {
     display: block;
-  }
+}
 
 /* Tabla catalogo de libros */
 
@@ -473,12 +482,12 @@ img.menu-header-user-photo{
 /* TABLA PEDIDOS */
 
 
-.admin-panel-pedido-editar-estado-form{
+.admin-panel-pedido-editar-estado-form {
     display: flex;
     align-items: center;
 }
 
-.admin-panel-pedido-submit-button{
+.admin-panel-pedido-submit-button {
     width: 30px;
     height: 30px;
     margin-left: 10px;
@@ -496,14 +505,14 @@ footer {
     justify-content: center;
 }
 
-.footer-link{
+.footer-link {
     color: white;
     margin-left: 20px;
 }
 
 /* LIBROS IMPORTANTES MAIN PAGE */
 
-.main-page-important-books{
+.main-page-important-books {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 1200px;
@@ -515,7 +524,7 @@ footer {
 
 }
 
-.important-book{
+.important-book {
     box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
     width: 300px;
     margin-bottom: 50px;
@@ -526,7 +535,7 @@ footer {
     margin: auto;
 }
 
-.important-book-image{
+.important-book-image {
     display: flex;
     width: 150px;
     height: 200px;
@@ -534,7 +543,7 @@ footer {
     margin-bottom: 10px;
 }
 
-.important-book-price{
+.important-book-price {
     text-align: left;
     font-size: 31px;
     padding-left: 20%;
@@ -542,14 +551,14 @@ footer {
     font-weight: 600;
 }
 
-.important-book-short-description{
+.important-book-short-description {
     color: grey;
     height: 8rem;
     width: 300px;
 
 }
 
-.important-reservation-book-button{
+.important-reservation-book-button {
     text-decoration: none;
     background-color: #FBA00E;
     border-radius: 25px;
@@ -558,19 +567,20 @@ footer {
     border: none;
 }
 
-.important-reservation-book-button:hover{
+.important-reservation-book-button:hover {
     opacity: 0.7;
     border-radius: 25px;
 }
 
 /* PREFOOTER MAIN PAGE */
 
-.pre-footer-title{
+.pre-footer-title {
     font-size: 40px;
     text-align: center;
     margin-bottom: 50px;
 }
-.pre-footer-images{
+
+.pre-footer-images {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 5px;
@@ -579,13 +589,14 @@ footer {
     width: 70%;
 
 }
-.pre-footer-image{
+
+.pre-footer-image {
     margin: auto;
     width: 50px;
     height: 50px;
 }
 
-.pre-footer-texts{
+.pre-footer-texts {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 5px;
@@ -594,7 +605,7 @@ footer {
     width: 70%;
 }
 
-.pre-footer-text{
+.pre-footer-text {
     margin: auto;
     width: 200px;
     height: 100px;
@@ -603,7 +614,7 @@ footer {
 
 /* Pagina del libro */
 
-.content-libro-container{
+.content-libro-container {
     display: flex;
     max-width: 1200px;
     margin-left: auto;
@@ -612,80 +623,80 @@ footer {
     padding-bottom: 100px;
 }
 
-.libro-image-container{
+.libro-image-container {
     display: flex;
     justify-content: end;
-width: 25%;
-margin: 1rem;
+    width: 25%;
+    margin: 1rem;
 }
 
-.libro-image{
+.libro-image {
     height: 425px;
     width: 280px;
 }
 
-.libro-text-container{
-width: 50%;
+.libro-text-container {
+    width: 50%;
 }
 
-.libro-text-title{
-font-size: 39px;
+.libro-text-title {
+    font-size: 39px;
 }
 
-.libro-text-categoria{
-font-size: 16px;
-font-weight: bolder;
+.libro-text-categoria {
+    font-size: 16px;
+    font-weight: bolder;
 }
 
-.libro-text-isbn{
-font-size: 14px;
+.libro-text-isbn {
+    font-size: 14px;
 }
 
-.libro-text-stock{
-font-size: 14px;
+.libro-text-stock {
+    font-size: 14px;
 }
 
-.libro-text-descrip-corta{
-margin-top: 1rem;
-margin-bottom: 1rem;
-color: #999;
+.libro-text-descrip-corta {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #999;
 }
 
-.libro-text-descrip{
+.libro-text-descrip {
     margin-top: 1rem;
     margin-bottom: 1rem;
     max-height: 100px;
     overflow: hidden;
 }
 
-.libro-actions-container{
+.libro-actions-container {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-width: 25%;
+    width: 25%;
 }
 
-.num-libro-input{
-border-radius: 25px 0px 0px 25px;
-text-align: center;
-outline: none;
-border-right: none;
-width: 38%;
-border: 1px solid gray;
+.num-libro-input {
+    border-radius: 25px 0px 0px 25px;
+    text-align: center;
+    outline: none;
+    border-right: none;
+    width: 38%;
+    border: 1px solid gray;
 }
 
-.add-to-carito-button{
+.add-to-carito-button {
     height: 48px;
-border-radius: 0px 25px 25px 0px;
-border:none;
-background-color: #FBA00E;
-padding-left: 1rem;
-padding-right: 1rem;
-cursor: pointer;
-color: white;
+    border-radius: 0px 25px 25px 0px;
+    border: none;
+    background-color: #FBA00E;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    color: white;
 }
 
-.add-carito-form{
+.add-carito-form {
     display: flex;
 }
 
@@ -695,16 +706,61 @@ color: white;
     font-size: 31px;
 }
 
-#mostrar-mas{
+#mostrar-mas {
     margin-right: 20px;
     text-align: end;
     color: #1F1F1F;
     cursor: pointer;
 }
 
-#mostrar-mas:hover{
+#mostrar-mas:hover {
     color: #FBA00E;
 }
+
+
+/* Estilo para la cesta */
+
+.cesta-container{
+
+}
+
+.cesta-item{
+
+}
+
+.cesta-item-imagen{
+
+}
+
+.cesta-item-info-container{
+
+}
+
+.cesta-item-titulo{
+
+}
+
+.cesta-item-pecio{
+
+}
+
+.cesta-item-action-container{
+
+}
+
+.cesta-item-action-container-item{
+
+}
+
+.cesta-item-action-container-items{
+
+}
+
+.cesta-item-action-img{
+    width: 50px;
+    height: 50px;
+}
+
 /* ESTILOS MÓVIL */
 
 /* Menú panel administrador fijo */
@@ -712,7 +768,7 @@ color: white;
 @media screen and (max-width: 1200px) {
 
 
-    .libro-image{
+    .libro-image {
         height: 297px;
         width: 196px;
     }
@@ -723,7 +779,7 @@ color: white;
 @media screen and (max-width: 576px) {
 
 
-    .libro-image{
+    .libro-image {
         height: 207px;
         width: 137px;
     }

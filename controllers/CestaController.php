@@ -6,8 +6,16 @@ class CestaController
 
     public function mostrarCesta(){
         var_dump($_SESSION['Cesta']);
-        echo "<br>";
-        require_once './views/cesta/cesta.php';
+        if(isset($_SESSION['Cesta'])){
+            foreach($_SESSION['Cesta'] as $libro){
+                $libroItem = new Libro();
+                $libroItem->setCantidad($libro['cant']);                
+            }
+            require_once './views/cesta/cesta.php';
+
+        }else{
+            echo "La cesta esta vacia";
+        }
     }
 
     public function agregarLibroACesta(){
