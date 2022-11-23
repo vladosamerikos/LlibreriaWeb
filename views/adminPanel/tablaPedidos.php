@@ -23,7 +23,7 @@ foreach ($catalogo as $pedido) {
         <td class='text'>" . $pedido['nombreusu'] . "</td>
         <td class='text'>" . $pedido['fecha'] . "</td>
         <td class='text'>" . $pedido['total'] . "</td>
-        <td class='text'><form class='admin-panel-pedido-editar-estado-form' method='post' action='index.php?controller=Pedido&action=editarEstado'>
+        <td><form class='admin-panel-pedido-editar-estado-form' method='post' action='index.php?controller=Pedido&action=editarEstado'>
             <input readonly class='ocult' name='id_factura' id='id_factura' value='".$pedido['id_factura']."'>
             <select name='estado' id='estado'>";
                     foreach ($estados as $estado){
@@ -36,7 +36,7 @@ foreach ($catalogo as $pedido) {
     echo    "</select>
             <input class='admin-panel-pedido-submit-button' type='image' name='submit' src='./img/upload2.svg' alt='Confirmar'>
         </form></td>
-        <td class='text'><a href='index.php?controller=Pedido&action=mostrarFacturas&id=". $pedido['id_factura'] . "'>Mostrar Detalles de la Factura</a></td>
+        <td class='admin-panel-page-table-td-link'><a class='details-comanda-link' href='index.php?controller=Pedido&action=mostrarFacturas&id=". $pedido['id_factura'] . "'>Mostrar detalle</a></td>
         </tr>";
 }
 echo "</table>

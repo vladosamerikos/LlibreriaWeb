@@ -59,7 +59,6 @@ li.main-menu-list-item {
 .main-menu-list-item>a:hover {
     color: #FBA00E;
     background-color: white;
-    padding: 8px;
     border-radius: 5px;
 }
 
@@ -102,9 +101,6 @@ input.submit-button {
 input.submit-button:hover {
     background-color: #1F1F1F;
     color: white;
-    border: 2px solid #FBA00E;
-    border-radius: 5px;
-    padding: 1px 3px 1px 3px;
 }
 
 
@@ -478,9 +474,25 @@ img.menu-header-user-photo {
     padding-left: 25%;
 }
 
-
 /* TABLA PEDIDOS */
 
+.details-comanda-link{
+    text-decoration: none;
+    color:white;
+    background-color: #FBA00E;
+    border-radius: 25px;
+    padding: 5px  10px ;
+}
+
+.details-comanda-link:hover{
+    opacity: 0.8;
+}
+
+.admin-panel-page-table-td-link{
+    text-align: center;
+    
+
+}
 
 .admin-panel-pedido-editar-estado-form {
     display: flex;
@@ -491,6 +503,9 @@ img.menu-header-user-photo {
     width: 30px;
     height: 30px;
     margin-left: 10px;
+}
+.admin-panel-pedido-submit-button:hover {
+    opacity: 0.8;
 }
 
 footer {
