@@ -21,7 +21,7 @@ foreach ($catalogo as $pedido) {
     echo " <tr>
         <td class='text'>" . $pedido['id_factura'] . "</td>
         <td class='text'>" . $pedido['nombreusu'] . "</td>
-        <td class='text'>" . $pedido['fecha'] . "</td>
+        <td class='text'>" . transformarFecha($pedido['fecha']) . "</td>
         <td class='text'>" . $pedido['total'] . "</td>
         <td><form class='admin-panel-pedido-editar-estado-form' method='post' action='index.php?controller=Pedido&action=editarEstado'>
             <input readonly class='ocult' name='id_factura' id='id_factura' value='".$pedido['id_factura']."'>

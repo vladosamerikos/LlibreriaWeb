@@ -103,6 +103,15 @@ input.submit-button:hover {
     color: white;
 }
 
+.tetx-area-panel-form{
+    padding: 10px;
+    max-width: 90%;
+    line-height: 1.5;
+    min-height:75px;
+    border-radius: 5px;
+    border: 1px solid #FBA00E;
+    box-shadow: 1px 1px 1px #999;
+}
 
 /* Editar foto */
 #edit-container {
@@ -323,6 +332,8 @@ img.menu-header-user-photo {
     background-color: #1F1F1F;
     border-radius: 5px;
 }
+
+
 
 /* Estilos buscador */
 .search_bar {

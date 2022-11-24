@@ -16,6 +16,7 @@ session_start();
 <body>
     <script src="script.js"></script>
     <?php
+    include "functions.php";
     require_once "autoload.php";
     require_once "views/general/menu.php";
 
