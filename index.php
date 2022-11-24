@@ -38,6 +38,7 @@ session_start();
         echo "No existe el controlador";
     }
     require_once "views/general/pie.html";
+    require_once "views/general/wrapper.html";
     ?>
 </body>
 

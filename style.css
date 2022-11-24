@@ -520,9 +520,9 @@ img.menu-header-user-photo {
 }
 
 footer {
-    height: 100px;
-    background-color: black;
+    height: 300px;
     color: white;
+    background-color: #1F1F1F;
     width: 100%;
     bottom: 0;
     position: relative;
@@ -531,9 +531,43 @@ footer {
     justify-content: center;
 }
 
+.div-footer-1{
+    background-color: #1F1F1F;
+    display: flex;
+}
+
+.title-footer-1{
+    color: #FBA00E;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.subdiv-footer-1{
+    display: block;
+    width: 300px;
+}
+
+.div-a-footer {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding-top: 10px;
+} 
+
+/* WRAPPER */
+
+.div-footer-2{
+    display: flex;
+    background-color: black;
+    height: 50px;
+    justify-content: center;
+    color: white;
+    padding-top: 25px;
+}
+
 .footer-link {
     color: white;
-    margin-left: 20px;
+    margin-left: 5px;
 }
 
 /* LIBROS IMPORTANTES MAIN PAGE */
