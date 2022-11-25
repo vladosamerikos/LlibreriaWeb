@@ -11,7 +11,7 @@ echo "</select><br><br>
     <input type='text' id='descripcion_short' class='place-holder' name='descripcion_short' placeholder='Descripción Corta'><br><br>
     <input type='text' id='descripcion' class='place-holder' name='descripcion' placeholder='Descripción'><br><br>
     <input type='text' id='stock' class='place-holder' name='stock' placeholder='Stock'><br><br>
-    <input type='number' id='precio_venta' class='place-holder' name='precio_venta' placeholder='Precio'><br><br>
+    <input type='number' id='precio_venta' step='0.01' class='place-holder' name='precio_venta' placeholder='Precio'><br><br>
     <input type='file' id='imagen' name='imagen'><br><br>
     <input name='submit' type='submit' class='submit-button' id='submit' value='Añadir libro'><br>
 </form>";
