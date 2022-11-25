@@ -23,8 +23,8 @@ foreach ($catalogo as $pedido) {
         <td><img class='libroicon' src='" . $pedido['imagen'] . "'></td>
         <td class='text'>" . $pedido['nombre'] . "</td>
         <td class='text'>" . $pedido['cantidad'] . "</td>
-        <td class='text'>" . $pedido['precio_venta'] . "€</td>
-        <td class='text'>" . $pedido['precio'] . "€</td>
+        <td class='text'>" . formatarPrecio($pedido['precio_venta']) . "€</td>
+        <td class='text'>" . formatarPrecio($pedido['precio']) . "€</td>
 
         </tr>";
 }
