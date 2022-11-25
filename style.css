@@ -501,8 +501,6 @@ img.menu-header-user-photo {
 
 .admin-panel-page-table-td-link{
     text-align: center;
-    
-
 }
 
 .admin-panel-pedido-editar-estado-form {
@@ -575,6 +573,7 @@ footer {
 .main-page-important-books {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 75px;
     width: 1200px;
     text-align: center;
     margin: auto;
