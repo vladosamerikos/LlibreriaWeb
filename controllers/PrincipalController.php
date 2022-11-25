@@ -30,4 +30,15 @@ class PrincipalController
         require_once "views/principal/preFooter.html";
     }
 
+    public function mostrarGeneral()
+    {
+        require_once "views/general/menu.php";
+        $categoria = new Categoria();
+        $resultado = $categoria->obtenerListado();
+        require_once "views/general/mostrarListaCategorias.php";
+        $libros = new Libro();
+        $resultado = $libros->librosGeneral();
+        require_once "views/principal/librosCategoria.php";
+        require_once "views/principal/preFooter.html";
+    }
 }

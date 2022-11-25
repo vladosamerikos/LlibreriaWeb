@@ -125,6 +125,14 @@ class Libro extends Database
 
     }
 
+    public function librosGeneral()
+    {
+        $consulta = $this->db->prepare("SELECT * FROM articulo");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
+
 
 
 

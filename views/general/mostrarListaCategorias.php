@@ -1,5 +1,6 @@
 <?php
 echo "<div class='main-page-list-category'>
+  <div><a href='index.php?controller=Principal&action=mostrarGeneral'>Todos los libros</a></div>
   <div class='dropcategory'>
     <button class='dropbtn'>Categorias 
       <i class='fa-down'></i>
