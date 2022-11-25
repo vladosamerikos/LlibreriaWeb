@@ -16,7 +16,7 @@ echo "
         }    
         echo "</div>
         <div class='libro-actions-container'>
-            <p class='libro-price'>".$precioFormat." €</p>
+            <p class='libro-price'>".formatarPrecio($datosLibro[0]['precio_venta'])." €</p>
             <form class='add-carito-form' method='POST' action='index.php?controller=Cesta&action=agregarLibroACesta'> 
                 <input class='ocult' value='".$datosLibro[0]['id_articulo']."' id='id_lib' name='id_lib' readonly>
                 <input class='num-libro-input' id='cant' name='cant' value='1' type='number' min='1' max='".$datosLibro[0]['stock']."'>

@@ -1,6 +1,5 @@
 <?php
 
-
 function calcularCesta(){
     $res = 0;
     foreach($_SESSION['Cesta'] as $articulo){
@@ -13,4 +12,8 @@ function transformarFecha($fecha){
     $objFecha = date_create_from_format('Y-m-d', $fecha);
     $formatFecha = date_format($objFecha, 'd/m/Y');
     return $formatFecha;
+}
+
+function formatarPrecio($precio){
+    return str_replace('.',',',(string)$precio);
 }

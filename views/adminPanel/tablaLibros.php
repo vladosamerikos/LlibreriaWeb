@@ -30,7 +30,7 @@ foreach ($catalogo as $libro) {
         <td class='text'>" . $libro['nombre'] . "</td>
         <td class='text'>" . $libro['descripcion_short'] . "</td>
         <td class='text'>" . $libro['stock'] . "</td>
-        <td class='text'>" . $libro['precio_venta'] . "</td>
+        <td class='text'>" . formatarPrecio($libro['precio_venta']) . "</td>
         <td><img class='libroicon' src='" . $libro['imagen'] . "'></td>";
     if ($libro['estado']) {
         echo "<td><a href='index.php?controller=Libro&action=desactivarLibro&id=" . $libro['id_articulo'] . "''><img class='control-icons' src='img/on.svg'></a></td>";
