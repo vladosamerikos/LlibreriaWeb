@@ -14,7 +14,7 @@ const mostrarEditFoto = () => {
 		editFotoBtn.innerHTML = 'Ocultar';
 	}
 };
-
+ddffgg
 
 // Crear cuenta form
 
