@@ -112,19 +112,6 @@ class Libro extends Database
         $resultado = $consulta->fetchAll();
         return $resultado;
     }
-
-    public function agregarCesta($id, $cant)
-    {   
-        if (isset($_SESSION['Cesta'])){
-            // unset($_SESSION['Cesta']);
-            $_SESSION['Cesta'][$id]['cant']=$cant;
-        }else{
-            $_SESSION['Cesta'][$id]['cant']=$cant;
-        }
-            
-
-    }
-
     public function librosGeneral()
     {
         $consulta = $this->db->prepare("SELECT * FROM articulo");

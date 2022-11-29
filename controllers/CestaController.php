@@ -1,35 +1,32 @@
 <?php
 
-require "models/libro.php";
+require "models/cesta.php";
 class CestaController
 {
 
     public function mostrarCesta(){
-        var_dump($_SESSION['Cesta']);
-        if(isset($_SESSION['Cesta'])){
-            foreach($_SESSION['Cesta'] as $libro){
-                $libroItem = new Libro();
-                $libroItem->setCantidad($libro['cant']);                
-            }
+        if (isset($_SESSION['Cesta'])){
+            $cesta = new Cesta();
+            $cesta->obtenerDatosCesta();
             require_once './views/cesta/cesta.php';
-
         }else{
-            echo "La cesta esta vacia";
+            echo "No tienes articulos";
         }
+
     }
 
     public function agregarLibroACesta(){
-        $libro = new Libro();
+        $cesta = new Cesta();
         $_id = $_POST['id_lib'];
         $_cant = $_POST['cant'];
         echo "id:".$_id;
         echo "<br>Cant:".$_cant;
-        $libro->agregarCesta($_id,$_cant);
+        $cesta->agregarACesta($_id,$_cant);
     }
 
     public function limpiarCesta(){
-        unset($_SESSION['Cesta']);
-        var_dump($_SESSION['Cesta']);
+        $cesta = new Cesta();
+        $cesta->limpiarCesta();
     }
 
 }
