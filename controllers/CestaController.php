@@ -27,6 +27,7 @@ class CestaController
     public function limpiarCesta(){
         $cesta = new Cesta();
         $cesta->limpiarCesta();
+        echo "No tienes articulos";
     }
 
 }

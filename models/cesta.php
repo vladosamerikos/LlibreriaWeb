@@ -6,8 +6,11 @@ class Cesta
     public function agregarACesta($id, $cant)
     {   
         if (isset($_SESSION['Cesta'])){
-            // unset($_SESSION['Cesta']);
-            $_SESSION['Cesta'][$id]['cant']=$cant;
+            if (isset($_SESSION['Cesta'][$id])){
+                $_SESSION['Cesta'][$id]['cant']+=$cant;
+            }else{
+                $_SESSION['Cesta'][$id]['cant']=$cant;
+            }
         }else{
             $_SESSION['Cesta'][$id]['cant']=$cant;
         }     
@@ -16,7 +19,6 @@ class Cesta
 
     public function limpiarCesta(){
         unset($_SESSION['Cesta']);
-        var_dump($_SESSION['Cesta']);
     }
 
 
