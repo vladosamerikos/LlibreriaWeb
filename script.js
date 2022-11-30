@@ -14,7 +14,6 @@ const mostrarEditFoto = () => {
 		editFotoBtn.innerHTML = 'Ocultar';
 	}
 };
-ddffgg
 
 // Crear cuenta form
 
@@ -54,6 +53,28 @@ const mostrarOcultarDescrip= ()=>{
 		mostrarMasButton.innerHTML = 'Mostrar menos'
 		descripLargaFlag= true
 	}
+}
+
+// Boton Go Up Page
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+
+	const topUpButton = document.getElementById("go-up-botonSubir");
+
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	topUpButton.setAttribute('style', 'display: block')
+  } else {
+	topUpButton.setAttribute('style', 'display: none')
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.documentElement.scrollTop = 0;
 }
 
 

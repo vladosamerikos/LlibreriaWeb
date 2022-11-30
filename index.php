@@ -19,7 +19,8 @@ session_start();
     include "functions.php";
     require_once "autoload.php";
     require_once "views/general/menu.php";
-
+    require_once "views/general/botonSubir.html";
+    
     if (isset($_GET['controller'])) {
         $nombreController = $_GET['controller'] . "Controller";
     } else {

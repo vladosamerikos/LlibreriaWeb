@@ -631,6 +631,20 @@ footer {
     border-radius: 25px;
 }
 
+/* BOTON GO UP PAGE */
+
+#go-up-botonSubir {
+    display: inline-block;
+	padding:20px;
+	background:#FBA00E;
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+}
+
 /* PREFOOTER MAIN PAGE */
 
 .pre-footer-title {
