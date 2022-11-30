@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -635,7 +636,7 @@ footer {
 /* BOTON GO UP PAGE */
 
 #go-up-botonSubir {
-    display: inline-block;
+    display: none;
 	padding:20px;
 	background:#FBA00E;
 	font-size:20px;
