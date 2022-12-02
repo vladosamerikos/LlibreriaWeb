@@ -23,6 +23,3 @@
         }
     ?>
 </div>
-
-<p class='name-categoria-libros-categoria'>Libros Importantes</p>
-<div class='orange-line'></div>
