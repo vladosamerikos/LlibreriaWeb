@@ -115,6 +115,16 @@ input.submit-button:hover {
     box-shadow: 1px 1px 1px #999;
 }
 
+.tetx-area-panel-form-name{
+    padding: 10px;
+    max-width: 90%;
+    line-height: 1.5;
+    min-height:10px;
+    border-radius: 5px;
+    border: 1px solid #FBA00E;
+    box-shadow: 1px 1px 1px #999;
+}
+
 /* Editar foto */
 #edit-container {
     display: none;
@@ -442,6 +452,16 @@ img.menu-header-user-photo {
     display: block;
 }
 
+.name-categoria-libros-categoria{
+    color: #FBA00E;
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 20%;
+    font-size: 40px;
+    font-weight: bold;
+}
+
 /* Tabla catalogo de libros */
 
 .admin-panel-page-table {
@@ -638,7 +658,6 @@ footer {
 #go-up-botonSubir {
     display: none;
 	padding:20px;
-	background:#FBA00E;
 	font-size:20px;
 	color:#fff;
 	cursor:pointer;
@@ -647,10 +666,12 @@ footer {
 	right:20px;
     z-index: 100;
     border-radius: 15px;
+    background:#FBA00E;
+    opacity: 0.6;
 }
 
 #go-up-botonSubir:hover{
-    opacity: 0.8;
+    opacity: 1;
 }
 
 /* PREFOOTER MAIN PAGE */

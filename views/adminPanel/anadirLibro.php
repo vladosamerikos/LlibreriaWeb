@@ -6,12 +6,12 @@ foreach ($listadoCategorias as $categorias) {
     echo "<option value=" . $categorias['id_genero'] . ">" . $categorias['nombre'] . "</option>";
 }
 echo "</select><br><br>
-    <input type='text' id='isbn' class='place-holder' name='isbn' placeholder='ISBN'><br><br>
-    <input type='text' id='nombre' class='place-holder' name='nombre' placeholder='Nombre'><br><br>
-    <input type='text' id='descripcion_short' class='place-holder' name='descripcion_short' placeholder='Descripción Corta'><br><br>
-    <input type='text' id='descripcion' class='place-holder' name='descripcion' placeholder='Descripción'><br><br>
-    <input type='text' id='stock' class='place-holder' name='stock' placeholder='Stock'><br><br>
-    <input type='number' id='precio_venta' step='0.01' class='place-holder' name='precio_venta' placeholder='Precio'><br><br>
-    <input type='file' id='imagen' name='imagen'><br><br>
+    <input type='number' id='isbn' class='place-holder' name='isbn' placeholder='ISBN' pattern=[0-9] required><br><br>
+    <textarea id='nombre' class='tetx-area-panel-form-name' name='nombre' placeholder='Nombre' required></textarea><br><br>
+    <textarea id='descripcion_short' class='tetx-area-panel-form' rows'3' cols='40' name='descripcion_short' placeholder='Descripción Corta' required></textarea><br><br>
+    <textarea id='descripcion' class='tetx-area-panel-form' rows'5' cols='40' name='descripcion' placeholder='Descripción' required></textarea><br><br>
+    <input type='number' id='stock' class='place-holder' name='stock' placeholder='Stock' required><br><br>
+    <input type='number' id='precio_venta' step='0.01' class='place-holder' name='precio_venta' placeholder='Precio' required><br><br>
+    <input type='file' id='imagen' name='imagen' required><br><br>
     <input name='submit' type='submit' class='submit-button' id='submit' value='Añadir libro'><br>
 </form>";

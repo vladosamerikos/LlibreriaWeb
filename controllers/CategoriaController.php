@@ -12,6 +12,14 @@ class CategoriaController
         require_once "views/adminPanel/tablaCategorias.php";
     }
 
+    public function mostrarCategoria()
+    {
+        require_once "views/adminPanel/menu.php";
+        $categoria = new Categoria();
+        $catalogo = $categoria->obtenerCategoria();
+        require_once "views/adminPanel/librosCategoria.php";
+    }
+
     public function mostrarAnadirCategoria()
     {
         require_once "views/adminPanel/menu.php";

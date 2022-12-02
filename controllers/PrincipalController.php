@@ -24,6 +24,8 @@ class PrincipalController
         $resultado = $categoria->obtenerListado();
         require_once "views/general/mostrarListaCategorias.php";
         $_idcategoria = $_GET['id'];
+        $categoria2 = new Categoria();
+        $datosCategoria = $categoria2->obtenerInfo($_idcategoria);
         $librosCategoria = new Libro();
         $resultado = $librosCategoria->librosCategoria($_idcategoria);
         require_once "views/principal/librosCategoria.php";
