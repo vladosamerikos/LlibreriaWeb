@@ -17,3 +17,11 @@ function transformarFecha($fecha){
 function formatarPrecio($precio){
     return str_replace('.',',',(string)$precio);
 }
+
+function adminIncorrecte(){
+    header("Location: index.php?controller=Login&action=mostrarLoginAdmin");
+}
+
+function usuariIncorrecte(){
+    header("Location: index.php?controller=Login&action=mostrarLoginUser");
+}

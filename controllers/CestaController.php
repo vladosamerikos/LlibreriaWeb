@@ -12,7 +12,6 @@ class CestaController
         }else{
             echo "No tienes articulos";
         }
-
     }
 
     public function agregarLibroACesta(){

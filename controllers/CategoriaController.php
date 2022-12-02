@@ -6,10 +6,15 @@ class CategoriaController
 
     public function mostrarCategorias()
     {
-        require_once "views/adminPanel/menu.php";
-        $categoria = new Categoria();
-        $catalogo = $categoria->obtenerListado();
-        require_once "views/adminPanel/tablaCategorias.php";
+        if (isset($_SESSION['email']) && $_SESSION['role'] == 'admin'){
+            require_once "views/adminPanel/menu.php";
+            $categoria = new Categoria();
+            $catalogo = $categoria->obtenerListado();
+            require_once "views/adminPanel/tablaCategorias.php";
+        }
+        else{
+            adminIncorrecte();
+        }
     }
 
     public function mostrarCategoria()
@@ -22,16 +27,26 @@ class CategoriaController
 
     public function mostrarAnadirCategoria()
     {
-        require_once "views/adminPanel/menu.php";
-        require_once "views/adminPanel/anadirCategoria.php";
+        if (isset($_SESSION['email']) && $_SESSION['role'] == 'admin'){
+            require_once "views/adminPanel/menu.php";
+            require_once "views/adminPanel/anadirCategoria.php";
+        }
+        else{
+            adminIncorrecte();
+        }
     }
 
     public function anadirCategoria()
     {
-        require_once "views/adminPanel/menu.php";
-        $categoria = new Categoria();
-        $nombre = $_POST['nombre'];
-        $categoria->anadir($nombre);
+        if (isset($_SESSION['email']) && $_SESSION['role'] == 'admin'){
+            require_once "views/adminPanel/menu.php";
+            $categoria = new Categoria();
+            $nombre = $_POST['nombre'];
+            $categoria->anadir($nombre);
+        }
+        else{
+            adminIncorrecte();
+        }
     }
 
     public function activarCategoria()
@@ -52,23 +67,32 @@ class CategoriaController
 
     public function mostrarEditarCategoria()
     {
-        $_idcategoria = $_GET['id'];
-        $categoria = new Categoria();
-        $datosCategoria = $categoria->obtenerInfo($_idcategoria);
-        require_once "views/adminPanel/menu.php";
-        require_once "views/adminPanel/editarCategoria.php";
+        if (isset($_SESSION['email']) && $_SESSION['role'] == 'admin'){
+            $_idcategoria = $_GET['id'];
+            $categoria = new Categoria();
+            $datosCategoria = $categoria->obtenerInfo($_idcategoria);
+            require_once "views/adminPanel/menu.php";
+            require_once "views/adminPanel/editarCategoria.php";
+        }
+        else{
+            adminIncorrecte();
+        }
     }
 
     public function editarCategoria()
     {
-        require_once "views/adminPanel/menu.php";
-        $categoria = new Categoria();
-        $_id_genero = $_POST['id_genero'];
-        $_nombre = $_POST['nombre'];
-        $_estado = $_POST['estado'];
-
-        $categoria->editar($_id_genero, $_nombre);
-        header("Location: index.php?controller=Categoria&action=mostrarCategorias");
+        if (isset($_SESSION['email']) && $_SESSION['role'] == 'admin'){
+            require_once "views/adminPanel/menu.php";
+            $categoria = new Categoria();
+            $_id_genero = $_POST['id_genero'];
+            $_nombre = $_POST['nombre'];
+            $_estado = $_POST['estado'];
+            $categoria->editar($_id_genero, $_nombre);
+            header("Location: index.php?controller=Categoria&action=mostrarCategorias");
+        }
+        else{
+            adminIncorrecte();
+        }
     }
     
 }
