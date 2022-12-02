@@ -11,6 +11,18 @@ echo "<div class='main-menu-bar'>
         if (isset($_SESSION['email']) && $_SESSION['role']=='user')
         {
             // Vista 2: User
+            echo "<div class='search_bar'>
+                    <img class='search_img' src='img/search.svg' alt='lupa de busqueda'>
+                    <form class='search_form' action='index.php?controller=Buscador&action=buscarPedido' method='post'>
+                        <select name='filtro'>
+                            <option value='titulo' selected> Titulo </option>
+                            <option value='isbn'> ISBN </option>
+                            <option value='genero'> Genero </option>
+                        </select>
+                        <input type='text' name='search' id='search' placeholder=' Buscar ...'>
+                        <button type='submit'>Buscar</button>
+                    </form>
+                </div>";
             if(isset($_SESSION['Cesta'])){
                 echo "<span style='color: white;'>".calcularCesta()."</span>";
             }

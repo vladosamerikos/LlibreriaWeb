@@ -33,5 +33,16 @@ class BuscadorController
         $estados = $buscador->obtenerEstados();
         require_once "views/adminPanel/tablaPedidos.php";
     }
+
+    public function buscadorGeneral()
+    {
+        require_once "views/adminPanel/menu.php";
+        $filtro = $_POST['filtro'];
+        $contenido = $_POST['search'];
+        $buscador = new Pedido();
+        $resultado = $buscador->;
+        $estados = $buscador->obtenerEstados();
+
+    }
     
 }
