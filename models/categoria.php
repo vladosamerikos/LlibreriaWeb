@@ -18,6 +18,7 @@ class Categoria extends Database
         $resultado = $consulta->fetchAll();
         return $resultado;
     }
+
     public function obtenerListadoActivos()
     {
         $consulta = $this->db->prepare("SELECT * FROM generos WHERE estado = 1");

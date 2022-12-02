@@ -1,3 +1,5 @@
+<p class='name-categoria-libros-categoria'>Libros Importantes</p>
+<div class='orange-line'></div>
 <div class="main-page-important-books">
     <?php
         foreach ($resultado as $libro) {

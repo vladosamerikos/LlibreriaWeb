@@ -1,3 +1,15 @@
+
+<?php
+    if(isset($datosCategoria[0]['nombre'])){
+        echo "<p class='name-categoria-libros-categoria'>". $datosCategoria[0]['nombre'] ."</p>";
+        echo "<div class='orange-line'></div>";
+    }
+    else{
+        echo "<p class='name-categoria-libros-categoria'>Todos los libros</p>";
+        echo "<div class='orange-line'></div>";
+    }
+?>
+
 <div class="main-page-important-books">
     <?php
         foreach ($resultado as $libro) {

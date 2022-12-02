@@ -12,7 +12,7 @@ foreach ($listadoCategorias as $categorias) {
 }
 echo "</select><br><br>
     <input type='text' id='isbn' class='place-holder' placeholder='ISBN' name='isbn' value='" . $datosLibro[0]['isbn'] . "'><br><br>
-    <input type='text' id='nombre' class='place-holder' name='nombre' value='" . $datosLibro[0]['nombre'] . "'><br><br>
+    <textarea id='nombre' class='tetx-area-panel-form-name' name='nombre'>" . $datosLibro[0]['nombre'] . "</textarea><br><br>
     <textarea class='tetx-area-panel-form' rows'3' cols='40' id='descripcion_short' name='descripcion_short'>" . $datosLibro[0]['descripcion_short'] . "</textarea><br><br>
     <textarea class='tetx-area-panel-form' rows'5' cols='40' id='descripcion' name='descripcion'>" . $datosLibro[0]['descripcion'] . "</textarea><br><br>
     <input type='text' id='stock' class='place-holder' name='stock' value='" . $datosLibro[0]['stock'] . "'><br><br>
