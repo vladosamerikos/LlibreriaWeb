@@ -39,7 +39,7 @@ class PedidoController
             require_once "views/adminPanel/menu.php";
             $pedido = new Pedido();
             $id_pedido = $_GET['id'];
-            $catalogo = $pedido->obtenerFacturaPedido($id_pedido);
+            $catalogo = $pedido->obtenerDetallePedido($id_pedido);
             $estados = $pedido->obtenerEstados();
             require_once "views/adminPanel/tablaFacturas.php";
         }
