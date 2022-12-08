@@ -836,11 +836,15 @@ footer {
 }
 
 .cesta-container{
-    max-width: 800px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 2rem 0px 3.5rem;
     margin-left: auto;
+    margin-right: auto;
+}
+
+.cesta-subcontainer{
+    width: 800px;
 }
 
 .cesta-item{
@@ -993,10 +997,10 @@ footer {
     border: 1px solid #999;
     border-radius: 5px;
     padding: 24px;
-    margin-right: auto;
+
     margin-left: 15px;
-    height: 220px;
-    margin-top: 3.4rem;
+    height: 260px;
+    margin-top: 1.5rem;
 }
 
 .cesta-total-row{
@@ -1010,39 +1014,68 @@ footer {
 }
 
 .total-container-title{
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     font-size: 20px;
     line-height: 24px;
     font-weight: 600;
 }
 
 .subtotal-container-title{
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     font-size: 16px;
 }
 
 .container-title-low-text{
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
     font-size: 12px;
     line-height: 16px;
 }
 
 .total-container-submit-button{
-    text-align: center;
+    border: 1px solid #999;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;    
     color: white;
     background-color: #FBA00E;
-    height: 40px;
+    cursor: pointer;
 }
 
-.total-container-back-button{
-    text-align: center;
-    height: 40px;
+.total-container-submit-button:hover{
+    background-color: #fba00ea1;
+    border-color: transparent;
+}
+
+.cesta-custom-msg-container{
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+}
+
+.cesta-custom-msg{
     color: black;
-    background-color: transparent;
-}   
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 25px;
+}
+
+.cesta-custom-msg-img{
+    width: 200px;
+    height: 300px;
+}
+
+
 
 
 /* ESTILOS MÓVIL */
