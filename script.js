@@ -78,3 +78,37 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+
+
+// Cesta progress bar
+
+
+let currentActive = 2;
+
+//NOTE CHANGE HERE TO 1-4
+//1=25%
+//2=50%
+//3=75%
+//4=100%
+
+
+function update(currentActive) {
+	const progress = document.getElementById("progress");
+	const stepCircles = document.querySelectorAll(".circle");
+	stepCircles.forEach((circle, i) => {
+		if (i < currentActive) {
+			circle.classList.add("active");
+		} else {
+			circle.classList.remove("active");
+		}
+	});
+
+	const activeCircles = document.querySelectorAll(".active");
+	progress.style.width =
+		((activeCircles.length - 1) / (stepCircles.length - 1)) * 100 + "%";
+
+  
+}
+
+
+
