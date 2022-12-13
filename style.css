@@ -996,7 +996,6 @@ footer {
     border: 1px solid #999;
     border-radius: 5px;
     padding: 24px;
-
     margin-left: 15px;
     height: 260px;
     margin-top: 1.5rem;
@@ -1083,21 +1082,22 @@ footer {
 
 /* DISEÑO RESPONSIVE PARA TABLET */
 
-@media screen and (min-width: 768px) and (max-width: 1500px) {
+@media screen and (min-width: 768px) and (max-width: 1300px) {
     *{
         font-size: 15px;
     }
 
     .main-menu-bar-logo{
-        padding-top: 25px;
-        height: 50px;
-        width: 100px;
+        padding-top: 15px;
+        height: 70px;
+        width: 120px;
     }
     
     .main-menu-bar-logo:hover{
-        padding-top: 25px;
-        height: 55px;
-        width: 105px;
+        padding-top: 15px;
+        height: 70px;
+        width: 120px;
+        opacity: 0.5;
     }
 
     .main-menu-bar{
@@ -1135,15 +1135,34 @@ footer {
         height: 200px;
         text-align: center;
     }
+
+    .form-container {
+        max-width: 80%;
+    }
+
+    .content-libro-container{
+        max-width: 80%;
+        margin-bottom: 5%;
+    }
+    .libro-image {
+        height: 220px;
+        width: 160px;
+    }
+
+    .cesta-container{
+        display: block;
+        
+    }
+    .cesta-subcontainer{
+        width: 100%;
+    }
+    .cesta-total-container{
+        margin-left: 0px;
+    }
 }
 
 
 @media screen and (max-width: 768px) {
 
-
-    .libro-image {
-        height: 207px;
-        width: 137px;
-    }
 
 }
