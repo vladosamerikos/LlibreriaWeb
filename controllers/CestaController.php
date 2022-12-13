@@ -1,5 +1,5 @@
 <?php
-
+require "models/usuario.php";
 require "models/cesta.php";
 class CestaController
 {
@@ -48,6 +48,29 @@ class CestaController
         header('Location: index.php?controller=Cesta&action=mostrarCesta');
     }
 
+    public function selecionarDireccion(){
+        if (isset($_SESSION['email']) || isset($_SESSION['role']) || $_SESSION['role']=='user'){
+            $user = new Usuario();
+            $direccion=$user->getDireccion($_SESSION['email']);
+            require_once "views/cesta/direccion.php";
+        }else{
+            require_once "views/mensajesAviso/avisoSesionCesta.php";
+        }
+    }
+
+    public function selecionarMetodoDePago(){
+        require_once "views/cesta/pago.php";
+        var_dump($_SESSION['Cesta']);
 
 
+    }
+
+    public function tramitarPedido(){
+        $cesta = new Cesta();
+        $user = new Usuario();
+        $data=$user->getId($_SESSION['email']);
+        $id_user = $data[0]['id_usuario'];
+        $cesta->tramitarPedido($id_user);
+        require_once "views/cesta/resument.php";
+    }
 }

@@ -1,7 +1,7 @@
 <?php
 require_once("libro.php");
-
-class Cesta
+require_once("database.php");
+class Cesta extends Database
 {
     public function agregarACesta($id, $cant)
     {   
@@ -59,6 +59,22 @@ class Cesta
         if ($_SESSION['Cesta'][$id]['cant']>1){
             $_SESSION['Cesta'][$id]['cant']-=1;
         }
+    }
+
+    public function tramitarPedido($id_usu){
+        $fechaActual = date('Y-m-d');
+        $total = $_SESSION['Cesta']['Total'];
+        echo $id_usu;
+        echo $fechaActual;
+        echo $total;
+        // genera la factura
+        $consulta = $this->db->prepare("INSERT INTO factura (fk_id_usuario, fecha, total, estado) VALUES ($id_usu, '$fechaActual', $total, 1)") ;
+        $consulta->execute();
+        $last_id = $this->db->lastInsertId();
+        // genera el detalle de la factura
+        
+
+
     }
 
 }
