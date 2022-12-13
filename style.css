@@ -461,7 +461,6 @@ img.menu-header-user-photo {
 
 .name-categoria-libros-categoria{
     color: #FBA00E;
-    width: 100%;
     height: 50px;
     padding-top: 10px;
     padding-left: 20%;
@@ -1049,18 +1048,64 @@ footer {
 
 /* Menú panel administrador fijo */
 
-@media screen and (max-width: 1200px) {
+/* DISEÑO RESPONSIVE PARA TABLET */
 
-
-    .libro-image {
-        height: 297px;
-        width: 196px;
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+    *{
+        font-size: 15px;
     }
 
+    .main-menu-bar-logo{
+        padding-top: 25px;
+        height: 50px;
+        width: 100px;
+    }
+    
+    .main-menu-bar-logo:hover{
+        padding-top: 25px;
+        height: 55px;
+        width: 105px;
+    }
+
+    .main-menu-bar{
+        width: 100%;
+    }
+
+    .main-page-important-books{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .important-book {
+        box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+        width: 300px;
+        margin-bottom: 50px;
+        height: 500px;
+        grid-column-gap: 15px;
+        grid-row-gap: 20px;
+        padding-top: 50px;
+        margin: auto;
+    }
+
+    .name-categoria-libros-categoria{
+        width: 80%;
+    }
+    
+    .subdiv-footer-1{
+        width: 180px;
+    }
+
+    .pre-footer-text {
+        margin: auto;
+        width: 100px;
+        height: 200px;
+        text-align: center;
+    }
 }
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
 
 
     .libro-image {
