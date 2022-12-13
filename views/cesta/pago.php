@@ -1,5 +1,14 @@
 <?php
 echo "
+<div class='progress-container'>
+        <div class='progress' id='progress'> </div>
+        <div class='circle active'>Cesta</div>
+        <div class='circle'>Dirección de envío</div>
+        <div class='circle'>Metodos de pago</div>
+        <div class='circle'>Resumen</div>
+</div>
+
+
 <form class='pago-page-container' method='POST'>
     <div class='pago-content-container'>
         <div class='pago-option'>

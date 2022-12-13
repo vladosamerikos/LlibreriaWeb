@@ -837,7 +837,7 @@ footer {
 .cesta-container{
     display: flex;
     flex-direction: row;
-    padding: 2rem 0px 3.5rem;
+    padding: 0px 0px 3.5rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1074,6 +1074,67 @@ footer {
 }
 
 
+/* Cesta progress bar */
+
+:root {
+    --line-border-fill: #FBA00E;
+    --line-border-empty: #e0e0e0;
+  }
+  
+  
+  .progress-container::before {
+    content: "";
+    background: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 550px;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .progress {
+    background: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+  }
+  
+  .circle {
+    text-align: center;
+    background: #fff;
+    color: #999;
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 6px solid var(--line-border-empty);
+    transition: .4s ease;
+  }
+  
+  .circle.active {
+    border-color: var(--line-border-fill);
+  }
 
 
 /* ESTILOS MÓVIL */
