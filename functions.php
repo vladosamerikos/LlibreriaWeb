@@ -2,8 +2,10 @@
 
 function calcularCesta(){
     $res = 0;
-    foreach($_SESSION['Cesta'] as $articulo){
-        $res += $articulo['cant'];
+    foreach($_SESSION['Cesta'] as $articulo=>$valor){
+        if (is_numeric($articulo)){
+            $res += $valor['cant'];
+        }
     }
     return $res;
 }
