@@ -120,7 +120,13 @@ class Libro extends Database
         return $resultado;
     }
 
-
+    public function obtenerBusquedaGeneral($filtro,$contenido)
+    {
+        $consulta = $this->db->prepare("SELECT articulo.id_articulo, articulo.fk_id_genero, articulo.isbn, articulo.nombre, articulo.descripcion_short, articulo.descripcion, articulo.stock, articulo.precio_venta, articulo.imagen, articulo.destacado, articulo.estado FROM articulo INNER JOIN generos ON articulo.fk_id_genero = generos.id_genero WHERE $filtro LIKE '%$contenido%'");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
 
 
     

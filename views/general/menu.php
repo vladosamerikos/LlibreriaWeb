@@ -13,11 +13,11 @@ echo "<div class='main-menu-bar'>
             // Vista 2: User
             echo "<div class='search_bar'>
                     <img class='search_img' src='img/search.svg' alt='lupa de busqueda'>
-                    <form class='search_form' action='index.php?controller=Buscador&action=buscarPedido' method='post'>
+                    <form class='search_form' action='index.php?controller=Buscador&action=buscadorGeneral' method='post'>
                         <select name='filtro'>
-                            <option value='titulo' selected> Titulo </option>
-                            <option value='isbn'> ISBN </option>
-                            <option value='genero'> Genero </option>
+                            <option value='articulo.nombre' selected> Titulo </option>
+                            <option value='articulo.isbn'> ISBN </option>
+                            <option value='generos.nombre'> Genero </option>
                         </select>
                         <input type='text' name='search' id='search' placeholder=' Buscar ...'>
                         <button type='submit'>Buscar</button>

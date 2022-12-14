@@ -43,4 +43,5 @@ class PrincipalController
         require_once "views/principal/librosCategoria.php";
         require_once "views/principal/preFooter.html";
     }
+    
 }

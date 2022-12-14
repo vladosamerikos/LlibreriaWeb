@@ -36,13 +36,12 @@ class BuscadorController
 
     public function buscadorGeneral()
     {
-        require_once "views/adminPanel/menu.php";
         $filtro = $_POST['filtro'];
         $contenido = $_POST['search'];
-        $buscador = new Pedido();
-        $resultado = $buscador->;
-        $estados = $buscador->obtenerEstados();
-
+        $buscador = new Libro();
+        $resultado = $buscador->obtenerBusquedaGeneral($filtro,$contenido);
+        require_once "views/principal/librosBuscador.php";
+        require_once "views/principal/preFooter.html";
     }
     
 }
