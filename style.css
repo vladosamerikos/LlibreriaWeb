@@ -327,6 +327,7 @@ img.menu-header-user-photo {
 .admin-panel-title {
     display: inline-block;
     font-size: 30px;
+    color: #FBA00E;
 }
 
 .orange-line {
@@ -837,7 +838,7 @@ footer {
 .cesta-container{
     display: flex;
     flex-direction: row;
-    padding: 2rem 0px 3.5rem;
+    padding: 0px 0px 3.5rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -996,7 +997,6 @@ footer {
     border: 1px solid #999;
     border-radius: 5px;
     padding: 24px;
-
     margin-left: 15px;
     height: 260px;
     margin-top: 1.5rem;
@@ -1075,29 +1075,191 @@ footer {
 }
 
 
+/* Cesta progress bar */
+
+:root {
+    --line-border-fill: #FBA00E;
+    --line-border-empty: #e0e0e0;
+  }
+  
+  
+  .progress-container::before {
+    content: "";
+    background: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 550px;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .progress {
+    background: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+  }
+  
+  .circle {
+    text-align: center;
+    background: #fff;
+    color: #999;
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 6px solid var(--line-border-empty);
+    transition: .4s ease;
+  }
+  
+  .circle.active {
+    border-color: var(--line-border-fill);
+  }
 
 
 /* ESTILOS MÓVIL */
 
 /* Menú panel administrador fijo */
 
-@media screen and (max-width: 1200px) {
+/* DISEÑO RESPONSIVE PARA TABLET */
 
-
-    .libro-image {
-        height: 297px;
-        width: 196px;
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+    *{
+        font-size: 15px;
     }
 
+    .main-menu-bar-logo{
+        padding-top: 15px;
+        height: 70px;
+        width: 120px;
+    }
+    
+    .main-menu-bar-logo:hover{
+        padding-top: 15px;
+        height: 70px;
+        width: 120px;
+        opacity: 0.5;
+    }
+
+    .main-menu-bar{
+        width: 100%;
+    }
+
+    .main-page-important-books{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .important-book {
+        box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+        width: 300px;
+        margin-bottom: 50px;
+        height: 500px;
+        grid-column-gap: 15px;
+        grid-row-gap: 20px;
+        padding-top: 50px;
+        margin: auto;
+    }
+
+    .name-categoria-libros-categoria{
+        width: 80%;
+    }
+    
+    .subdiv-footer-1{
+        width: 180px;
+    }
+
+    .pre-footer-text {
+        margin: auto;
+        width: 100px;
+        height: 200px;
+        text-align: center;
+    }
+
+    .form-container {
+        max-width: 80%;
+    }
+
+    .content-libro-container{
+        max-width: 80%;
+        margin-bottom: 5%;
+    }
+    .libro-image {
+        height: 220px;
+        width: 160px;
+    }
+
+    .cesta-container{
+        display: block;
+        
+    }
+    .cesta-subcontainer{
+        width: 100%;
+    }
+    .cesta-total-container{
+        margin-left: 0px;
+    }
+
+    .admin-menu-bar{
+        text-align: center;
+        flex-direction: row;
+        width: 100%;
+        height: 70px;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 0px;
+        background-color: #1F1F1F;
+    }
+    .admin-menu-bar-item{
+        color: white;
+    }
+    .admin-menu-bar-item:hover{
+        height: 70px;
+        color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+
+    }
+    .search_bar input{
+        width: 80%;
+    }
+    .search_bar{
+        width: 500px;
+    }
+
+    .admin-panel-content-container {
+        width: 100%;
+        float: none;
+    }
+    .admin-panel-title{
+        padding-left: 20px;
+    }
 }
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
 
-
-    .libro-image {
-        height: 207px;
-        width: 137px;
-    }
 
 }

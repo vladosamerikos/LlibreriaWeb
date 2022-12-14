@@ -42,4 +42,17 @@ class Usuario extends Database
         }
     }
 
+    public function getDireccion($email){
+        $consulta = $this->db->prepare("SELECT direccion FROM usuario WHERE email LIKE '$email'");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
+    public function getId($email){
+        $consulta = $this->db->prepare("SELECT id_usuario FROM usuario WHERE email LIKE '$email'");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
+
 }

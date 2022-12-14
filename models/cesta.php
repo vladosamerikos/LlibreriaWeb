@@ -1,7 +1,7 @@
 <?php
 require_once("libro.php");
-
-class Cesta
+require_once("database.php");
+class Cesta extends Database
 {
     public function agregarACesta($id, $cant)
     {   
@@ -59,6 +59,34 @@ class Cesta
         if ($_SESSION['Cesta'][$id]['cant']>1){
             $_SESSION['Cesta'][$id]['cant']-=1;
         }
+    }
+
+    public function tramitarPedido($id_usu){
+        $fechaActual = date('Y-m-d');
+        $total = $_SESSION['Cesta']['Total'];
+        echo $id_usu;
+        echo $fechaActual;
+        echo $total;
+        // genera la factura
+        $consulta = $this->db->prepare("INSERT INTO factura (fk_id_usuario, fecha, total, estado) VALUES ($id_usu, '$fechaActual', $total, 1)") ;
+        $consulta->execute();
+        $last_id = $this->db->lastInsertId();
+        echo "S'ha agregado corectamende el pedido".$last_id."<br>";
+        // genera el detalle de la factura
+        foreach($_SESSION['Cesta'] as $articulo=>$valor){
+            if (is_numeric($articulo)){
+                $cantidad = $valor['cant'];
+                $subtotal = $cantidad* $valor['precio'];
+                $consulta = $this->db->prepare("INSERT INTO detalle_factura (fk_id_factura, fk_id_articulo, cantidad, precio) VALUES ($last_id, $articulo, $cantidad, $subtotal)") ;
+                $consulta->execute();
+                $lastdetalle_id = $this->db->lastInsertId();
+                echo "S'ha agregado corectamende el detalle de pedido".$lastdetalle_id."<br>";
+            }
+        }
+        // Limpia la cesta 
+        unset($_SESSION['Cesta']);
+
+
     }
 
 }
