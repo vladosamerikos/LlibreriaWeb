@@ -11,16 +11,15 @@ echo "<div class='main-menu-bar'>
         if (isset($_SESSION['email']) && $_SESSION['role']=='user')
         {
             // Vista 2: User
-            echo "<div class='search_bar'>
-                    <img class='search_img' src='img/search.svg' alt='lupa de busqueda'>
-                    <form class='search_form' action='index.php?controller=Buscador&action=buscadorGeneral' method='post'>
-                        <select name='filtro'>
+            echo "<div class='search_bar_header'>
+                    <form class='form_search_form_header' action='index.php?controller=Buscador&action=buscadorGeneral' method='post'>
+                        <select name='filtro' class='option_search_bar'>
                             <option value='articulo.nombre' selected> Titulo </option>
                             <option value='articulo.isbn'> ISBN </option>
                             <option value='generos.nombre'> Genero </option>
                         </select>
-                        <input type='text' name='search' id='search' placeholder=' Buscar ...'>
-                        <button type='submit'>Buscar</button>
+                        <input type='text' class='input_search_bar_header' name='search' id='search'>
+                        <button type='submit' class='button_search_bar_header'>Buscar</button>
                     </form>
                 </div>";
             if(isset($_SESSION['Cesta'])){
@@ -34,6 +33,17 @@ echo "<div class='main-menu-bar'>
     else
     {
         // Vista 3: User no logueado
+        echo "<div class='search_bar_header'>
+                    <form class='form_search_form_header' action='index.php?controller=Buscador&action=buscadorGeneral' method='post'>
+                        <select name='filtro' class='option_search_bar'>
+                            <option value='articulo.nombre' selected> Titulo </option>
+                            <option value='articulo.isbn'> ISBN </option>
+                            <option value='generos.nombre'> Genero </option>
+                        </select>
+                        <input type='text' class='input_search_bar_header' name='search' id='search'>
+                        <button type='submit' class='button_search_bar_header'>Buscar</button>
+                    </form>
+                </div>";
         if(isset($_SESSION['Cesta'])){
             echo "<span style='color: white;'>".calcularCesta()."</span>";
         }
