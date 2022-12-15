@@ -63,7 +63,7 @@ if (isset($_SESSION['Cesta'])){
                     <div class='total-container-title'><div class='left'>Total</div><div class='rigth'>". formatarPrecio($_SESSION['Cesta']['Total']) ."€</div></div>
                     <div class='container-title-low-text'><div class='left'>IVA incluido</div><div class='rigth'></div></div>
                 </div>
-                <a onclick='update(2)' href='index.php?controller=Cesta&action=selecionarDireccion' class='total-container-submit-button'>Tramitar pedido</a>
+                <a href='index.php?controller=Cesta&action=selecionarDireccion' class='total-container-submit-button'>Realizar pedido</a>
             </div>
 
 
