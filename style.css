@@ -1137,11 +1137,6 @@ footer {
     border-color: var(--line-border-fill);
   }
 
-
-/* ESTILOS MÓVIL */
-
-/* Menú panel administrador fijo */
-
 /* DISEÑO RESPONSIVE PARA TABLET */
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
@@ -1206,6 +1201,7 @@ footer {
         max-width: 80%;
         margin-bottom: 5%;
     }
+
     .libro-image {
         height: 220px;
         width: 160px;
@@ -1213,11 +1209,12 @@ footer {
 
     .cesta-container{
         display: block;
-        
     }
+
     .cesta-subcontainer{
         width: 100%;
     }
+
     .cesta-total-container{
         margin-left: 0px;
     }
@@ -1232,19 +1229,22 @@ footer {
         margin-top: 0px;
         background-color: #1F1F1F;
     }
+
     .admin-menu-bar-item{
         color: white;
     }
+
     .admin-menu-bar-item:hover{
         height: 70px;
         color: white;
         border: 1px solid white;
         border-radius: 10px;
-
     }
+
     .search_bar input{
         width: 80%;
     }
+
     .search_bar{
         width: 500px;
     }
@@ -1253,13 +1253,53 @@ footer {
         width: 100%;
         float: none;
     }
+
     .admin-panel-title{
         padding-left: 20px;
     }
 }
 
+/* DISEÑO RESPONSIVE PARA MÓVIL */
+
 
 @media screen and (max-width: 768px) {
+    .main-page-important-books{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
 
+    .pre-footer-title{
+        height: 100px;
+    }
+
+    .pre-footer-images{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: absolute;
+        z-index: 1;
+        margin-left: 15%;
+    }
+
+    .pre-footer-image{
+        margin-bottom: 70%;
+    }
+
+    .pre-footer-texts{
+        margin-top: 150px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pre-footer-text {
+        margin: auto;
+        width: 100px;
+        height: 200px;
+        text-align: center;
+    }
+  
+    .subdiv-footer-1{
+        width: 130px;
+    }
 
 }
