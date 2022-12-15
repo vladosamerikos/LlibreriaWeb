@@ -397,6 +397,39 @@ img.menu-header-user-photo {
     opacity: 50%;
 }
 
+.search_bar_header {
+    padding-right: 1rem;
+}
+
+.form_search_form_header {
+    display: flex;
+    row-gap: 2px;
+}
+
+.button_search_bar_header {
+    height: 48px;
+    border-radius: 0px 25px 25px 0px;
+    border: none;
+    background-color: #FBA00E;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    color: white;
+}
+
+.input_search_bar_header {
+    height: 48px;
+    background-color: white;
+    border: none;
+}
+
+.option_search_bar {
+    height: 48px;
+    background-color: white;
+    border: none;
+    border-radius: 25px 0px 0px 25px;
+}
+
 /* Navegador categorias (main page) */
 
 .main-page-list-category {
