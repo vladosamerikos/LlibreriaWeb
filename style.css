@@ -16,6 +16,10 @@ a {
     text-decoration: none;
 }
 
+.disabled{
+    opacity: 60%;
+}
+
 .left{
     float: left;
 }

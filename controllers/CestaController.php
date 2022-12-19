@@ -70,6 +70,38 @@ class CestaController
         }
     }
 
+    public function mostrarEditarDireccion(){
+        if (isset($_SESSION['Cesta'])){
+            if (isset($_SESSION['email']) || isset($_SESSION['role']) || $_SESSION['role']=='user'){
+                $user = new Usuario();
+                $direccion=$user->getDireccion($_SESSION['email']);
+                require_once "views/cesta/editDireccion.php";
+            }else{
+                header('Location: index.php?controller=Login&action=mostrarLoginUser');
+            }
+        }else{
+            header('Location: index.php?controller=Cesta&action=mostrarCesta');
+        }
+    }
+
+
+    public function editarDireccion(){
+        if (isset($_SESSION['Cesta'])){
+            if (isset($_SESSION['email']) || isset($_SESSION['role']) || $_SESSION['role']=='user'){
+                $direccion = $_POST['newdireccion'];
+                $user = new Usuario();
+                $user->setDireccion($_SESSION['email'], $direccion);
+                header('Location: index.php?controller=Cesta&action=selecionarDireccion');
+            }else{
+                header('Location: index.php?controller=Login&action=mostrarLoginUser');
+            }
+        }else{
+            header('Location: index.php?controller=Cesta&action=mostrarCesta');
+        }
+    }
+
+
+
     public function tramitarPedido(){
         if (isset($_SESSION['Cesta'])){
             $cesta = new Cesta();

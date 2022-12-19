@@ -12,13 +12,14 @@ echo"
 
 <div class='direccion-page-container'>
     <div class='direccion-page-content'>
-        <div class='current-direction'>
+        <form class='current-direction' action='index.php?controller=Cesta&action=editarDireccion' method='POST'>
             
-            <div class='direction-text-content'><img class='payment-icon' src='./img/house.svg'>
-                ".$direccion[0]['direccion']."
+            <div class='direction-text-content'>
+                <img class='payment-icon' src='./img/house.svg'>
+                <input name='newdireccion' id='newdireccion' type='text' value='".$direccion[0]['direccion']."'>
             </div>
-            <a class='cesta-item-action-container-item cesta-item-action' href='index.php?controller=Cesta&action=mostrarEditarDireccion'>Editar</a>
-        </div>
+            <button type='submit' class='cesta-item-action-container-item cesta-item-action'>Guardar</button>
+        </form>
 
         <div class='cesta-total-container'>
             <div class='cesta-total-row'>
@@ -43,7 +44,7 @@ echo"
                 <div class='total-container-title'><div class='left'>Total</div><div class='rigth'>". formatarPrecio($_SESSION['Cesta']['Total']) ."€</div></div>
                 <div class='container-title-low-text'><div class='left'>IVA incluido</div><div class='rigth'></div></div>
             </div>
-            <a href='index.php?controller=Cesta&action=selecionarMetodoDePago' class='total-container-submit-button'>Guardar y continuar</a>
+            <a class='total-container-submit-button disabled'>Guardar y continuar</a>
         </div>
 
     </div>
