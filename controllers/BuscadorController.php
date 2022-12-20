@@ -36,6 +36,10 @@ class BuscadorController
 
     public function buscadorGeneral()
     {
+        $categoria = new Categoria();
+        $resultado = $categoria->obtenerListado();
+        require_once "views/general/mostrarListaCategorias.php";
+        
         $filtro = $_POST['filtro'];
         $contenido = $_POST['search'];
         $buscador = new Libro();

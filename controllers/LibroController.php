@@ -144,6 +144,10 @@ class LibroController
 
     public function mostrarLibro()
     {
+        $categoria = new Categoria();
+        $resultado = $categoria->obtenerListado();
+        require_once "views/general/mostrarListaCategorias.php";
+        
         $_idlibro = $_GET['id'];
         $libro = new Libro();
         $datosLibro = $libro->obtenerInfo($_idlibro);

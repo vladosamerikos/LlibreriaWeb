@@ -2,7 +2,7 @@
 if (isset($_SESSION['Cesta'])){
     echo "
     <div class='progress-container'>
-        <div class='progress' id='progress'> </div>
+        <div  class='progress' id='progress'> </div>
         <div class='circle active'>Cesta</div>
         <div class='circle'>Dirección de envío</div>
         <div class='circle'>Metodos de pago</div>
