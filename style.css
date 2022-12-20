@@ -1026,7 +1026,6 @@ footer {
     padding: 0.2rem;
 }
 
-
 .cesta-total-container{
     display: flex;
     flex-direction: column;
@@ -1120,7 +1119,6 @@ background: #e0e0e0;
 position: absolute;
 top: 50%;
 left: 0;
-transform: translateY(-50%);
 height: 4px;
 width: 100%;
 z-index: -1;
@@ -1143,11 +1141,9 @@ background: #FBA00E;
 position: absolute;
 top: 50%;
 left: 0;
-transform: translateY(-50%);
 height: 4px;
 width: 0%;
 z-index: -1;
-transition: 0.4s ease;
 }
 
 .circle {
@@ -1161,7 +1157,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 border: 6px solid #e0e0e0;
-transition: .4s ease;
 }
 
 .circle.active {

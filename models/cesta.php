@@ -72,7 +72,7 @@ class Cesta extends Database
         $consulta->execute();
         $last_id = $this->db->lastInsertId();
         echo "S'ha agregado corectamende el pedido".$last_id."<br>";
-        // genera el detalle de la factura
+        // genera el detalle de la facturay resta el stock
         foreach($_SESSION['Cesta'] as $articulo=>$valor){
             if (is_numeric($articulo)){
                 $cantidad = $valor['cant'];
@@ -81,6 +81,9 @@ class Cesta extends Database
                 $consulta->execute();
                 $lastdetalle_id = $this->db->lastInsertId();
                 echo "S'ha agregado corectamende el detalle de pedido".$lastdetalle_id."<br>";
+                // Quitar el stock
+                $consulta2 = $this->db->prepare("UPDATE articulo SET stock = stock - $cantidad WHERE id_articulo = $articulo");
+                $consulta2->execute();
             }
         }
         // Limpia la cesta 
