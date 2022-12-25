@@ -16,6 +16,10 @@ a {
     text-decoration: none;
 }
 
+.disabled{
+    opacity: 60%;
+}
+
 .left{
     float: left;
 }
@@ -1022,7 +1026,6 @@ footer {
     padding: 0.2rem;
 }
 
-
 .cesta-total-container{
     display: flex;
     flex-direction: column;
@@ -1110,65 +1113,152 @@ footer {
 
 /* Cesta progress bar */
 
-:root {
-    --line-border-fill: #FBA00E;
-    --line-border-empty: #e0e0e0;
-  }
-  
-  
-  .progress-container::before {
-    content: "";
-    background: var(--line-border-empty);
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    height: 4px;
-    width: 100%;
-    z-index: -1;
-  }
-  
-  .progress-container {
+.progress-container::before {
+content: "";
+background: #e0e0e0;
+position: absolute;
+top: 50%;
+left: 0;
+height: 4px;
+width: 100%;
+z-index: -1;
+}
+
+.progress-container {
+display: flex;
+justify-content: space-between;
+position: relative;
+margin-bottom: 30px;
+max-width: 100%;
+width: 550px;
+margin-top: 2rem;
+margin-left: auto;
+margin-right: auto;
+}
+
+.progress {
+background: #FBA00E;
+position: absolute;
+top: 50%;
+left: 0;
+height: 4px;
+width: 0%;
+z-index: -1;
+}
+
+.circle {
+text-align: center;
+background: #fff;
+color: #999;
+border-radius: 50%;
+height: 75px;
+width: 75px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 6px solid #e0e0e0;
+}
+
+.circle.active {
+border-color: #FBA00E;
+}
+
+
+/* Estilos pagina de direccion */
+
+.direccion-page-container{
     display: flex;
-    justify-content: space-between;
-    position: relative;
-    margin-bottom: 30px;
-    max-width: 100%;
-    width: 550px;
-    margin-top: 2rem;
+
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  .progress {
-    background: var(--line-border-fill);
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    height: 4px;
-    width: 0%;
-    z-index: -1;
-    transition: 0.4s ease;
-  }
-  
-  .circle {
-    text-align: center;
-    background: #fff;
-    color: #999;
-    border-radius: 50%;
-    height: 75px;
-    width: 75px;
+}
+
+.direccion-page-content{
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.current-direction{
+    width: 800px;
+    max-height: 100px;
+    display: flex;
+    border: 1px solid #999;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+    margin-top: 1.5rem;
+}
+
+
+.cesta-item-action{
+    color: black;
+    width: 68px;
+
+}
+
+
+.direction-text-content{
     display: flex;
     align-items: center;
-    justify-content: center;
-    border: 6px solid var(--line-border-empty);
-    transition: .4s ease;
-  }
-  
-  .circle.active {
-    border-color: var(--line-border-fill);
-  }
+}
+
+
+.cesta-action{
+
+}
+
+
+/* Estilos pagina de pago */
+
+.pago-page-container{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.pago-content-container{
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.pago-options{
+    display: flex;
+    flex-direction: column;
+    min-width: 600px;
+    padding-top: 1.5rem;
+
+}
+
+
+.pago-option{
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+}
+.pago-option-label{
+    display: flex;
+    align-items: center;
+}
+
+.payment-icon{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
 
 /* DISEÑO RESPONSIVE PARA TABLET */
 

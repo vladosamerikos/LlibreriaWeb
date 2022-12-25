@@ -49,6 +49,12 @@ class Usuario extends Database
         return $resultado;
     }
 
+    public function setDireccion($email, $direccion){
+        $consulta = $this->db->prepare("UPDATE usuario SET direccion = '$direccion' WHERE email = '$email'") ;
+        $count =$consulta->execute();
+    }
+
+
     public function getId($email){
         $consulta = $this->db->prepare("SELECT id_usuario FROM usuario WHERE email LIKE '$email'");
         $consulta->execute();

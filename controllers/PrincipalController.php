@@ -7,7 +7,6 @@ class PrincipalController
 
     public function mostrarPaginaPrincipal()
     {
-        require_once "views/general/menu.php";
         $categoria = new Categoria();
         $resultado = $categoria->obtenerListado();
         require_once "views/general/mostrarListaCategorias.php";
@@ -19,7 +18,6 @@ class PrincipalController
 
     public function mostrarLibrosCategoria()
     {
-        require_once "views/general/menu.php";
         $categoria = new Categoria();
         $resultado = $categoria->obtenerListado();
         require_once "views/general/mostrarListaCategorias.php";
@@ -34,7 +32,6 @@ class PrincipalController
 
     public function mostrarGeneral()
     {
-        require_once "views/general/menu.php";
         $categoria = new Categoria();
         $resultado = $categoria->obtenerListado();
         require_once "views/general/mostrarListaCategorias.php";

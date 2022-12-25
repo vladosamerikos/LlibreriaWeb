@@ -1,21 +1,25 @@
 <?php
-echo "
+echo"
+
 <div class='progress-container'>
-        <div style='width: 66.6667%;' class='progress' id='progress'> </div>
+        <div style='width: 33.3333%;' class='progress' id='progress'> </div>
         <div class='circle active'>Cesta</div>
         <div class='circle active'>Dirección de envío</div>
-        <div class='circle active'>Metodos de pago</div>
+        <div class='circle'>Metodos de pago</div>
         <div class='circle'>Resumen</div>
 </div>
 
 
-<form class='pago-page-container' method='POST'>
-    <div class='pago-content-container'>
-        <div class='pago-options'>
-            <div class='pago-option'><input type='radio' id='bankTransfer' name='metodoDePago' value='bankTransfer' checked><label class='pago-option-label' for='bankTransfer'><img class='payment-icon' src='./img/bank-transfer.svg'>Transferencia bancaria</label></div>
-            <div class='pago-option'><input type='radio' id='card' name='metodoDePago' value='card' checked><label class='pago-option-label' for='card'><img class='payment-icon' src='./img/credit-card.svg'>Tarjeta de crédito</label></div>
-            <div class='pago-option'><input type='radio' id='cash' name='metodoDePago' value='cash' checked><label class='pago-option-label' for='cash'><img class='payment-icon' src='./img/cash.svg'>Efectivo</label></div>
-        </div>
+<div class='direccion-page-container'>
+    <div class='direccion-page-content'>
+        <form class='current-direction' action='index.php?controller=Cesta&action=editarDireccion' method='POST'>
+            
+            <div class='direction-text-content'>
+                <img class='payment-icon' src='./img/house.svg'>
+                <input name='newdireccion' id='newdireccion' type='text' value='".$direccion[0]['direccion']."'>
+            </div>
+            <button type='submit' class='cesta-item-action-container-item cesta-item-action'>Guardar</button>
+        </form>
 
         <div class='cesta-total-container'>
             <div class='cesta-total-row'>
@@ -40,10 +44,10 @@ echo "
                 <div class='total-container-title'><div class='left'>Total</div><div class='rigth'>". formatarPrecio($_SESSION['Cesta']['Total']) ."€</div></div>
                 <div class='container-title-low-text'><div class='left'>IVA incluido</div><div class='rigth'></div></div>
             </div>
-            <a href='index.php?controller=Cesta&action=tramitarPedido' class='total-container-submit-button'>Tramitar pedido</a>
+            <a class='total-container-submit-button disabled'>Guardar y continuar</a>
         </div>
 
     </div>
 
     
-</form>";
+</div>";

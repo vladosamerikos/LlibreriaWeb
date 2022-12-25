@@ -49,28 +49,69 @@ class CestaController
     }
 
     public function selecionarDireccion(){
-        if (isset($_SESSION['email']) || isset($_SESSION['role']) || $_SESSION['role']=='user'){
-            $user = new Usuario();
-            $direccion=$user->getDireccion($_SESSION['email']);
-            require_once "views/cesta/direccion.php";
+        if (isset($_SESSION['Cesta'])){
+            if (isset($_SESSION['email']) || isset($_SESSION['role']) || $_SESSION['role']=='user'){
+                $user = new Usuario();
+                $direccion=$user->getDireccion($_SESSION['email']);
+                require_once "views/cesta/direccion.php";
+            }else{
+                header('Location: index.php?controller=Login&action=mostrarLoginUser');
+            }
         }else{
-            require_once "views/mensajesAviso/avisoSesionCesta.php";
+            header('Location: index.php?controller=Cesta&action=mostrarCesta');
         }
     }
 
     public function selecionarMetodoDePago(){
-        require_once "views/cesta/pago.php";
-        var_dump($_SESSION['Cesta']);
-
-
+        if (isset($_SESSION['Cesta'])){
+            require_once "views/cesta/pago.php";
+        }else{
+            header('Location: index.php?controller=Cesta&action=mostrarCesta');
+        }
     }
 
+    public function mostrarEditarDireccion(){
+        if (isset($_SESSION['Cesta'])){
+            if (isset($_SESSION['email']) || isset($_SESSION['role']) || $_SESSION['role']=='user'){
+                $user = new Usuario();
+                $direccion=$user->getDireccion($_SESSION['email']);
+                require_once "views/cesta/editDireccion.php";
+            }else{
+                header('Location: index.php?controller=Login&action=mostrarLoginUser');
+            }
+        }else{
+            header('Location: index.php?controller=Cesta&action=mostrarCesta');
+        }
+    }
+
+
+    public function editarDireccion(){
+        if (isset($_SESSION['Cesta'])){
+            if (isset($_SESSION['email']) || isset($_SESSION['role']) || $_SESSION['role']=='user'){
+                $direccion = $_POST['newdireccion'];
+                $user = new Usuario();
+                $user->setDireccion($_SESSION['email'], $direccion);
+                header('Location: index.php?controller=Cesta&action=selecionarDireccion');
+            }else{
+                header('Location: index.php?controller=Login&action=mostrarLoginUser');
+            }
+        }else{
+            header('Location: index.php?controller=Cesta&action=mostrarCesta');
+        }
+    }
+
+
+
     public function tramitarPedido(){
-        $cesta = new Cesta();
-        $user = new Usuario();
-        $data=$user->getId($_SESSION['email']);
-        $id_user = $data[0]['id_usuario'];
-        $cesta->tramitarPedido($id_user);
-        require_once "views/cesta/resument.php";
+        if (isset($_SESSION['Cesta'])){
+            $cesta = new Cesta();
+            $user = new Usuario();
+            $data=$user->getId($_SESSION['email']);
+            $id_user = $data[0]['id_usuario'];
+            $cesta->tramitarPedido($id_user);
+            require_once "views/cesta/resument.php";
+        }else{
+            header('Location: index.php?controller=Cesta&action=mostrarCesta');
+        }
     }
 }
