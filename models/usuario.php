@@ -48,6 +48,7 @@ class Usuario extends Database
         $resultado = $consulta->fetchAll();
         return $resultado;
     }
+
     public function getId($email){
         $consulta = $this->db->prepare("SELECT id_usuario FROM usuario WHERE email LIKE '$email'");
         $consulta->execute();
@@ -55,4 +56,10 @@ class Usuario extends Database
         return $resultado;
     }
 
+    public function getProfile($email){
+        $consulta = $this->db->prepare("SELECT * FROM usuario WHERE email LIKE '$email'");
+        $consulta->execute();
+        $datosUser = $consulta->fetchAll();
+        return $datosUser;
+    }
 }
