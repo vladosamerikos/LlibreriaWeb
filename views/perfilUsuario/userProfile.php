@@ -1,5 +1,5 @@
 <?php
-    echo "<h2>El meu perfil</h2>";
+    echo "<h2 class='my-profile-title'>El meu perfil</h2>";
     echo "<div class='pedidos-usuario-profile'>
         <a href='#'>Mis pedidos</a>
     </div>";
