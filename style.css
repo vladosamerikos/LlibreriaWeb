@@ -1370,11 +1370,6 @@ border-color: #FBA00E;
         margin-bottom: 5%;
     }
 
-    .libro-image {
-        height: 220px;
-        width: 160px;
-    }
-
     .cesta-container{
         display: block;
     }
@@ -1450,12 +1445,41 @@ border-color: #FBA00E;
         font-size: 18px;
     }
 
+    /* Pagina del libro */
+
+    .libro-image {
+        height: 297px;
+        width: 196px;
+    }
+
+    .libro-price{
+        text-align: center;
+        margin-left: none;
+        margin-bottom: 5px;
+    }
+
+    .num-libro-input{
+        height: 52px;
+        width: 100px;
+    }
+
+    .add-to-carito-button{
+        height: 54px;
+        width: 160px;
+    }
+
 }
 
 /* DISEÑO RESPONSIVE PARA MÓVIL */
 
 
 @media screen and (max-width: 768px) {
+
+    .important-book-price{
+        text-align: center;
+        padding-left: 0px;
+    }
+
     .main-page-important-books{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -1555,5 +1579,40 @@ border-color: #FBA00E;
         height: 210px;
     }
 
+    /* Pagina del libro */
 
+    .content-libro-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .libro-image-container{
+        width: auto;
+    }
+
+    .libro-text-container{
+        width: auto;
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    .libro-actions-container{
+        width: auto;
+    }
+
+    .libro-price{
+        text-align: center;
+        margin-left: none;
+        margin-bottom: 25px;
+    }
+
+    .num-libro-input{
+        height: 52px;
+        width: 100px;
+    }
+
+    .add-to-carito-button{
+        height: 54px;
+        width: 160px;
+    }
 }

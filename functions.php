@@ -17,7 +17,12 @@ function transformarFecha($fecha){
 }
 
 function formatarPrecio($precio){
-    return str_replace('.',',',(string)$precio);
+    $precioArr = explode('.', (string)$precio);
+    if (strlen($precioArr[1])==1){
+        $precioArr[1]= $precioArr[1]."0";
+    }
+    $precioFormat=$precioArr[0].",".$precioArr[1];
+    return $precioFormat;
 }
 
 function adminIncorrecte(){
