@@ -18,11 +18,16 @@ function transformarFecha($fecha){
 
 function formatarPrecio($precio){
     $precioArr = explode('.', (string)$precio);
-    if (strlen($precioArr[1])==1){
-        $precioArr[1]= $precioArr[1]."0";
+    if(!isset($precioArr[1])){
+        return str_replace(".",",",(string)$precio);
+    }else{
+        if (strlen($precioArr[1])==1){
+            $precioArr[1]= $precioArr[1]."0";
+        }
+        $precioFormat=$precioArr[0].",".$precioArr[1];
+        return $precioFormat;
     }
-    $precioFormat=$precioArr[0].",".$precioArr[1];
-    return $precioFormat;
+   
 }
 
 function adminIncorrecte(){
