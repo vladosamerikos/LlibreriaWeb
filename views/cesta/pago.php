@@ -2,8 +2,8 @@
 echo "
 <div class='progress-container'>
         <div style='width: 66.6667%;' class='progress' id='progress'> </div>
-        <div class='circle active'>Cesta</div>
-        <div class='circle active'>Dirección de envío</div>
+        <div class='circle active'><a href='index.php?controller=Cesta&action=mostrarCesta'>Cesta</a></div>
+        <div class='circle active'><a href='index.php?controller=Cesta&action=selecionarDireccion'>Dirección de envío</a></div>
         <div class='circle active'>Metodos de pago</div>
         <div class='circle'>Resumen</div>
 </div>

@@ -272,6 +272,10 @@ img.menu-header-user-photo {
     border-bottom: 1px solid #FBA00E;
 }
 
+.signin-user-mobile-link{
+    display: none;
+}
+
 /* Formulario crear cuenta usuario */
 
 #repite-password {
@@ -1361,10 +1365,6 @@ border-color: #FBA00E;
         text-align: center;
     }
 
-    .form-container {
-        max-width: 80%;
-    }
-
     .content-libro-container{
         max-width: 80%;
         margin-bottom: 5%;
@@ -1425,6 +1425,31 @@ border-color: #FBA00E;
     .admin-panel-title{
         padding-left: 20px;
     }
+
+    /* Login/Sign-up pages  */
+
+    .form-container{
+        max-width: 80%;
+    }
+
+    .login-user-form-submit-button{
+        padding: 7px 20px;
+    }
+
+    .login-user-form-foto{
+        width: 204px;
+        height: 245px;
+    }
+
+    .login-form-input{
+        font-size: 12px;
+        width: 80%;
+    }
+
+    .form-title{
+        font-size: 18px;
+    }
+
 }
 
 /* DISEÑO RESPONSIVE PARA MÓVIL */
@@ -1469,5 +1494,66 @@ border-color: #FBA00E;
     .subdiv-footer-1{
         width: 130px;
     }
+
+  /* Login/Sign-up pages  */
+
+    .login-user-content{
+        padding-top: 33px;
+        padding-bottom: 44px;
+    }
+
+    .login-user-form{
+        margin-top: 20px;
+    }
+
+    .form-container{
+    max-width: 50%;
+    }
+
+    .login-user-form-submit-button{
+
+        margin-left: 22% ;
+        padding: 7px 20px;
+    }
+
+    .login-user-form-foto-container{
+        display: none;
+    }
+
+    .login-form-input{
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .form-title{
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .form-row{
+        margin-bottom: 18px;
+    }
+
+    .signin-user-mobile-link{
+        display: block;
+        margin-bottom: 20px;
+        color: #222;
+        text-align: center;
+        width: 120px;
+        margin-left: 50%;
+        font-size: 15px;
+        font-weight: bolder;
+        border-bottom: 1px solid black;
+    }
+
+
+    /* Cesta */
+
+    .cesta-custom-msg-img{
+        width: 140px;
+        height: 210px;
+    }
+
 
 }

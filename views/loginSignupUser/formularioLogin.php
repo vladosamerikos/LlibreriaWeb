@@ -20,6 +20,7 @@ echo "
                 <input type='checkbox' name='remember-me' id='remember-me' class='form-checkbox'>
                 <label for='remember-me' class='form-label-checkbox'>Recuerdame</label>
             </div>    
+            <a class='signin-user-mobile-link' href='index.php?controller=Login&action=mostrarSignupUser'>Crear una cuenta</a>
             <input class='login-user-form-submit-button' name='submit' type='submit' id='submit' value='Iniciar session'>
         </form>
     </div>

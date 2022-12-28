@@ -3,7 +3,7 @@ echo"
 
 <div class='progress-container'>
         <div style='width: 33.3333%;' class='progress' id='progress'> </div>
-        <div class='circle active'>Cesta</div>
+        <div class='circle active'><a href='index.php?controller=Cesta&action=mostrarCesta'>Cesta</a></div>
         <div class='circle active'>Dirección de envío</div>
         <div class='circle'>Metodos de pago</div>
         <div class='circle'>Resumen</div>
