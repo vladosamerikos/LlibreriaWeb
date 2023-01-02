@@ -49,6 +49,10 @@ class LoginController
         if ($_result) {
             $_SESSION['email'] = $_email;
             $_SESSION['role'] = 'user';
+            $_foto=$user->getFoto($_email)[0]['foto'];
+            $_SESSION['foto']=$_foto;
+            $_nombre=$user->getNombre($_email)[0]['nombre'];
+            $_SESSION['nombre']=$_nombre;
             echo "login correcto";
             header('Location: index.php?controller=Login&action=index');
             die();

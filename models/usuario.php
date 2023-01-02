@@ -62,6 +62,20 @@ class Usuario extends Database
         return $resultado;
     }
 
+    public function getFoto($email){
+        $consulta = $this->db->prepare("SELECT foto FROM usuario WHERE email LIKE '$email'");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
+
+    public function getNombre($email){
+        $consulta = $this->db->prepare("SELECT nombre FROM usuario WHERE email LIKE '$email'");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
+
     public function getProfile($email){
         $consulta = $this->db->prepare("SELECT * FROM usuario WHERE email LIKE '$email'");
         $consulta->execute();

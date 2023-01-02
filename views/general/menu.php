@@ -26,7 +26,11 @@ echo "<div class='main-menu-bar'>
                 echo "<span style='color: white;'>".calcularCesta()."</span>";
             }
             echo "<a href='index.php?controller=Cesta&action=mostrarCesta'><img class='menu-header-basket-photo' src='./img/basket.svg' alt='basket' height='40px' width='40px'></a>";
-            echo "<a href='index.php?controller=Perfil&action=mostrarPerfil'><img class='menu-header-user-photo' src='./img/user.svg' alt='user' height='40px' width='40px'></a>";
+            if ($_SESSION['foto']!=''){
+                echo "<a class='foto-perfil' href='index.php?controller=Perfil&action=mostrarPerfil'><img class='menu-header-user-photo' src='".$_SESSION['foto']."' alt='user' height='50px' width='50px'>".$_SESSION['nombre']."</a>";
+            }else{
+                echo "<a class='foto-perfil' href='index.php?controller=Perfil&action=mostrarPerfil'><img class='menu-header-user-photo' src='./img/user.svg' alt='user' height='40px' width='40px'>".$_SESSION['nombre']."</a>";
+            }
             echo "<li class='main-menu-list-item'><a href='index.php?controller=Login&action=destroySesion'>Cerrar Sessión</a></li>";
         }
     }

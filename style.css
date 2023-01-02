@@ -32,7 +32,7 @@ a {
     display: none;
 }
 
-/* Menu horizontal admin */
+/* Menu horizontal */
 .main-menu-bar {
     height: 100px;
     background-color: black;
@@ -51,13 +51,13 @@ a {
     display: flex;
     flex-direction: row;
     list-style: none;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 li.main-menu-list-item {
     color: white;
     margin-right: 2vh;
-    margin-top: 5px;
+    margin-top: 20px;
     align-items: center;
 }
 
@@ -75,6 +75,17 @@ li.main-menu-list-item {
     border-radius: 5px;
 }
 
+.foto-perfil{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.foto-perfil > img {
+    border-radius: 25px;
+}
 
 /* formularios de edicion/agregamiento admin  */
 
@@ -154,10 +165,7 @@ input.submit-button:hover {
 /* MENÚ HORIZONTAL USER */
 
 img.menu-header-basket-photo {
-    padding-right: 20px;
-}
-
-img.menu-header-user-photo {
+    margin-top: 10px;
     padding-right: 20px;
 }
 
@@ -406,6 +414,7 @@ img.menu-header-user-photo {
 }
 
 .search_bar_header {
+    margin-top: 10px;
     padding-right: 1rem;
 }
 
