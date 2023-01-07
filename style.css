@@ -1279,31 +1279,64 @@ border-color: #FBA00E;
     padding-top: 20px;
     padding-bottom: 10px;
     margin: auto;
-    width: 50%;
+    width: 65%;
     height: 50px;
     font-size: 30px;
     color: #FBA00E;
 }
 
-.div1{
+.div1-user{
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 22px;
+    grid-row-gap: 0px;
+    margin-bottom: 5%;
+}
+
+.subdiv1-user{
+    grid-area: 1 / 1 / 2 / 2;
     background-color: white;
     border: 2px solid #1F1F1F;
     box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
-    width: 50%;
+    width: 100%;
     margin: auto;
-    margin-bottom: 10%;
+    height: 300px;
+    margin-left: 10%;
 }
 
-.div1 > div{
+.subdiv1-user > div{
     padding-left: 5%;
-    padding-top: 2%;
+    padding-top: 5%;
+}
+
+.subdiv2-user{
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: white;
+    border: 2px solid #1F1F1F;
+    box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    margin: auto;
+    height: 300px;
+    width: 70%;
+}
+
+.subdiv2-user > div{
+    width: 100%;
+    padding-top: 4%;
+    text-align: center;
+}
+.subdiv2-user > div > img{
+    border-radius: 20px;
+
 }
 
 .pedidos-usuario-profile{
     float: left;
     width: 10%;
-    padding-left: 5%;
+    margin-left: 2%;
+    text-align: center;
     padding-top: 1%;
     padding-bottom: 1%;
     text-decoration: none;
