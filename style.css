@@ -1509,7 +1509,6 @@ border-color: #FBA00E;
         height: 54px;
         width: 160px;
     }
-
 }
 
 /* DISEÑO RESPONSIVE PARA MÓVIL */
@@ -1558,7 +1557,12 @@ border-color: #FBA00E;
     }
   
     .subdiv-footer-1{
-        width: 130px;
+        width: 90px;
+        text-align: center;
+    }
+
+    .div-footer-2{
+        text-align: center;
     }
 
   /* Login/Sign-up pages  */
@@ -1657,4 +1661,32 @@ border-color: #FBA00E;
         height: 54px;
         width: 160px;
     }
+
+    /* Perfil Usuario */
+
+    .div1-user{
+        display: block;
+    }
+
+    .subdiv1-user{
+        width: 60%;
+        margin: auto;
+        margin-top: 5%;
+        margin-left: 25%;
+        height: 230px;
+    }
+
+    .subdiv2-user{
+        width: 60%;
+        margin: auto;
+        margin-top: 5%;
+        margin-left: 25%;
+        height: 250px;
+    }
+
+    .pedidos-usuario-profile{
+        margin-top: 5%;
+        width: 20%;
+    }
+
 }

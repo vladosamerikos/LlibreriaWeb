@@ -2,7 +2,6 @@
 echo "<wrapper>
     <div class='div-footer-2'>
         <p> © 2022 Time2Read</p>
-        <a class='footer-link' href='#'>| Condiciones de compra</a>
         <a class='footer-link' href='#'>| Política de privacidad</a>
         <a class='footer-link' href='#'>| Política de cookies</a>";
 
