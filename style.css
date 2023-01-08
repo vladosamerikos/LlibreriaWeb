@@ -1541,6 +1541,7 @@ border-color: #FBA00E;
 
     .pre-footer-image{
         margin-bottom: 70%;
+        padding-top: 40px;
     }
 
     .pre-footer-texts{
@@ -1559,7 +1560,7 @@ border-color: #FBA00E;
     .subdiv-footer-1{
         width: 90px;
         text-align: center;
-    }
+    }x
 
     .div-footer-2{
         text-align: center;
