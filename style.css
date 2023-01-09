@@ -1316,7 +1316,6 @@ border-color: #FBA00E;
 .subdiv1-user{
     grid-area: 1 / 1 / 2 / 2;
     background-color: white;
-    border: 2px solid #1F1F1F;
     box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     width: 100%;
@@ -1333,7 +1332,6 @@ border-color: #FBA00E;
 .subdiv2-user{
     grid-area: 1 / 2 / 2 / 3;
     background-color: white;
-    border: 2px solid #1F1F1F;
     box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     margin: auto;
@@ -1360,14 +1358,29 @@ border-color: #FBA00E;
     padding-bottom: 1%;
     text-decoration: none;
     color: black;
-    border: 2px solid #1F1F1F;
     border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+
+    --c: #FBA00E; /* the border color */
+    --b: 4px;    /* the border thickness*/
+    --g: 5px;     /* the gap on hover */
+    
+    padding: calc(var(--g) + var(--b));
+    --_g: #0000 25%,var(--c) 0;
+    background: 
+        conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g))
+        var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
+        conic-gradient(            at bottom var(--b) left  var(--b),var(--_g))
+        0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
+    transition: .3s, background-position .3s .3s;
+    cursor: pointer;
 }
 
 .pedidos-usuario-profile:hover{
-    background-color: #1F1F1F;
-    color: #FF6000;
     border-radius: 15px;
+    --_i: 100%;
+    transition: .2s, background-size .2s .2s;
 }
 
 /* TABLA PEDIDOS PERFIL USUARIO */
