@@ -6,6 +6,7 @@
     scroll-behavior: smooth;
 }
 
+
 body {
     height: 100%;
     font-family: 'Source Sans Pro', sans-serif;
@@ -1341,12 +1342,61 @@ border-color: #FBA00E;
 
 .subdiv2-user > div{
     width: 100%;
-    padding-top: 4%;
     text-align: center;
 }
 .subdiv2-user > div > img{
     border-radius: 20px;
+}
 
+.foto-input {
+    color: transparent;
+  }
+.foto-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.foto-input::before {
+    content: 'Cambiar foto';
+    margin-left: 30%;
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+}
+.foto-input:hover::before {
+    border-color: black;
+}
+.foto-input:active {
+    outline: 0;
+}
+.foto-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+
+.user-profile-row{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-save-button{
+    background-color: transparent;
+    border: none;
+}
+.save-icon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.save-icon:hover{
+    opacity: 80%;
 }
 
 .pedidos-usuario-profile{

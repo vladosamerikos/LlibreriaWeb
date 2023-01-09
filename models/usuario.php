@@ -83,6 +83,14 @@ class Usuario extends Database
         return $datosUser;
     }
 
+    public function editFoto($email,$foto){
+        $consulta = $this->db->prepare("UPDATE usuario SET foto = '$foto' WHERE email = '$email'") ;
+        $_SESSION['foto']= $foto;
+        $count =$consulta->execute();
+    }
+
+
+
     public function getOrders($email){
         $consulta = $this->db->prepare("SELECT id_factura, U.nombre AS nombreusu, fecha, total, E.estado AS estado FROM factura F INNER JOIN usuario U ON U.id_usuario = F.fk_id_usuario INNER JOIN estado_factura  E ON F.estado = E.id_estado WHERE U.email LIKE '$email'");
         $consulta->execute();
