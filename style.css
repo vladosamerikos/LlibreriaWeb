@@ -1464,6 +1464,14 @@ border-color: #FBA00E;
 .profile-orders-panel-page-table-td-link{
     text-align: center;
 }
+.mobile-search{
+    display: none;
+}
+
+.mobile-search-bar{
+    display: none;
+}
+
 
 /* DISEÑO RESPONSIVE PARA TABLET */
 
@@ -1802,6 +1810,19 @@ border-color: #FBA00E;
     .pedidos-usuario-profile{
         margin-top: 5%;
         width: 20%;
+    }
+
+    .mobile-search{
+        display: block;
+        border: 1px solid white;
+    }
+
+    .search_bar_header{
+        display: none;
+    }
+    .mobile-search-bar{
+        display: block;
+        color: red;
     }
 
 }

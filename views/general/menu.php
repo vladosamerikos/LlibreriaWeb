@@ -11,7 +11,13 @@ echo "<div class='main-menu-bar'>
         if (isset($_SESSION['email']) && $_SESSION['role']=='user')
         {
             // Vista 2: User
-            echo "<div class='search_bar_header'>
+
+            echo "
+            
+            <div class='mobile-search' onclick='buscarMobil()'>proves</div>
+            <div class='mobile-search-bar'>buscador</div>
+
+            <div class='search_bar_header'>
                     <form class='form_search_form_header' action='index.php?controller=Buscador&action=buscadorGeneral' method='post'>
                         <select name='filtro' class='option_search_bar'>
                             <option value='articulo.nombre' selected> Titulo </option>
