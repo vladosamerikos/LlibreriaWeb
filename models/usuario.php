@@ -82,4 +82,12 @@ class Usuario extends Database
         $datosUser = $consulta->fetchAll();
         return $datosUser;
     }
+
+    public function editFoto($email,$foto){
+        $consulta = $this->db->prepare("UPDATE usuario SET foto = '$foto' WHERE email = '$email'") ;
+        $_SESSION['foto']= $foto;
+        $count =$consulta->execute();
+    }
+
+
 }
