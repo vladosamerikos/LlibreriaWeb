@@ -1472,6 +1472,29 @@ border-color: #FBA00E;
     display: none;
 }
 
+/* Menu vertical perfil usuario */
+
+.user-menu-bar {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 15%;
+    margin-top: 70px;
+}
+
+.user-menu-bar-item {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.user-menu-bar-item:hover {
+    color: #FBA00E;
+    background-color: #1F1F1F;
+}
+
 
 /* DISEÑO RESPONSIVE PARA TABLET */
 
