@@ -763,10 +763,10 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 5px;
+    grid-row-gap: 0px ;
     padding-bottom: 20px;
     margin: auto;
     width: 70%;
-
 }
 
 .pre-footer-image {
@@ -1299,7 +1299,7 @@ border-color: #FBA00E;
     padding-top: 20px;
     padding-bottom: 10px;
     margin: auto;
-    width: 65%;
+    width: 55%;
     height: 50px;
     font-size: 30px;
     color: #FBA00E;
@@ -1321,13 +1321,19 @@ border-color: #FBA00E;
     border-radius: 20px;
     width: 100%;
     margin: auto;
-    height: 300px;
+    height: 100%;
     margin-left: 10%;
 }
 
 .subdiv1-user > div{
     padding-left: 5%;
     padding-top: 5%;
+    width: 70%;
+    display: flex;
+}
+
+.image-profile-dades{
+    padding-right: 5%;
 }
 
 .subdiv2-user{
@@ -1336,7 +1342,7 @@ border-color: #FBA00E;
     box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     margin: auto;
-    height: 300px;
+    height: 100%;
     width: 70%;
 }
 
@@ -1544,6 +1550,7 @@ border-color: #FBA00E;
     height: 70vh;
     width: 15%;
     margin-top: 120px;
+    margin-left: 30px;
 }
 
 .user-menu-bar-item {
@@ -1568,13 +1575,12 @@ border-color: #FBA00E;
 
 .user-menu-bar-item:hover {
     color: #FBA00E;
-    background-color: #1F1F1F;
     --_i: 100%;
     transition: .2s, background-size .2s .2s;
 }
 
 
-/* DISEÑO RESPONSIVE PARA TABLET */
+/* --------------DISEÑO RESPONSIVE PARA TABLET-------------------- */
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
     *{
@@ -1632,7 +1638,8 @@ border-color: #FBA00E;
 
     .content-libro-container{
         max-width: 80%;
-        margin-bottom: 5%;
+        margin-top: 5%;
+        margin-bottom: 10%;
     }
 
     .cesta-container{
@@ -1669,6 +1676,37 @@ border-color: #FBA00E;
         border-radius: 10px;
     }
 
+    .user-menu-bar{
+        text-align: center;
+        flex-direction: row;
+        width: 100%;
+        height: 70px;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 0px;
+        margin: auto;
+        background-color: #1F1F1F;
+        float: none;
+        color: white;
+    }
+    .user-menu-bar-item{
+        background:none;
+        width: 100%;
+        color: white;
+    }
+
+    .user-menu-bar-item:hover{
+        border: none;
+        opacity: 0.4;
+        background: none;
+        color: white;
+    }
+
+    .my-profile-title{
+        width: 90%;
+
+    }
+
     .search_bar input{
         width: 80%;
     }
@@ -1690,6 +1728,8 @@ border-color: #FBA00E;
 
     .form-container{
         max-width: 80%;
+        margin-top: 20%;
+        margin-bottom: 20%;
     }
 
     .login-user-form-submit-button{
@@ -1734,7 +1774,7 @@ border-color: #FBA00E;
     }
 }
 
-/* DISEÑO RESPONSIVE PARA MÓVIL */
+/*---------------------- DISEÑO RESPONSIVE PARA MÓVIL --------------------*/
 
 
 @media screen and (max-width: 768px) {
@@ -1760,17 +1800,20 @@ border-color: #FBA00E;
         position: absolute;
         z-index: 1;
         margin-left: 15%;
+        height: 150px;
     }
 
     .pre-footer-image{
-        margin-bottom: 70%;
+        margin-bottom: 150px;
         padding-top: 40px;
     }
 
     .pre-footer-texts{
-        margin-top: 150px;
+        margin-top: 200px;
+        height: 350px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 5%;
     }
 
     .pre-footer-text {
@@ -1789,6 +1832,16 @@ border-color: #FBA00E;
         text-align: center;
     }
 
+    .div-footer-2 > p{
+        font-size: 11px;
+        width: 20%;
+    }
+    .div-footer-2 > .footer-link{
+        font-size: 11px;
+        width: 20%;
+    }
+
+
   /* Login/Sign-up pages  */
 
     .login-user-content{
@@ -1801,7 +1854,7 @@ border-color: #FBA00E;
     }
 
     .form-container{
-    max-width: 50%;
+        max-width: 50%;
     }
 
     .login-user-form-submit-button{
@@ -1893,19 +1946,18 @@ border-color: #FBA00E;
     }
 
     .subdiv1-user{
-        width: 60%;
+        width: 80%;
         margin: auto;
         margin-top: 5%;
-        margin-left: 25%;
-        height: 230px;
+        height: 25%;
     }
 
     .subdiv2-user{
-        width: 60%;
+        width: 50%;
+        padding-top: 5%;
         margin: auto;
         margin-top: 5%;
-        margin-left: 25%;
-        height: 250px;
+        height: 25%;
     }
 
     .pedidos-usuario-profile{
@@ -1921,9 +1973,40 @@ border-color: #FBA00E;
     .search_bar_header{
         display: none;
     }
+
     .mobile-search-bar{
         display: block;
         color: red;
     }
 
+    .user-menu-bar{
+        text-align: center;
+        flex-direction: row;
+        width: 100%;
+        height: 70px;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 0px;
+        margin: auto;
+        background-color: #1F1F1F;
+        float: none;
+        color: white;
+    }
+    .user-menu-bar-item{
+        background:none;
+        width: 100%;
+        color: white;
+    }
+
+    .user-menu-bar-item:hover{
+        border: none;
+        opacity: 0.4;
+        background: none;
+        color: white;
+    }
+
+    .my-profile-title{
+        width: 80%;
+
+    }
 }

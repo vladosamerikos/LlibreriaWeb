@@ -1,16 +1,16 @@
 <?php
-    echo "<h2 class='my-profile-title'>El meu perfil</h2>";
+    echo "<h2 class='my-profile-title'>Mi perfil</h2>";
     echo "<div class='orange-line'></div>";
     echo "<br>";
     echo "<div class='div1-user'>
         <div class='subdiv1-user'>
-            <div><p>Nombre: ".$datosUser[0]['nombre']."</p></div>
+            <div><img src='img/person.svg' width='20px' height='20px' class='image-profile-dades'><h3>Nombre: &nbsp</h3><p>" .$datosUser[0]['nombre']."</p></div>
             <br>
-            <div><p>Apellidos: ".$datosUser[0]['apellidos']."</p></div>
+            <div><img src='img/person.svg' width='20px' height='20px' class='image-profile-dades'><h3>Apellidos: &nbsp</h3><p>".$datosUser[0]['apellidos']."</p></div>
             <br>
-            <div><p>Dirección: ".$datosUser[0]['direccion']."</p></div>
+            <div><img src='img/home.svg' width='20px' height='20px' class='image-profile-dades'><h3>Dirección: &nbsp</h3><p>".$datosUser[0]['direccion']."</p></div>
             <br>
-            <div><p>Correo: ".$datosUser[0]['email']."</p></div>
+            <div><img src='img/email.svg' width='20px' height='20px' class='image-profile-dades'><h3>Correo: &nbsp</h3><p>".$datosUser[0]['email']."</p></div>
             <br>
         </div>
         <form  class='subdiv2-user' method='post' ENCTYPE='multipart/form-data' action='index.php?controller=Perfil&action=cambiarFoto'>
