@@ -1,8 +1,5 @@
 <?php
     echo "<h2 class='my-profile-title'>El meu perfil</h2>";
-    echo "<div class='pedidos-usuario-profile'>
-        <a href='#'>Mis pedidos</a>
-    </div>";
     echo "<div class='div1-user'>
         <div class='subdiv1-user'>
             <div><p>Nombre: ".$datosUser[0]['nombre']."</p></div>

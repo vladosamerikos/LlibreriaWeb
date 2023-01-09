@@ -2,6 +2,7 @@
 require "models/libro.php";
 require "models/categoria.php";
 require "models/pedidos.php";
+require "models/usuario.php";
 
 class BuscadorController
 {
@@ -46,6 +47,15 @@ class BuscadorController
         $resultado = $buscador->obtenerBusquedaGeneral($filtro,$contenido);
         require_once "views/principal/librosBuscador.php";
         require_once "views/principal/preFooter.html";
+    }
+    
+    public function buscadorFactura()
+    {
+        $pedido = new Usuario();
+        $id_pedido = $_POST['id_pedido'];
+        $email = $_SESSION['email'];
+        $userOrders = $pedido->obtenerBusquedaPedidoUsuario($id_pedido,$email);
+        require_once "views/perfilUsuario/userOrders.php";
     }
     
 }

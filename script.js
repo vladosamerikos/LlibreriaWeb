@@ -78,6 +78,24 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+// Mobile buscador
+
+var showBuscador = false;
+
+function buscarMobil() {
+	var buscadorMobil= document.querySelector('.mobile-search-bar');
+
+	if( showBuscador){
+		buscadorMobil.setAttribute('style', 'display: none');	
+		showBuscador=false
+	}else{
+		buscadorMobil.setAttribute('style', 'display: block');
+		showBuscador= true;	
+	}
+
+
+	
+}
 
 
 
