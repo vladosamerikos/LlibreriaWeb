@@ -1370,6 +1370,101 @@ border-color: #FBA00E;
     border-radius: 15px;
 }
 
+/* TABLA PEDIDOS PERFIL USUARIO */
+
+.profile-orders-panel-content-container {
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+    align-items: center;
+}
+
+.profile-orders-panel-title-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 50px;
+    float: right;
+}
+
+.profile-orders-panel-title {
+    display: inline-block;
+    font-size: 30px;
+    color: #FBA00E;
+}
+
+.orange-line {
+    width: 100%;
+    height: 3px;
+    background-color: #FBA00E;
+    margin-top: 10px;
+}
+
+.profile-orders-panel-add-link {
+    display: block;
+    float: right;
+    background-color: #FBA00E;
+    color: black;
+    padding: 8px;
+    margin-right: 5%;
+    border-radius: 5px;
+}
+
+.profile-orders-panel-add-link:hover {
+    color: #FBA00E;
+    background-color: #1F1F1F;
+    border-radius: 5px;
+}
+
+.profile-orders-panel-page-table {
+    display: inline-block;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+}
+
+.profile-orders-panel-page-table th {
+    color: black;
+    border-bottom: 1px solid #FBA00E;
+    padding: 2rem 2rem 0.75rem 2rem;
+}
+
+.profile-orders-panel-page-table tr:nth-child(odd) {
+    color: #1F1F1F;
+}
+
+.profile-orders-panel-page-table tr:nth-child(even) {
+    color: gray;
+}
+
+.text {
+    padding: 0rem 1rem 0rem 1rem;
+    text-align: center;
+    height: 60px;
+    max-width: 100px;
+}
+
+.libroicon {
+    width: 100px;
+    height: 120px;
+    padding-left: 10%;
+
+}
+
+.control-icons {
+    width: 60px;
+    height: 60px;
+    padding-left: 25%;
+}
+
+.profile-orders-panel-page-table-td-link{
+    text-align: center;
+}
+
 /* DISEÑO RESPONSIVE PARA TABLET */
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {

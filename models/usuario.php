@@ -82,4 +82,33 @@ class Usuario extends Database
         $datosUser = $consulta->fetchAll();
         return $datosUser;
     }
+
+    public function getOrders($email){
+        $consulta = $this->db->prepare("SELECT id_factura, U.nombre AS nombreusu, fecha, total, E.estado AS estado FROM factura F INNER JOIN usuario U ON U.id_usuario = F.fk_id_usuario INNER JOIN estado_factura  E ON F.estado = E.id_estado WHERE U.email LIKE '$email'");
+        $consulta->execute();
+        $userOrders = $consulta->fetchAll();
+        return $userOrders;
+    }
+
+    public function obtenerDetallePedido($idfactura){
+        $consulta = $this->db->prepare("SELECT * FROM detalle_factura F INNER JOIN articulo A ON F.fk_id_articulo = A.id_articulo WHERE fk_id_factura = $idfactura");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
+
+    public function obtenerEstados(){
+        $consulta = $this->db->prepare("SELECT * FROM estado_factura");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        return $resultado;
+    }
+
+    public function obtenerBusquedaPedidoUsuario($id_pedido,$email)
+    {
+        $consulta = $this->db->prepare("SELECT id_factura, U.nombre AS nombreusu, fecha, total, E.estado AS estado FROM factura F INNER JOIN usuario U ON U.id_usuario = F.fk_id_usuario INNER JOIN estado_factura  E ON F.estado = E.id_estado WHERE U.email LIKE '$email' AND id_factura = '$id_pedido'");
+        $consulta->execute();
+        $userOrders = $consulta->fetchAll();
+        return $userOrders;
+    }
 }

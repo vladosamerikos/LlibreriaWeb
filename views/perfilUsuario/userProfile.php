@@ -1,7 +1,7 @@
 <?php
     echo "<h2 class='my-profile-title'>El meu perfil</h2>";
     echo "<div class='pedidos-usuario-profile'>
-        <a href='#'>Mis pedidos</a>
+        <a href='index.php?controller=Perfil&action=mostrarPedidosUsuario'>Mis pedidos</a>
     </div>";
     echo "<div class='div1-user'>
         <div class='subdiv1-user'>
