@@ -83,18 +83,36 @@ function topFunction() {
 var showBuscador = false;
 
 function buscarMobil() {
+
 	var buscadorMobil= document.querySelector('.mobile-search-bar');
+	var logo= document.querySelector('.main-menu-bar-logo');
+	var cesta= document.querySelector('.menu-header-basket-photo');
+	var user= document.querySelector('.menu-header-user-photo');
+	var fotoperfil= document.querySelector('.foto-perfil');
+	var logout= document.querySelector('.mobile-menu-img');
+	var lupa= document.querySelector('.mobile-search');
 
 	if( showBuscador){
-		buscadorMobil.setAttribute('style', 'display: none');	
+		buscadorMobil.setAttribute('style', 'display: none');
+		logo.setAttribute('style', 'display: inline');
+		cesta.setAttribute('style', 'display: inline');
+		user.setAttribute('style', 'display: flex');
+		logout.setAttribute('style', 'display: inline');
+		fotoperfil.setAttribute('style', 'display: flex');
+		lupa.setAttribute('src', 'img/lupa-buscador.svg');
 		showBuscador=false
 	}else{
-		buscadorMobil.setAttribute('style', 'display: block');
+		buscadorMobil.setAttribute('style', 'display: inline');
+		logo.setAttribute('style', 'display: none');
+		cesta.setAttribute('style', 'display: none');
+		user.setAttribute('style', 'display: none');
+		logout.setAttribute('style', 'display: none');
+		fotoperfil.setAttribute('style', 'display: none');
+		lupa.setAttribute('style', 'height: 30px', 'width: 30px');
+		lupa.setAttribute('src', 'img/cross.svg');
 		showBuscador= true;	
 	}
 
-
-	
 }
 
 

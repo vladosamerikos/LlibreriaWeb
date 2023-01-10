@@ -427,6 +427,7 @@ img.menu-header-basket-photo {
 }
 
 .search_bar_header {
+    width: 40px;
     margin-top: 10px;
     padding-right: 1rem;
 }
@@ -437,7 +438,7 @@ img.menu-header-basket-photo {
 }
 
 .button_search_bar_header {
-    height: 48px;
+    height: 28px;
     border-radius: 0px 25px 25px 0px;
     border: none;
     background-color: #FBA00E;
@@ -448,13 +449,13 @@ img.menu-header-basket-photo {
 }
 
 .input_search_bar_header {
-    height: 48px;
+    height: 28px;
     background-color: white;
     border: none;
 }
 
 .option_search_bar {
-    height: 48px;
+    height: 28px;
     background-color: white;
     border: none;
     border-radius: 25px 0px 0px 25px;
@@ -1099,6 +1100,10 @@ footer {
     background-color: #999;
 }
 
+.mobile-close-main-menu-list-item {
+    display: none;
+}
+
 .total-container-title{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -1562,12 +1567,10 @@ border-color: #FBA00E;
     height: 60px;
     padding-left: 25%;
 }
-.mobile-search{
-    display: none;
-}
 
 .mobile-search-bar{
     display: none;
+    margin-bottom: 20px;
 }
 
 /* Menu vertical perfil usuario */
@@ -1971,6 +1974,23 @@ border-color: #FBA00E;
 
     }
 
+    /* Main menu */
+
+    .close-mobile-main-menu-list-item {
+        display: inline;
+    }
+
+    .mobile-menu-img{
+        padding-top: 10px;
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    .close-main-menu-list-item {
+        display: none;
+    }
+
   /* Login/Sign-up pages  */
 
     .login-user-content{
@@ -2152,7 +2172,10 @@ border-color: #FBA00E;
 
     .mobile-search{
         display: block;
-        border: 1px solid white;
+        height: 30px;
+        width: 30px;
+        margin-top: 10px;
+        padding-right: 20px;
     }
 
     .search_bar_header{
@@ -2160,8 +2183,7 @@ border-color: #FBA00E;
     }
 
     .mobile-search-bar{
-        display: block;
-        color: red;
+        display: none;
     }
 
     .user-menu-bar{
@@ -2319,5 +2341,4 @@ border-color: #FBA00E;
         width: 45px;
         height: 60px;
     }
-
 }
