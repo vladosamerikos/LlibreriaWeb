@@ -1841,6 +1841,11 @@ border-color: #FBA00E;
         width: 20%;
     }
 
+    .name-categoria-libros-categoria{
+        width: 90%;
+        padding-left: 10%;
+    }
+
 
   /* Login/Sign-up pages  */
 

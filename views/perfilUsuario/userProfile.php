@@ -4,13 +4,13 @@
     echo "<br>";
     echo "<div class='div1-user'>
         <div class='subdiv1-user'>
-            <div><img src='img/person.svg' width='20px' height='20px' class='image-profile-dades'><h3>Nombre: &nbsp</h3><p>" .$datosUser[0]['nombre']."</p></div>
+            <div><img src='img/person.svg' width='20px' height='20px' class='image-profile-dades'><h3>Nombre: &nbsp</h3>" .$datosUser[0]['nombre']."</div>
             <br>
-            <div><img src='img/person.svg' width='20px' height='20px' class='image-profile-dades'><h3>Apellidos: &nbsp</h3><p>".$datosUser[0]['apellidos']."</p></div>
+            <div><img src='img/person.svg' width='20px' height='20px' class='image-profile-dades'><h3>Apellidos: &nbsp</h3>".$datosUser[0]['apellidos']."</div>
             <br>
-            <div><img src='img/home.svg' width='20px' height='20px' class='image-profile-dades'><h3>Dirección: &nbsp</h3><p>".$datosUser[0]['direccion']."</p></div>
+            <div><img src='img/home.svg' width='20px' height='20px' class='image-profile-dades'><h3>Dirección: &nbsp</h3>".$datosUser[0]['direccion']."</div>
             <br>
-            <div><img src='img/email.svg' width='20px' height='20px' class='image-profile-dades'><h3>Correo: &nbsp</h3><p>".$datosUser[0]['email']."</p></div>
+            <div><img src='img/email.svg' width='20px' height='20px' class='image-profile-dades'><h3>Correo: &nbsp</h3>".$datosUser[0]['email']."</div>
             <br>
         </div>
         <form  class='subdiv2-user' method='post' ENCTYPE='multipart/form-data' action='index.php?controller=Perfil&action=cambiarFoto'>
