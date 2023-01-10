@@ -1850,16 +1850,21 @@ border-color: #FBA00E;
     }
 
     .login-user-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .form-container{
-        max-width: 50%;
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .login-user-form-submit-button{
-
-        margin-left: 22% ;
         padding: 7px 20px;
     }
 
@@ -1880,6 +1885,7 @@ border-color: #FBA00E;
 
     .form-row{
         margin-bottom: 18px;
+        max-width: 80%;
     }
 
     .signin-user-mobile-link{
@@ -1888,10 +1894,14 @@ border-color: #FBA00E;
         color: #222;
         text-align: center;
         width: 120px;
-        margin-left: 50%;
         font-size: 15px;
         font-weight: bolder;
         border-bottom: 1px solid black;
+    }
+
+    .mobile-label{
+        position: initial !important;
+        margin-left: 0px;
     }
 
 
