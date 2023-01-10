@@ -64,14 +64,11 @@ class Cesta extends Database
     public function tramitarPedido($id_usu){
         $fechaActual = date('Y-m-d');
         $total = $_SESSION['Cesta']['Total'];
-        echo $id_usu;
-        echo $fechaActual;
-        echo $total;
         // genera la factura
         $consulta = $this->db->prepare("INSERT INTO factura (fk_id_usuario, fecha, total, estado) VALUES ($id_usu, '$fechaActual', $total, 1)") ;
         $consulta->execute();
         $last_id = $this->db->lastInsertId();
-        echo "S'ha agregado corectamende el pedido".$last_id."<br>";
+        
         // genera el detalle de la facturay resta el stock
         foreach($_SESSION['Cesta'] as $articulo=>$valor){
             if (is_numeric($articulo)){
@@ -80,7 +77,6 @@ class Cesta extends Database
                 $consulta = $this->db->prepare("INSERT INTO detalle_factura (fk_id_factura, fk_id_articulo, cantidad, precio) VALUES ($last_id, $articulo, $cantidad, $subtotal)") ;
                 $consulta->execute();
                 $lastdetalle_id = $this->db->lastInsertId();
-                echo "S'ha agregado corectamende el detalle de pedido".$lastdetalle_id."<br>";
                 // Quitar el stock
                 $consulta2 = $this->db->prepare("UPDATE articulo SET stock = stock - $cantidad WHERE id_articulo = $articulo");
                 $consulta2->execute();

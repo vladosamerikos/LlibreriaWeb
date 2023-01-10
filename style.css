@@ -1160,6 +1160,33 @@ footer {
 }
 
 
+/* resumen */
+
+.cesta-resumen-msg-img{
+    width: 250px;
+    height: 270px;
+}
+
+.cesta-resumen-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin-bottom: 125px;
+    margin-top: 30px;
+
+}
+
+.cesta-resumen-actions-container{
+    margin-top: 20px;
+    width: 100%;
+    display:  flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
 /* Cesta progress bar */
 
 .progress-container::before {
@@ -1596,6 +1623,7 @@ border-color: #FBA00E;
         font-size: 15px;
     }
 
+
     .main-menu-bar-logo{
         padding-top: 15px;
         height: 70px;
@@ -1793,6 +1821,32 @@ border-color: #FBA00E;
         height: 54px;
         width: 160px;
     }
+
+    /* direction page  */
+
+    .direccion-page-content{
+        display: block;
+    }
+
+    .current-direction{
+        max-width: 500px;
+    }
+
+    .cesta-total-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* pago page */
+
+    .pago-content-container{
+        display: block;
+    }
+
+    .pago-options{
+        min-width: 500px;
+    }
+
 }
 
 /*---------------------- DISEÑO RESPONSIVE PARA MÓVIL --------------------*/
@@ -2107,4 +2161,67 @@ border-color: #FBA00E;
     .user-menu-bar-item:active{
         color: white;
     }
+
+    /* cesta resumen */
+
+    .cesta-resumen-msg-img{
+        width: 175px;
+        height: 189px;
+    }
+
+    .cesta-resumen-container > h3{
+        text-align: center;
+    }
+
+    .cesta-resumen-actions-container{
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        flex-direction: column;
+    }
+
+
+    /* cesta direction */
+
+
+    .direccion-page-content{
+        width: 80%;
+        display: block;
+    }
+
+    .current-direction{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        box-sizing: border-box;
+
+    }
+
+    .cesta-total-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* pago page */
+
+    .pago-content-container{
+        width: 80%;
+        display: block;
+    }
+
+    .pago-options{
+        width: 100%;
+        min-width: 0px;
+    }
+
+    .pago-option{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+
+
+
+
+
 }
