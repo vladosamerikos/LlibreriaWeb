@@ -357,11 +357,11 @@ img.menu-header-basket-photo {
 }
 
 .orange-line-profile{
-    width: 80%;
+    width: 100%;
     height: 3px;
     background-color: #FBA00E;
     margin-top: 10px;
-    margin-left: 20%;
+    margin-left: 10%;
     margin-bottom: 20px;
 }
 
@@ -1315,6 +1315,7 @@ border-color: #FBA00E;
     padding-top: 20px;
     padding-bottom: 10px;
     margin: auto;
+    margin-left: 10%;
     width: 55%;
     height: 50px;
     font-size: 30px;
@@ -1339,6 +1340,8 @@ border-color: #FBA00E;
     margin: auto;
     height: 100%;
     margin-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .subdiv1-user > div{
@@ -1359,6 +1362,8 @@ border-color: #FBA00E;
     box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     margin: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
     height: 100%;
     width: 70%;
 }
@@ -1950,7 +1955,7 @@ border-color: #FBA00E;
     }
     
     .cesta-container{
-        width: 70%;
+        width: 85%;
         display: flex;
         flex-direction: column;
     }
