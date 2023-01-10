@@ -5,7 +5,7 @@ echo"
         <div style='width: 33.3333%;' class='progress' id='progress'> </div>
         <div class='circle active'>Cesta</div>
         <div class='circle active'>Dirección de envío</div>
-        <div class='circle'>Metodos de pago</div>
+        <div class='circle'>Métodos de pago</div>
         <div class='circle'>Resumen</div>
 </div>
 
@@ -24,7 +24,7 @@ echo"
         <div class='cesta-total-container'>
             <div class='cesta-total-row'>
                 <div class='total-container-title'>Resumen</div>
-                <div class='container-title-low-text'>Los cupone se puedem añadir durante el proceso de pago</div>
+                <div class='container-title-low-text'>Los cupones se pueden añadir durante el proceso de pago</div>
                 <div class='cesta-total-line'></div>
             </div>
             <div class='cesta-total-row'>

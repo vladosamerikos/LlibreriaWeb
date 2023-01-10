@@ -12,7 +12,7 @@ echo "
             <p class='libro-text-descrip-corta'>".$datosLibro[0]['descripcion_short']."</p>
             <p class='libro-text-descrip'>".$datosLibro[0]['descripcion']."</p>";
         if(strlen($datosLibro[0]['descripcion'])>414){
-            echo"<p id='mostrar-mas' onclick='mostrarOcultarDescrip()'>Mostrar mas</p>";
+            echo"<p id='mostrar-mas' onclick='mostrarOcultarDescrip()'>Mostrar más</p>";
         }    
         echo "</div>
         <div class='libro-actions-container'>

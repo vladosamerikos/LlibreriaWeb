@@ -38,7 +38,7 @@ echo "
         </form>
         <div class='login-user-form-foto-container'>
             <img class='login-user-form-foto' src='img/signposter.png' alt='login image'>
-            <a class='signin-user-link' href='index.php?controller=Login&action=mostrarLoginUser'>Tengo cuenta</a>
+            <a class='signin-user-link' href='index.php?controller=Login&action=mostrarLoginUser'>Ya tengo cuenta</a>
         </div>
     </div>
 </div>
