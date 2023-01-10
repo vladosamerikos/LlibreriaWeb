@@ -51,6 +51,7 @@ class BuscadorController
     
     public function buscadorFactura()
     {
+        require_once "views/general/menuPerfil.php";
         $pedido = new Usuario();
         $id_pedido = $_POST['id_pedido'];
         $email = $_SESSION['email'];

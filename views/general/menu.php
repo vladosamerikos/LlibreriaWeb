@@ -13,9 +13,18 @@ echo "<div class='main-menu-bar'>
             // Vista 2: User
 
             echo "
-            
-            <div class='mobile-search' onclick='buscarMobil()'>proves</div>
-            <div class='mobile-search-bar'>buscador</div>
+            <div class='mobile-search-bar'>buscador
+                <form class='form_search_form_header' action='index.php?controller=Buscador&action=buscadorGeneral' method='post'>
+                    <select name='filtro' class='option_search_bar'>
+                        <option value='articulo.nombre' selected> Titulo </option>
+                        <option value='articulo.isbn'> ISBN </option>
+                        <option value='generos.nombre'> Genero </option>
+                    </select>
+                    <input type='text' class='input_search_bar_header' name='search' id='search'>
+                    <button type='submit' class='button_search_bar_header'>Buscar</button>
+                </form>
+            </div>
+            <li  onclick='buscarMobil()'><img class='mobile-search' src='img/lupa-buscador.svg '></li>
 
             <div class='search_bar_header'>
                     <form class='form_search_form_header' action='index.php?controller=Buscador&action=buscadorGeneral' method='post'>
@@ -31,13 +40,14 @@ echo "<div class='main-menu-bar'>
             if(isset($_SESSION['Cesta'])){
                 echo "<span style='color: white;'>".calcularCesta()."</span>";
             }
-            echo "<a href='index.php?controller=Cesta&action=mostrarCesta'><img class='menu-header-basket-photo' src='./img/basket.svg' alt='basket' height='40px' width='40px'></a>";
+            echo "<a href='index.php?controller=Cesta&action=mostrarCesta'><img class='menu-header-basket-photo' src='./img/basket.svg' alt='basket' height='30px' width='30px'></a>";
             if ($_SESSION['foto']!=''){
                 echo "<a class='foto-perfil' href='index.php?controller=Perfil&action=mostrarPerfil'><img class='menu-header-user-photo' src='".$_SESSION['foto']."' alt='user' height='50px' width='50px'>".$_SESSION['nombre']."</a>";
             }else{
                 echo "<a class='foto-perfil' href='index.php?controller=Perfil&action=mostrarPerfil'><img class='menu-header-user-photo' src='./img/user.svg' alt='user' height='40px' width='40px'>".$_SESSION['nombre']."</a>";
             }
-            echo "<li class='main-menu-list-item'><a href='index.php?controller=Login&action=destroySesion'>Cerrar Sesión</a></li>";
+            echo "<li class='close-main-menu-list-item'><a href='index.php?controller=Login&action=destroySesion'>Cerrar Sesión</a></li>
+            <li class='mobile-main-menu-list-item'><a href='index.php?controller=Login&action=destroySesion'><img class='mobile-menu-img' src='img/exit-orange.svg'></a></li>";
         }
     }
     else

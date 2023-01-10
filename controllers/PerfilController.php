@@ -21,6 +21,7 @@ class PerfilController{
 
     public function mostrarDetallePedidoUsuario()
     {
+        require_once "views/general/menuPerfil.php";
         $pedido = new Usuario();
         $id_pedido = $_GET['id'];
         $userOrders = $pedido->obtenerDetallePedido($id_pedido);
