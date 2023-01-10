@@ -1311,7 +1311,7 @@ border-color: #FBA00E;
     grid-template-rows: 1fr;
     grid-column-gap: 22px;
     grid-row-gap: 0px;
-    margin-bottom: 5%;
+    margin-bottom: 20%;
 }
 
 .subdiv1-user{
@@ -1330,6 +1330,7 @@ border-color: #FBA00E;
     padding-top: 5%;
     width: 70%;
     display: flex;
+    
 }
 
 .image-profile-dades{
@@ -1350,6 +1351,7 @@ border-color: #FBA00E;
     width: 100%;
     text-align: center;
 }
+
 .subdiv2-user > div > img{
     border-radius: 20px;
 }
@@ -1846,6 +1848,10 @@ border-color: #FBA00E;
         padding-left: 10%;
     }
 
+    .name-categoria-libros-categoria{
+        font-size: 26px;
+
+    }
 
   /* Login/Sign-up pages  */
 

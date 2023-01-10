@@ -1,6 +1,6 @@
 <?php
     echo "<h2 class='my-profile-title'>Mi perfil</h2>";
-    echo "<div class='orange-line'></div>";
+    echo "<div class='orange-line orange-line-profile'></div>";
     echo "<br>";
     echo "<div class='div1-user'>
         <div class='subdiv1-user'>
