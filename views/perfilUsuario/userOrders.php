@@ -1,11 +1,8 @@
 <?php
+echo "<h2 class='my-profile-title'>Mis pedidos</h2>";
+echo "<div class='orange-line-profile'></div>";
 echo "
 <div class='profile-orders-panel-content-container'>
-    <div class='profile-orders-panel-title-container'>
-        <h1 class='profile-orders-panel-title'>Mis pedidos</h1>
-        <div class='orange-line'></div>
-    </div>
-
     <div class='search_bar'>
         <img class='search_img' src='img/search.svg' alt='lupa de busqueda'>
         <form class='search_form' action='index.php?controller=Buscador&action=buscadorFactura' method='post'>
@@ -13,7 +10,6 @@ echo "
             <button type='submit'>Buscar</button>
         </form>
     </div>";
-
     echo "<div class='profile-orders-main-container'>";
         foreach ($userOrders as $order) {
             echo "<div class='profile-order-container'>
@@ -26,4 +22,3 @@ echo "
         }
     echo "</div>
 </div>";
-

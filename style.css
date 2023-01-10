@@ -1462,8 +1462,6 @@ border-color: #FBA00E;
 .profile-orders-panel-content-container {
     display: flex;
     flex-direction: column;
-    width: 85%;
-    float: right;
     align-items: center;
 }
 
@@ -1504,27 +1502,7 @@ border-color: #FBA00E;
     border-radius: 5px;
 }
 
-.profile-orders-panel-page-table {
-    display: inline-block;
-    background-color: white;
-    border-radius: 10px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
-}
-
-.profile-orders-panel-page-table th {
-    color: black;
-    border-bottom: 1px solid #FBA00E;
-    padding: 2rem 2rem 0.75rem 2rem;
-}
-
-.profile-orders-panel-page-table tr:nth-child(odd) {
-    color: #1F1F1F;
-}
-
-.profile-orders-panel-page-table tr:nth-child(even) {
-    color: gray;
+.profile-order-container{
 }
 
 .text {
@@ -1545,10 +1523,6 @@ border-color: #FBA00E;
     width: 60px;
     height: 60px;
     padding-left: 25%;
-}
-
-.profile-orders-panel-page-table-td-link{
-    text-align: center;
 }
 .mobile-search{
     display: none;
