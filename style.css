@@ -1738,6 +1738,18 @@ border-color: #FBA00E;
 
     }
 
+    .user-menu-bar-item:visited{
+        color: white;
+    }
+    
+    .user-menu-bar-item:link{
+        color: white;
+    }
+    
+    .user-menu-bar-item:active{
+        color: white;
+    }
+
     .search_bar input{
         width: 80%;
     }
@@ -2100,5 +2112,17 @@ border-color: #FBA00E;
     .my-profile-title{
         width: 80%;
 
+    }
+
+    .user-menu-bar-item:visited{
+        color: white;
+    }
+    
+    .user-menu-bar-item:link{
+        color: white;
+    }
+    
+    .user-menu-bar-item:active{
+        color: white;
     }
 }
