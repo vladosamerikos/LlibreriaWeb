@@ -19,9 +19,16 @@ if (isset($_SESSION['Cesta'])){
                         <div class='cesta-item-info-container'>
                             <a href='index.php?controller=Libro&action=mostrarLibro&id=".$id."' class='cesta-item-imagen'><img class='cesta-imagen' src='".$data['imagen']."' alt='imagen producto'></a>
                             <div class='cesta-item-info-text-container'>
-                                <a href='index.php?controller=Libro&action=mostrarLibro&id=".$id."' class='cesta-item-titulo'>".$data['titulo']."</a>
-                                <p class='cesta-item-pecio'>".formatarPrecio($data['precio'])."€</p>
-                            </div>
+                                <a href='index.php?controller=Libro&action=mostrarLibro&id=".$id."' class='cesta-item-titulo'>".$data['titulo']."</a>";
+                                
+                                if($data['cant']>1){
+                                    echo "
+                                    <p class='cesta-item-precio'>".formatarPrecio($data['precio']*$data['cant'])."€</p>
+                                    <p class='cesta-item-precio-unitario'>Precio unitario ".formatarPrecio($data['precio'])."€</p>";
+                                }else{
+                                    echo"<p class='cesta-item-precio'>".formatarPrecio($data['precio'])."€</p>";
+                                }
+                    echo    "</div>
                         </div>
                         <div class='cesta-item-action-container'>
                                 <a class='cesta-item-action-container-item cesta-item-action-container-item-basura' href='index.php?controller=Cesta&action=elimLibro&id=".$id."'><img class='cesta-item-action-img' src='./img/trash-bin.svg'></a>

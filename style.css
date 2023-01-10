@@ -963,8 +963,13 @@ footer {
     color: #FF6000;
 }
 
-.cesta-item-pecio{
+.cesta-item-precio{
     font-size: 19px;
+    font-weight: 700;
+    color:  black;
+}
+
+.cesta-item-pecio-unitario{
     font-weight: 700;
     color:  black;
 }
