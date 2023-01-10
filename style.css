@@ -1462,9 +1462,8 @@ border-color: #FBA00E;
 .profile-orders-panel-content-container {
     display: flex;
     flex-direction: column;
-    width: 96%;
-    padding-left: 2%;
-    padding-right: 2%;
+    width: 85%;
+    float: right;
     align-items: center;
 }
 
