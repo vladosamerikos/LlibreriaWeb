@@ -31,7 +31,7 @@ echo "
             </div>
             <div class='form-row'>
                 <input required type='checkbox' name='accept-condition' id='accept-condition' class='form-checkbox'>
-                <label for='accept-condition' class='form-label-checkbox'>Acepto los términos de servicio</label>
+                <label for='accept-condition' class='form-label-checkbox mobile-label'>Acepto los términos de servicio</label>
             </div>
             <a class='signin-user-mobile-link' href='index.php?controller=Login&action=mostrarLoginUser'>Tengo cuenta</a>
             <input class='login-user-form-submit-button' id='submit-button-login-form' name='submit' type='submit' id='submit' value='Crear cuenta'>
