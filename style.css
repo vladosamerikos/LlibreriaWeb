@@ -1969,7 +1969,11 @@ border-color: #FBA00E;
     }
 
     .cesta-action{
-        width: 100%;
+        width: auto;
+    }
+
+    .cesta-action:first-of-type{
+        margin-bottom: 20px;
     }
     
     .cesta-container{
