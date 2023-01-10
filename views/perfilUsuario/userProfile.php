@@ -1,7 +1,6 @@
 <?php
     echo "<h2 class='my-profile-title'>Mi perfil</h2>";
-    echo "<div class='orange-line'></div>";
-    echo "<br>";
+    echo "<div class='orange-line-profile'></div>";
     echo "<div class='div1-user'>
         <div class='subdiv1-user'>
             <div><img src='img/person.svg' width='20px' height='20px' class='image-profile-dades'><h3>Nombre: &nbsp</h3>" .$datosUser[0]['nombre']."</div>

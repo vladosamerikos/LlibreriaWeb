@@ -5,7 +5,7 @@ echo"
         <div style='width: 33.3333%;' class='progress' id='progress'> </div>
         <div class='circle active'><a href='index.php?controller=Cesta&action=mostrarCesta'>Cesta</a></div>
         <div class='circle active'>Dirección de envío</div>
-        <div class='circle'>Metodos de pago</div>
+        <div class='circle'>Métodos de pago</div>
         <div class='circle'>Resumen</div>
 </div>
 
@@ -23,12 +23,12 @@ echo"
         <div class='cesta-total-container'>
             <div class='cesta-total-row'>
                 <div class='total-container-title'>Resumen</div>
-                <div class='container-title-low-text'>Los cupone se puedem añadir durante el proceso de pago</div>
+                <div class='container-title-low-text'>Los cupones se pueden añadir durante el proceso de pago</div>
                 <div class='cesta-total-line'></div>
             </div>
             <div class='cesta-total-row'>
                 <div class='subtotal-container-title'><div class='left'>Subtotal</div><div class='rigth'>". formatarPrecio($_SESSION['Cesta']['subTotal']) ."€</div></div>
-                <div class='subtotal-container-title'><div class='left'>Costes de envío</div><div class='rigth'>";
+                <div class='subtotal-container-title'><div class='left'>Gastos de envío</div><div class='rigth'>";
                 $_SESSION['Cesta']['Total']= $_SESSION['Cesta']['subTotal']+$_SESSION['Cesta']['Envio'];
                     if( $_SESSION['Cesta']['Envio']>0){
                         echo $_SESSION['Cesta']['Envio']."€";
