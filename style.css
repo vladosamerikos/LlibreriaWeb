@@ -1826,7 +1826,7 @@ border-color: #FBA00E;
     .subdiv-footer-1{
         width: 90px;
         text-align: center;
-    }x
+    }
 
     .div-footer-2{
         text-align: center;
@@ -1923,10 +1923,15 @@ border-color: #FBA00E;
         width: auto;
     }
 
+    .libro-image{
+        width: 252px;
+        height: 382px;
+    }
+
     .libro-text-container{
         width: auto;
-        padding-left: 6rem;
-        padding-right: 6rem;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     .libro-actions-container{
